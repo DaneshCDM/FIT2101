@@ -383,15 +383,24 @@
             />
           </div>
           <div class="dashboard-dark-product-backlog-add-task">
-            <img
-              alt="LinearEssentionalUIAddCircle4153"
-              src="public/external/linearessentionaluiaddcircle4153-clmw.svg"
-              class="dashboard-dark-product-backlog-linear-essentional-ui-add-circle"
-            />
-            <span class="dashboard-dark-product-backlog-text45">
-              <span>Add Task</span>
-            </span>
+            <a href="">
+              <button type="submit" class = "btn" onclick="openPopUp()">
+                <img
+                  alt="LinearEssentionalUIAddCircle4153"
+                  src="public/external/linearessentionaluiaddcircle4153-clmw.svg"
+                  class="dashboard-dark-product-backlog-linear-essentional-ui-add-circle"
+                />
+                <span class="dashboard-dark-product-backlog-text45">
+                  <span>Add Task</span>
+                </span>
+              </button>
+            </a>
           </div>
+          <div id="popup">
+            <h2>Pop-up Window</h2>
+            <p>This is a pop-up window.</p>
+            <button id="close-button">Close</button>
+          </div> 
           <img
             alt="image14154"
             src="public/external/image14154-ds6h-200h.png"
@@ -424,8 +433,23 @@
             src="public/external/flagiconicons34963-zeft-200h.png"
             class="dashboard-dark-product-backlog-flagiconicons3"
           />
+
+          <table id=" dataTable">
+            <tr>
+              <th>  </th>
+              <th>Tasks</th>
+              <th>Story Point</th>
+              <th>Progress</th>
+            </tr>
+          </table>
         </div>
       </div>
     </div>
+    <script>
+      let popup = document.getElementById("popup")
+      function openPopUp(){
+        popup.classList.add("open-popup")
+      }
+    </script>
   </body>
 </html>
