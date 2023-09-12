@@ -1,15 +1,17 @@
 .dashboard-dark-product-backlog-container {
   width: 100%;
   display: flex;
-  overflow: auto;
+  overflow: hidden;
   min-height: 100vh;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
 }
 .dashboard-dark-product-backlog-dashboard-dark-product-backlog {
   width: 100%;
-  height: auto;
+  height: 850px;
   display: flex;
+  overflow: hidden;
   align-items: flex-start;
   flex-direction: column;
 }
@@ -173,7 +175,7 @@
 }
 .dashboard-dark-product-backlog-body {
   width: 100%;
-  height: 791px;
+  height: 790px;
   display: flex;
   z-index: 1;
   overflow: hidden;

@@ -3,11 +3,12 @@
   height: 400px;
   display: flex;
   position: relative;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
+  justify-content: center;
 }
 .dashboard-dark-pop-up-manage-sprint-dashboard-dark-popupformanagingsprinttasks {
-  width: 100%;
+  width: 1342px;
   height: 720px;
   display: flex;
   overflow: hidden;

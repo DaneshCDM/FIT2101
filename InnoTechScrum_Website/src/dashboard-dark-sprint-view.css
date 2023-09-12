@@ -5,6 +5,7 @@
   min-height: 100vh;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
 }
 .dashboard-dark-sprint-view-dashboard-dark-sprint-view {
   width: 100%;

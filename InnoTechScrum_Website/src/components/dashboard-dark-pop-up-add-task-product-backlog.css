@@ -3,11 +3,12 @@
   height: 400px;
   display: flex;
   position: relative;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
+  justify-content: center;
 }
 .dashboard-dark-pop-up-add-task-product-backlog-dashboard-dark-popupfor-adding-task {
-  width: 100%;
+  width: 799px;
   height: 445px;
   display: flex;
   overflow: hidden;
@@ -267,4 +268,11 @@
   line-height: normal;
   font-stretch: normal;
   text-decoration: none;
+}
+.dashboard-dark-pop-up-add-task-product-backlog-drop-down-arrow {
+  top: 321px;
+  left: 414px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
 }
