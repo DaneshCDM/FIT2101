@@ -19,3 +19,18 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+
+// Assuming you have a function to fetch data from the database
+function fetchDataFromDatabase(searchQuery) {
+  // Replace this with actual code to fetch data from the database
+  // and display it in the #result-container
+  const data = `Data for search query: ${searchQuery}`;
+  document.getElementById('result-container').textContent = data;
+}
+
+document.getElementById('search-bar').addEventListener('keyup', function(event) {
+  if (event.key === 'Enter') {
+      const searchQuery = event.target.value;
+      fetchDataFromDatabase(searchQuery);
+  }
+});
