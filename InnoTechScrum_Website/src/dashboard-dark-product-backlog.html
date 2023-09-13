@@ -179,6 +179,7 @@
               <span class="dashboard-dark-product-backlog-text08">
                 <form>
                   <input type = "text" id = "search_text" placeholder="Search here">
+                  <button type="submit" id="search"style="background-color: rgb(233, 16, 16); color: rgb(255, 255, 255); height:20px;width:50px">Search</button>
                 </form>
               </span>
               <img
@@ -469,3 +470,58 @@
     </script>
   </body>
 </html>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-analytics.js";
+  import { getDatabase, ref, set, push, child, onValue } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-database.js";
+  
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCghK_Zy_3Enmz0RJ9pvAxZfWxUYQp-InQ",
+    authDomain: "innotechscrum.firebaseapp.com",
+    databaseURL: "https://innotechscrum-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "innotechscrum",
+    storageBucket: "innotechscrum.appspot.com",
+    messagingSenderId: "365889461120",
+    appId: "1:365889461120:web:42e3ff55449d78b148bf65",
+    measurementId: "G-435J39SW2R"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const database = getDatabase(app)
+
+  search.addEventListener('click',(e)=>{
+    $("#TaskTable td").remove();
+
+    const recentPostsRef = query(ref(db, 'posts'), limitToFirst(4));
+
+    onValue(dbRef, (snapshot) => {
+      snapshot.forEach((childSnapshot) => {
+        const childKey = childSnapshot.key;
+        const childData = childSnapshot.val();
+        // ...
+
+        var row = 
+          "<tr><td>"+
+          childData.Task_Name + "</td><td>" +
+          childData.Story_Points + "</td><td>" +
+          childData.Progress + "</td><td>" +
+          childData.Tag + "</td><td>" +
+          childData.Assign_Member + "</td></tr>"
+        
+        $(row).append("#TaskTable")
+      });
+    }, {
+      onlyOnce: true
+    });
+  })
+  
+</script>
