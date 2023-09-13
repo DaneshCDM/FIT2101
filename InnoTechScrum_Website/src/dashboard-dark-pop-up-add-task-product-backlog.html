@@ -148,7 +148,13 @@
               <span
                 class="dashboard-dark-pop-up-add-task-product-backlog-text08"
               >
-                <span>Not Started</span>
+                <select>
+                  <!-- option tag starts -->
+                      <option value="Not Started">Not Started</option>
+                      <option value="In Progress">In Progress</option>
+                      <option value="Completed">Completed</option>
+                  <!-- option tag ends -->
+                  </select>
               </span>
             </div>
             <span class="dashboard-dark-pop-up-add-task-product-backlog-text10">
@@ -184,7 +190,7 @@
                   <span
                     class="dashboard-dark-pop-up-add-task-product-backlog-text16"
                   >
-                    <button type="submit" class = "btn" onclick="closePopUp()"></button>
+                    <button type="submit" class = "btn" id="create_task" onclick="closePopUp()"></button>
                       <span>Create Task</span>
                     </button>
                   </span>
