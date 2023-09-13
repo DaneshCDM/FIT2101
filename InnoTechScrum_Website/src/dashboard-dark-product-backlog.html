@@ -499,29 +499,26 @@
   const database = getDatabase(app)
 
   search.addEventListener('click',(e)=>{
-    $("#TaskTable td").remove();
-
     const recentPostsRef = query(ref(db, 'posts'), limitToFirst(4));
 
-    onValue(dbRef, (snapshot) => {
-      snapshot.forEach((childSnapshot) => {
-        const childKey = childSnapshot.key;
-        const childData = childSnapshot.val();
-        // ...
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("search_text");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("TaskTable");
+    tr = table.getElementsByTagName("tr");
 
-        var row = 
-          "<tr><td>"+
-          childData.Task_Name + "</td><td>" +
-          childData.Story_Points + "</td><td>" +
-          childData.Progress + "</td><td>" +
-          childData.Tag + "</td><td>" +
-          childData.Assign_Member + "</td></tr>"
-        
-        $(row).append("#TaskTable")
-      });
-    }, {
-      onlyOnce: true
-    });
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
   })
   
 </script>
