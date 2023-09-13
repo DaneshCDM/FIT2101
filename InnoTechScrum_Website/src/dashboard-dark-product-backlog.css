@@ -1013,3 +1013,10 @@
   top: 50%;
   transform: translate(-50%, -50%) scale(1);
 }
+
+#TaskTable {
+  border-collapse: collapse; /* Collapse borders */
+  width: 100%; /* Full-width */
+  border: 1px solid #ddd; /* Add a grey border */
+  font-size: 18px; /* Increase font-size */
+}
