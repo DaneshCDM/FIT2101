@@ -363,9 +363,6 @@
   align-items: flex-start;
   flex-shrink: 0;
 }
-.dashboard-dark-mainpagefor-admin-navlink {
-  display: contents;
-}
 .dashboard-dark-mainpagefor-admin-sprint-view-widget1 {
   top: 0px;
   left: 0px;
@@ -373,7 +370,6 @@
   height: 120px;
   position: absolute;
   border-radius: 17px;
-  text-decoration: none;
 }
 .dashboard-dark-mainpagefor-admin-text16 {
   top: 11px;
@@ -408,9 +404,6 @@
   align-items: flex-start;
   flex-shrink: 0;
 }
-.dashboard-dark-mainpagefor-admin-navlink1 {
-  display: contents;
-}
 .dashboard-dark-mainpagefor-admin-project-backlog-widget1 {
   top: 0px;
   left: 0px;
@@ -418,7 +411,6 @@
   height: 120px;
   position: absolute;
   border-radius: 17px;
-  text-decoration: none;
 }
 .dashboard-dark-mainpagefor-admin-text18 {
   top: 12px;
