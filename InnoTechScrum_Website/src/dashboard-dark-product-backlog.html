@@ -143,9 +143,12 @@
               />
             </div>
             <div class="dashboard-dark-product-backlog-dashboard-home-page">
-              <span class="dashboard-dark-product-backlog-text02">
+              <a
+                href="dashboard-dark-mainpage-admin.html"
+                class="dashboard-dark-product-backlog-text02"
+              >
                 <span>Dashboard</span>
-              </span>
+              </a>
             </div>
             <div class="dashboard-dark-product-backlog-project-backlogpage">
               <span class="dashboard-dark-product-backlog-text04">
@@ -177,9 +180,7 @@
             />
             <div class="dashboard-dark-product-backlog-search-bar">
               <span class="dashboard-dark-product-backlog-text08">
-                <form>
-                  <input type = "text" id = "search_text" placeholder="Search here">
-                </form>
+                <span>Search here...</span>
               </span>
               <img
                 alt="Searchbar2559"
@@ -383,24 +384,15 @@
             />
           </div>
           <div class="dashboard-dark-product-backlog-add-task">
-            <a href="dashboard-dark-pop-up-add-task-product-backlog.html">
-              <button type="submit" class = "btn" onclick="openPopUp()">
-                <img
-                  alt="LinearEssentionalUIAddCircle4153"
-                  src="public/external/linearessentionaluiaddcircle4153-clmw.svg"
-                  class="dashboard-dark-product-backlog-linear-essentional-ui-add-circle"
-                />
-                <span class="dashboard-dark-product-backlog-text45">
-                  <span>Add Task</span>
-                </span>
-              </button>
-            </a>
+            <img
+              alt="LinearEssentionalUIAddCircle4153"
+              src="public/external/linearessentionaluiaddcircle4153-clmw.svg"
+              class="dashboard-dark-product-backlog-linear-essentional-ui-add-circle"
+            />
+            <span class="dashboard-dark-product-backlog-text45">
+              <span>Add Task</span>
+            </span>
           </div>
-          <div id="popup">
-            <h2>Pop-up Window</h2>
-            <p>This is a pop-up window.</p>
-            <button id="close-button" onclick="closePopUp()">Close</button>
-          </div> 
           <img
             alt="image14154"
             src="public/external/image14154-ds6h-200h.png"
@@ -433,38 +425,8 @@
             src="public/external/flagiconicons34963-zeft-200h.png"
             class="dashboard-dark-product-backlog-flagiconicons3"
           />
-
-          <table id=" dataTable">
-            <tr>
-              <th>  </th>
-              <th>Tasks</th>
-              <th>Story Point</th>
-              <th>Progress</th>
-            </tr>
-          </table>
         </div>
       </div>
     </div>
-    <!--<script src="index.js"></script>Import error line 2 index.js-->
-    <script src="javaScript.js"></script>
-    <script>
-      // let popup = document.getElementById("popup")
-      // function openPopUp(){
-      //   popup.classList.add("open-popup")
-      // }
-      // function openPopUp(){
-      //   const popup = document.getElementById("popup");
-      //   const popupContentText = "This is the popup content";
-      //   const popupContent = document.createElement("div");
-      //   popupContent.textContent = popupContentText;
-      //   popup.appendChild(popupContent);
-      //   popup.style.display="block";
-      // }
-      // function closePopUp(){
-      //   const popup = document.getElementById("popup");
-      //   popup.style.display="none";
-      //   popup.innerHTML ="";
-      // }
-    </script>
   </body>
 </html>
