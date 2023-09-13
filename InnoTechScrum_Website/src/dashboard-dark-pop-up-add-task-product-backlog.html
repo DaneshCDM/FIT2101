@@ -148,7 +148,7 @@
               <span
                 class="dashboard-dark-pop-up-add-task-product-backlog-text08"
               >
-                <select>
+                <select id="progress">
                   <!-- option tag starts -->
                       <option value="Not Started">Not Started</option>
                       <option value="In Progress">In Progress</option>
@@ -190,7 +190,7 @@
                   <span
                     class="dashboard-dark-pop-up-add-task-product-backlog-text16"
                   >
-                    <button type="submit" class = "btn" id="create_task" onclick="closePopUp()"></button>
+                    <button type="submit" class = "btn" id="submit"></button>
                       <span>Create Task</span>
                     </button>
                   </span>
@@ -213,3 +213,45 @@
     <script src="javaScript.js"></script>
   </body>
 </html>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-analytics.js";
+  import { getDatabase, ref, set, push, child } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-database.js";
+  
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCghK_Zy_3Enmz0RJ9pvAxZfWxUYQp-InQ",
+    authDomain: "innotechscrum.firebaseapp.com",
+    databaseURL: "https://innotechscrum-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "innotechscrum",
+    storageBucket: "innotechscrum.appspot.com",
+    messagingSenderId: "365889461120",
+    appId: "1:365889461120:web:42e3ff55449d78b148bf65",
+    measurementId: "G-435J39SW2R"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const database = getDatabase(app)
+
+  submit.addEventListener('click',(e)=>{
+
+    const userId = push(child(ref(database),"Task")).key;
+
+    set(ref(db, 'users/' + userId), {
+    Task_Name: document.getElementById('Task_Name_text').value,
+    Assign_Member: document.getElementById('Assign_Member_text').value,
+    Story_Points: document.getElementById('Story_Points_text').value,
+    Tag: document.getElementById('Tag_text').value,
+    Progress: document.getElementById('progress').value,
+  });
+  closePopUp();
+  })
+</script>
