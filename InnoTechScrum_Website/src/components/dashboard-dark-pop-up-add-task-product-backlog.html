@@ -180,13 +180,22 @@
             class="dashboard-dark-pop-up-add-task-product-backlog-create-task"
           >
             <div class="dashboard-dark-pop-up-add-task-product-backlog-group1">
-              <span
-                class="dashboard-dark-pop-up-add-task-product-backlog-text16"
-              >
-                <span>Create Task</span>
-              </span>
+              <a href="dashboard-dark-product-backlog.html">
+                  <span
+                    class="dashboard-dark-pop-up-add-task-product-backlog-text16"
+                  >
+                    <button type="submit" class = "btn" onclick="closePopUp()"></button>
+                      <span>Create Task</span>
+                    </button>
+                  </span>
+              </a>
             </div>
           </div>
+          <div id="popup">
+            <h2>Pop-up Window</h2>
+            <p>This is a pop-up window.</p>
+            <button id="close-button" onclick="closePopUp()">Close</button>
+          </div> 
           <img
             alt="DropDownArrow3733"
             src="public/external/dropdownarrow3733-cbq6.svg"
@@ -195,5 +204,6 @@
         </div>
       </div>
     </div>
+    <script src="javaScript.js"></script>
   </body>
 </html>
