@@ -1,6 +1,6 @@
 .dashboard-dark-mainpagefor-admin-container {
   width: 100%;
-  display: flex;
+  /* display: flex; */
   overflow: hidden;
   min-height: 100vh;
   align-items: center;
@@ -15,7 +15,7 @@
   position: relative;
   align-items: flex-start;
   flex-shrink: 0;
-  background-color: rgba(255, 255, 255, 1);
+  /* background-color: rgba(255, 255, 255, 1); */
 }
 .dashboard-dark-mainpagefor-admin-top-navigation {
   top: 0px;
@@ -177,7 +177,7 @@
   height: 25px;
   position: absolute;
 }
-.dashboard-dark-mainpagefor-admin-body {
+/* .dashboard-dark-mainpagefor-admin-body {
   top: 59px;
   left: 0px;
   width: 100%;
@@ -188,7 +188,7 @@
   align-items: flex-start;
   flex-shrink: 0;
   background-image: linear-gradient(180deg, rgba(13, 13, 13, 1) 0%, rgba(61, 25, 1, 1) 100%);
-}
+} */
 .dashboard-dark-mainpagefor-admin-teams-widget {
   top: 550px;
   left: 479px;
