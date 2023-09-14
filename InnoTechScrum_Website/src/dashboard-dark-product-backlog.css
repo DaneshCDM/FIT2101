@@ -1,15 +1,16 @@
 .dashboard-dark-product-backlog-container {
   width: 100%;
-  display: flex;
+  /* display: flex; */
   overflow: hidden;
   min-height: 100vh;
+  /* max-height: none; */
   align-items: center;
   flex-direction: column;
   justify-content: center;
 }
 .dashboard-dark-product-backlog-dashboard-dark-product-backlog {
   width: 100%;
-  height: 850px;
+  height: 100%;
   display: flex;
   overflow: hidden;
   align-items: flex-start;
@@ -173,7 +174,7 @@
   height: 25px;
   position: absolute;
 }
-.dashboard-dark-product-backlog-body {
+/* .dashboard-dark-product-backlog-body {
   width: 100%;
   height: 790px;
   display: flex;
@@ -183,7 +184,7 @@
   align-items: flex-start;
   flex-shrink: 0;
   background-image: linear-gradient(180deg, rgba(13, 13, 13, 1) 0%, rgba(61, 25, 1, 1) 100%);
-}
+} */
 .dashboard-dark-product-backlog-searhbarfliter {
   top: 214px;
   left: 106px;
