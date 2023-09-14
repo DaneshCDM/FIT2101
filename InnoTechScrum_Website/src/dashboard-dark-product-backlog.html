@@ -30,7 +30,7 @@
         letter-spacing: normal;
         line-height: 1.15;
         color: var(--dl-color-gray-black);
-        background-color: var(--dl-color-gray-white);
+        background-image: linear-gradient(180deg, rgba(13, 13, 13, 1) 0%, rgba(61, 25, 1, 1) 100%)
 
       }
     </style>
@@ -109,7 +109,7 @@
   <body>
     <div>
       <link href="./dashboard-dark-product-backlog.css" rel="stylesheet" />
-
+      
       <div class="dashboard-dark-product-backlog-container">
         <div
           class="dashboard-dark-product-backlog-dashboard-dark-product-backlog"
@@ -147,8 +147,11 @@
             </div>
             <div class="dashboard-dark-product-backlog-dashboard-home-page">
               <span class="dashboard-dark-product-backlog-text02">
+              <a
+                href="dashboard-dark-mainpage-admin.html"
+                class="dashboard-dark-product-backlog-text02">
                 <span>Dashboard</span>
-              </span>
+              </a>
             </div>
             <div class="dashboard-dark-product-backlog-project-backlogpage">
               <span class="dashboard-dark-product-backlog-text04">
@@ -182,6 +185,7 @@
               <span class="dashboard-dark-product-backlog-text08">
                 <form>
                   <input type = "text" id = "search_text" placeholder="Search here">
+                  <button type="submit" id="search"style="background-color: rgb(233, 16, 16); color: rgb(255, 255, 255); height:20px;width:50px">Search</button>
                 </form>
               </span>
               <img
@@ -228,14 +232,7 @@
             <span class="dashboard-dark-product-backlog-text14">
               <span>Task 4</span>
             </span>
-            <div class="dashboard-dark-product-backlog-story-point">
-              <img
-                alt="DropDownArrow4153"
-                src="public/external/dropdownarrow4153-o36a.svg"
-                class="dashboard-dark-product-backlog-drop-down-arrow"
-              />
-              <span class="dashboard-dark-product-backlog-text16">9</span>
-            </div>
+            
             <div class="dashboard-dark-product-backlog-status">
               <img
                 alt="DropDownArrow4153"
@@ -256,13 +253,35 @@
             <span class="dashboard-dark-product-backlog-text21">
               <span>Task 3</span>
             </span>
+            <div class="dashboard-dark-product-backlog-story-point">
+              <select id = 'storypoint'>
+                <option value = "1">1</option>
+                <option value = "2">2</option>
+                <option value = "3">3</option>
+                <option value = "4">4</option>
+                <option value = "5">5</option>
+                <option value = "6">6</option>
+                <option value = "7">7</option>
+                <option value = "8">8</option>
+                <option value = "9">9</option>
+                <option value = "10">10</option>
+              </select>
+              <span class="dashboard-dark-product-backlog-text16"></span>
+            </div>
             <div class="dashboard-dark-product-backlog-story-point1">
-              <img
-                alt="DropDownArrow4153"
-                src="public/external/dropdownarrow4153-w5wp.svg"
-                class="dashboard-dark-product-backlog-drop-down-arrow2"
-              />
-              <span class="dashboard-dark-product-backlog-text23">9</span>
+              <select id = 'storypoint'>
+                <option value = "1">1</option>
+                <option value = "2">2</option>
+                <option value = "3">3</option>
+                <option value = "4">4</option>
+                <option value = "5">5</option>
+                <option value = "6">6</option>
+                <option value = "7">7</option>
+                <option value = "8">8</option>
+                <option value = "9">9</option>
+                <option value = "10">10</option>
+              </select>
+              <span class="dashboard-dark-product-backlog-text23"></span>
             </div>
             <div class="dashboard-dark-product-backlog-status1">
               <img
@@ -310,12 +329,19 @@
               <span>Task 2</span>
             </span>
             <div class="dashboard-dark-product-backlog-story-point2">
-              <img
-                alt="DropDownArrow4153"
-                src="public/external/dropdownarrow4153-msa8.svg"
-                class="dashboard-dark-product-backlog-drop-down-arrow4"
-              />
-              <span class="dashboard-dark-product-backlog-text30">9</span>
+              <select id = 'storypoint'>
+                <option value = "1">1</option>
+                <option value = "2">2</option>
+                <option value = "3">3</option>
+                <option value = "4">4</option>
+                <option value = "5">5</option>
+                <option value = "6">6</option>
+                <option value = "7">7</option>
+                <option value = "8">8</option>
+                <option value = "9">9</option>
+                <option value = "10">10</option>
+              </select>
+              <span class="dashboard-dark-product-backlog-text30"></span>
             </div>
             <div class="dashboard-dark-product-backlog-status2">
               <img
@@ -338,13 +364,20 @@
               <span>Task 1</span>
             </span>
             <div class="dashboard-dark-product-backlog-story-point3">
-              <img
-                alt="DropDownArrow4153"
-                src="public/external/dropdownarrow4153-3ob.svg"
-                class="dashboard-dark-product-backlog-drop-down-arrow6"
-              />
+              <select id = 'storypoint'>
+                <option value = "1">1</option>
+                <option value = "2">2</option>
+                <option value = "3">3</option>
+                <option value = "4">4</option>
+                <option value = "5">5</option>
+                <option value = "6">6</option>
+                <option value = "7">7</option>
+                <option value = "8">8</option>
+                <option value = "9">9</option>
+                <option value = "10">10</option>
+              </select>
               <span class="dashboard-dark-product-backlog-text37">
-                <span>10</span>
+                <span></span>
               </span>
             </div>
             <div class="dashboard-dark-product-backlog-status3">
@@ -454,16 +487,17 @@
             src="public/external/flagiconicons34963-zeft-200h.png"
             class="dashboard-dark-product-backlog-flagiconicons3"
           />
-
-          <table id=" dataTable">
+        </div>
+        <!-- <table id = "TaskTable">
             <tr>
-              <th>  </th>
+              <th></th>
               <th>Tasks</th>
               <th>Story Point</th>
               <th>Progress</th>
+              <th></th>
+              <th>Assign Member</th>
             </tr>
-          </table>
-        </div>
+        </table> -->
       </div>
     </div>
     <!--<script src="index.js"></script>Import error line 2 index.js-->
@@ -490,3 +524,55 @@
     </script>
   </body>
 </html>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-analytics.js";
+  import { getDatabase, ref, set, push, child, onValue } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-database.js";
+  
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCghK_Zy_3Enmz0RJ9pvAxZfWxUYQp-InQ",
+    authDomain: "innotechscrum.firebaseapp.com",
+    databaseURL: "https://innotechscrum-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "innotechscrum",
+    storageBucket: "innotechscrum.appspot.com",
+    messagingSenderId: "365889461120",
+    appId: "1:365889461120:web:42e3ff55449d78b148bf65",
+    measurementId: "G-435J39SW2R"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const database = getDatabase(app);
+
+  search.addEventListener('click',(e)=>{
+    const recentPostsRef = query(ref(db, 'posts'), limitToFirst(4));
+
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("search_text");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("TaskTable");
+    tr = table.getElementsByTagName("tr");
+
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  })
+  
+</script>
