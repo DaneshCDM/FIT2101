@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="english">
   <head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>exported project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
@@ -176,26 +177,29 @@
               class="dashboard-dark-pop-up-add-task-product-backlog-flagiconicons7"
             />
           </div>
-          <div
-            class="dashboard-dark-pop-up-add-task-product-backlog-create-task"
-          >
+          <div class="dashboard-dark-pop-up-add-task-product-backlog-create-task">
             <div class="dashboard-dark-pop-up-add-task-product-backlog-group1">
-              <a href="dashboard-dark-product-backlog.html">
-                  <span
-                    class="dashboard-dark-pop-up-add-task-product-backlog-text16"
-                  >
-                    <button type="submit" class = "btn" onclick="closePopUp()"></button>
-                      <span>Create Task</span>
-                    </button>
-                  </span>
-              </a>
+              <!-- <a href="dashboard-dark-product-backlog.html"> -->
+              <span class="dashboard-dark-pop-up-add-task-product-backlog-text16"> 
+                <!-- <button id="btnAddTaskClose" type="submit" class = "close" data-bs-dismiss="modal" aria-label="close"></button> -->
+                <!-- <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                <span class="close">&times;</span>
+                </button> -->
+              </span>
+              <span class="dashboard-dark-pop-up-add-task-product-backlog-text16"> 
+                <button id="btnAddTaskClose" type="submit" class = "close" data-bs-dismiss="modal" aria-label="close"></button>
+                  <span class="close">Create Task</span>
+              </span>
             </div>
           </div>
-          <div id="popup">
-            <h2>Pop-up Window</h2>
-            <p>This is a pop-up window.</p>
-            <button id="close-button" onclick="closePopUp()">Close</button>
-          </div> 
+          <div class="overlay" id="overlay">
+            <div class="popup" id="popup">
+              <h2>Pop-up Window</h2>
+              <p>This is a pop-up window.</p>
+              <button id="open-button" type="submit" class="btn" onclick="openPopUp()">Open</button>
+              <button id="close-button" onclick="closePopUp()">Close</button>
+            </div> 
+          </div>
           <img
             alt="DropDownArrow3733"
             src="public/external/dropdownarrow3733-cbq6.svg"
@@ -204,6 +208,15 @@
         </div>
       </div>
     </div>
+    <script>
+    //   $('#btnAddTaskClose').click(function() {
+    //     parent.$('#modelCase').modal('hide');
+    // });
+    //   window.parent.closeModal();
+    //   $('#modelCase').on('click', 'button.close', function (eventObject) {
+    //   $('#modelCase').modal('hide');
+    // });
+    </script>
     <script src="javaScript.js"></script>
   </body>
 </html>
