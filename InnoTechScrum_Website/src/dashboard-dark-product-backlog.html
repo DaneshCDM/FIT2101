@@ -185,7 +185,7 @@
               <span class="dashboard-dark-product-backlog-text08">
                 <form>
                   <input type = "text" id = "search_text" placeholder="Search here">
-                  <button type="submit" id="search"style="background-color: rgb(233, 16, 16); color: rgb(255, 255, 255); height:20px;width:50px">Search</button>
+                  <button type="submit" id="search" style="background-color: rgb(233, 16, 16); color: rgb(255, 255, 255); height:20px;width:50px">Search</button>
                 </form>
               </span>
               <img
@@ -590,9 +590,7 @@
   // })
 
 
-  // Retrieving the Live Table (Firebase)
-  refreshData.addEventListener('click', (e) => {
-
+  function filterData(searchText) {
     $("#dataTable td").remove();
 
     const dbRef = ref(database, 'product-backlog-tasks/');
@@ -601,21 +599,32 @@
       snapshot.forEach((childSnapshot) => {
         const childKey = childSnapshot.key;
         const childData = childSnapshot.val();
-        // ...
 
-        var row = "<tr><td>" + childData.Task_Name + "</td><td>" + 
-        childData.Story_Points + "</td><td>" + 
-        childData.Progress + "</td><td>" + 
-        childData.Tag + "</td><td>" +
-        childData.Assign_Member + "</td></tr>"
+        // Check if the Task_Name contains the search text
+        if (childData.Task_Name.toLowerCase().includes(searchText.toLowerCase())) {
+          var row = "<tr><td>" + childData.Task_Name + "</td><td>" + 
+            childData.Story_Points + "</td><td>" + 
+            childData.Progress + "</td><td>" + 
+            childData.Tag + "</td><td>" +
+            childData.Assign_Member + "</td></tr>";
 
-        $(row).appendTo('#dataTable');
-
+          $(row).appendTo('#dataTable');
+        }
       });
-    }, {
-      onlyOnce: true
     });
+  }
 
+  // Event listener for the search button
+  $("#search").click(function (e) {
+    e.preventDefault(); // Prevent form submission
+    const searchText = $("#search_text").val();
+    filterData(searchText);
+  });
+
+  // Initial data load (you can keep this if needed)
+  refreshData.addEventListener('click', (e) => {
+    const searchText = $("#search_text").val(); // Get the current search text
+    filterData(searchText); // Filter data based on the search text
     alert('Data Refreshed');
   });
 </script>
