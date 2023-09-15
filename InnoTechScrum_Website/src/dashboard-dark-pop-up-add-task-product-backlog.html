@@ -2,6 +2,8 @@
 <html lang="english">
   <head>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     <title>exported project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
@@ -187,16 +189,26 @@
           <div class="dashboard-dark-pop-up-add-task-product-backlog-create-task" id = "submitbtn">
             <div class="dashboard-dark-pop-up-add-task-product-backlog-group1">
               <!-- <a href="dashboard-dark-product-backlog.html"> -->
-              <span class="dashboard-dark-pop-up-add-task-product-backlog-text16"> 
-                <!-- <button id="btnAddTaskClose" type="submit" class = "close" data-bs-dismiss="modal" aria-label="close"></button> -->
-                <!-- <button type="button" class="close" data-dismiss="modal" aria-label="close">
-                <span class="close">&times;</span>
-                </button> -->
-              </span>
+              <!-- <a href="dashboard-dark-product-backlog.html" class="close"data-bs-dismiss="modal" aria-label="close"data-toggle="modal" data-target="#modalCase" onclick="closeWindow(event);"> -->
+                <!-- <span class="dashboard-dark-pop-up-add-task-product-backlog-text16"> -->
+                  <!--<button id="btnModal" type="button" class = "close" data-dismiss="modal" aria-label="close"onclick="window.parent.closeModal();"></button>-->
+                  <!-- <button id="btnAddTaskClose" type="submit" class = "close" onclick="closeModalAndIframe"></button> -->
+                  <!-- <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                  <span class="close">&times;</span>
+                  </button> -->
+                    <!--<span class="close">Create Task</span>
+                  </button>
+                  </span> --> 
+              <a href="#" class="close" data-bs-dismiss="modal" aria-label="close" onclick="closeModal">
               <span class="dashboard-dark-pop-up-add-task-product-backlog-text16"> 
                 <button id="btnAddTaskClose" type="submit" class = "close" data-bs-dismiss="modal" aria-label="close"></button>
                   <span class="close">Create Task</span>
               </span>
+              </a>
+              <!-- <span class="dashboard-dark-pop-up-add-task-product-backlog-text16"> 
+                <button id="btnAddTaskClose" type="submit" class = "close" data-bs-dismiss="modal" aria-label="close" onclick="closeModal()"></button>
+                  <span class="close">Create Task</span>
+              </span> -->
             </div>
           </div>
           <div class="overlay" id="overlay">
@@ -245,10 +257,18 @@
         </div>
       </div>
     </div>
+    <script type="text/javascript">
+ 
+      function closeWindow(e)
+      {
+          this.parent.$("#Window").data("tWindow").close();
+      }
+       
+    </script>
     <script>
-      $('#btnAddTaskClose').click(function() {
-        parent.$('#modelCase').modal('hide');
-    });
+    //   $('#btnAddTaskClose').click(function() {
+    //     parent.$('#modelCase').modal('hide');
+    // });
     //   window.parent.closeModal();
     //   $('#modelCase').on('click', 'button.close', function (eventObject) {
     //   $('#modelCase').modal('hide');

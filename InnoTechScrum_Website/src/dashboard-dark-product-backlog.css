@@ -1058,6 +1058,7 @@ select option {
   z-index: 3; 
 } */
 .modal{
+  display: fixed;
   position: fixed;
   width: 100%; height: 100%;
   justify-content: center;

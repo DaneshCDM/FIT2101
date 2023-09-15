@@ -109,23 +109,75 @@ function chooseStorypoint(){
 //   $('modalCase').modal('show');
 
 // }
+function modal(){
+    // Get the modal
+  var modal = document.getElementById("modalCase");
+
+  // Get the button that opens the modal
+  var btn = document.getElementById("btnModal");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks on the button, open the modal
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+}
 // function callCloseModal(){
+//   $('#modalCase').modal('hide');
+//   var modal = document.getElementById("modalCase");
+//   var iframe = document.getElementById("taskIFrame");
 //   modal.style.display="none";
+//   iframe.style.display="none";
+//   iframe.remove();
 // }
 // function closeModal(){
 //   //Data
 //   var modal = document.getElementById("modalCase");
-//   var closeButton=document.getElementsByClassName("close")[0];
+//   var closeButton=document.getElementsByClassName("close");
+//   var iframe = document.getElementById("taskIFrame");
+//   //iframe.style.display = 'none';
 //   for(let closeBtn of closeButton){
 //     closeBtn.onclick =callCloseModal;
 //   }
-//   console.log('closeModal function called');
-//   $('#modalCase').modal('hide');
+//   // console.log('closeModal function called');
+//   // $('#modalCase').modal('hide');
 //   // closeButton.onclik=function(){
 //   //   modal.style.display="none";
 //   //   $('#modalCase').modal('hide');
 //   // }
 // }
-// window.closeModal = function(){
-//   parent.$('#modelCase').modal('hide');
-// };
+window.closeModal = function(){
+  parent.$('#taskIFrame').modal('hide');
+};
+// function closeModalAndIframe() {
+//   // Close the modal containing the iframe
+//   $('#modalCase').modal('hide');
+  
+//   // Hide or remove the iframe
+//   var iframe = document.getElementById('taskIFrame');
+//   iframe.style.display = 'none'; // or iframe.remove() to completely remove it
+//   //iframe.remove();
+// }
+// function closeWindow(){
+//   window.close();
+//   $("#modalCase").modal("hide");
+  
+//   // Hide or remove the iframe
+//   var iframe = document.getElementById("taskIFrame");
+//   iframe.style.display = 'none'; // or iframe.remove() to completely remove it
+//   //iframe.remove();
+// }
