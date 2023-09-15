@@ -299,6 +299,7 @@
     var Story_Points = document.getElementById('Story_Points_text').value;
     var Tag = document.getElementById('Tag_text').value;
     var Progress = document.getElementById('progress').value;
+    var Priority = document.getElementById('priority').value;
 
     const userId = push(child(ref(database), 'product-backlog-tasks')).key;
 
@@ -307,7 +308,8 @@
       Assign_Member: Assign_Member,
       Story_Points: Story_Points,
       Tag: Tag,
-      Progress: Progress
+      Progress: Progress,
+      Priority: Priority
     });
 
     alert('Task Added to Product Backlog');
