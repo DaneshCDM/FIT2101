@@ -506,6 +506,7 @@
           <table id = "dataTable", style ="height: 320px; overflow-y: scroll;">
             <thead> 
               <th>Tasks</th>
+              <th>Priority</th>
               <th>Story Points</th>
               <th>Progress</th>
               <th>Tag</th>
@@ -632,6 +633,7 @@ function filterData(searchText, sortBy) {
       // Iterate through the filtered data and append it to the table
       filteredData.forEach((childData) => {
         var row = "<tr><td>" + childData.Task_Name + "</td><td>" + 
+          childData.Priority + "</td><td>" +
           childData.Story_Points + "</td><td>" + 
           childData.Progress + "</td><td>" + 
           childData.Tag + "</td><td>" +
