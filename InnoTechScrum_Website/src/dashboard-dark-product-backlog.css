@@ -855,15 +855,15 @@
   flex-shrink: 1;
 }
 .dashboard-dark-product-backlog-linear-arrows-alt-arrow-right {
-  top: 0px;
-  left: 25px;
+  top: 20px;
+  left: 20px;
   width: 25px;
   height: 25px;
   position: absolute;
 }
 .dashboard-dark-product-backlog-linear-arrows-alt-arrow-left {
-  top: 0px;
-  left: 60px;
+  top: 20px;
+  left: 55px;
   width: 25px;
   height: 25px;
   position: absolute;
@@ -880,15 +880,15 @@
   flex-shrink: 1;
 }
 .dashboard-dark-product-backlog-linear-essentional-ui-add-circle {
-  top: 0px;
+  top: 20px;
   left: 87px;
   width: 30px;
   height: 30px;
   position: absolute;
 }
 .dashboard-dark-product-backlog-text45 {
-  top: 3px;
-  right: 10px;
+  top: 20px;
+  right: 12px;
   color: rgba(255, 255, 255, 1);
   height: auto;
   position: absolute;
@@ -1022,11 +1022,53 @@
   transform: translate(-50%, -50%) scale(1);
 }
 
-#TaskTable {
+/* .table-container {
+  height: 400px;
+  overflow-y: scroll;
+} */
+
+#dataTable {
   border-collapse: collapse; /* Collapse borders */
-  width: 100%; /* Full-width */
-  border: 1px solid #ddd; /* Add a grey border */
-  font-size: 18px; /* Increase font-size */
+  table-layout: fixed;
+  width: 80%; 
+  position: absolute;
+  /* position: sticky; */
+  top: 360px;
+  left: 50%; /* Center the table horizontally */
+  transform: translateX(-50%); /* Centering trick */
+
+}
+
+#dataTable tbody {
+  table-layout: fixed;
+  width: 100%;
+  height: 320px;
+  position: absolute;
+  overflow-y: scroll;
+  background-color: rgb(202, 84, 69);
+}
+
+#dataTable th {
+  font-style: bold;
+  font-size: 20px;
+  height: 90px;
+  text-align: center;
+  color: white; /* Change the text color to red */
+  background-color: rgb(116, 20, 7);  
+}
+
+#dataTable td {
+  height: 80px;
+  font-size: 20px;
+  text-align: center;
+  color: rgb(46, 9, 3); /* Change the text color to red */
+  background-color: rgb(202, 84, 69);
+}
+
+#dataTable tr {
+  width: 100%; /* Make sure table rows span the entire width */
+  display: table; /* Add this to ensure proper rendering */
+  table-layout: fixed; /* Necessary for fixed table layout */
 }
 
 select option {

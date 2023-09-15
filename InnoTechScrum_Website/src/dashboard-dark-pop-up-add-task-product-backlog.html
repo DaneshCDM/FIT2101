@@ -172,21 +172,27 @@
             </span>
           </div>
           <div class="dashboard-dark-pop-up-add-task-product-backlog-priority">
-            <img
+             <img
               alt="Rectangle76435"
               src="public/external/rectangle76435-exmp-200h.png"
               class="dashboard-dark-pop-up-add-task-product-backlog-rectangle7"
-            />
+            /> 
             <span class="dashboard-dark-pop-up-add-task-product-backlog-text14">
               <span>Priority:</span>
             </span>
-            <img
+            <select id = 'priority' style="position: absolute; top: 34px; left: 4px;">
+              <option value = "none">None</option>
+              <option value = "low">Low</option>
+              <option value = "medium">Medium</option>
+              <option value = "high">High</option>
+            </select>
+            <!-- <img
               alt="flagiconicons76435"
-              src="https://drive.google.com/uc?export=view&id=1LXCVbjyrlwY7e2JVYgleYTLvqCmM0-xg"
+              src="public/external/flagiconicons76435-w46d-200h.png"
               class="dashboard-dark-pop-up-add-task-product-backlog-flagiconicons7"
-            />
+            /> -->
           </div>
-          <div class="dashboard-dark-pop-up-add-task-product-backlog-create-task" id = "submitbtn">
+          <div class="dashboard-dark-pop-up-add-task-product-backlog-create-task", id = "submitbtn">
             <div class="dashboard-dark-pop-up-add-task-product-backlog-group1">
               <!-- <a href="dashboard-dark-product-backlog.html"> -->
               <!-- <a href="dashboard-dark-product-backlog.html" class="close"data-bs-dismiss="modal" aria-label="close"data-toggle="modal" data-target="#modalCase" onclick="closeWindow(event);"> -->
@@ -249,11 +255,11 @@
             <button id="close-button" onclick="closePopUp()">Close</button>
           </div>  -->
 
-          <img
+          <!-- <img
             alt="DropDownArrow3733"
             src="public/external/dropdownarrow3733-cbq6.svg"
             class="dashboard-dark-pop-up-add-task-product-backlog-drop-down-arrow"
-          />
+          /> -->
         </div>
       </div>
     </div>
@@ -313,6 +319,7 @@
     var Story_Points = document.getElementById('Story_Points_text').value;
     var Tag = document.getElementById('Tag_text').value;
     var Progress = document.getElementById('progress').value;
+    var Priority = document.getElementById('priority').value;
 
     const userId = push(child(ref(database), 'product-backlog-tasks')).key;
 
@@ -321,7 +328,8 @@
       Assign_Member: Assign_Member,
       Story_Points: Story_Points,
       Tag: Tag,
-      Progress: Progress
+      Progress: Progress,
+      Priority: Priority
     });
 
     alert('Task Added to Product Backlog');

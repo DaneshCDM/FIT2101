@@ -1,6 +1,6 @@
 .dashboard-dark-sprint-view-container {
   width: 100%;
-  display: flex;
+  /* display: flex; */
   overflow: auto;
   min-height: 100vh;
   align-items: center;
@@ -173,7 +173,7 @@
   height: 25px;
   position: absolute;
 }
-.dashboard-dark-sprint-view-body {
+/* .dashboard-dark-sprint-view-body {
   top: 59px;
   left: 0px;
   width: 100%;
@@ -184,7 +184,7 @@
   align-items: flex-start;
   flex-shrink: 0;
   background-image: linear-gradient(180deg, rgba(13, 13, 13, 1) 0%, rgba(61, 25, 1, 1) 100%);
-}
+} */
 .dashboard-dark-sprint-view-sprint-boardview {
   top: 145px;
   left: 70px;
