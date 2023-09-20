@@ -1,5 +1,7 @@
 /* Quick color choices */
 /* dark orange => linear-gradient(180deg, rgb(201, 61, 26) 0%, rgba(100, 20, 0) 100%); */
+
+/* Container formatting start */
 .dashboard-dark-pop-up-add-task-product-backlog-container {
   width: 100%;
   height: 100%;
@@ -28,6 +30,7 @@
   position: absolute;
   border-radius: 8px 8px 0 0;
 }
+
 .dashboard-dark-pop-up-add-task-product-backlog-text {
   top: 21px;
   left: 425px;
@@ -43,6 +46,9 @@
   font-stretch: normal;
   text-decoration: none;
 }
+/* Container formatting end */
+
+/* Task name start */
 .dashboard-dark-pop-up-add-task-product-backlog-task-name {
   top: 136px;
   left: 90px;
@@ -69,6 +75,9 @@
   font-stretch: normal;
   text-decoration: none;
 }
+/* Task name end */
+
+/* Assign member start */
 .dashboard-dark-pop-up-add-task-product-backlog-assign-member {
   top: 440px;
   left: 90px;
@@ -95,6 +104,9 @@
   font-stretch: normal;
   text-decoration: none;
 }
+/* Assign member end */
+
+/* Story points start */
 .dashboard-dark-pop-up-add-task-product-backlog-story-points {
   top: 136px;
   left: 480px;
@@ -121,11 +133,53 @@
   font-stretch: normal;
   text-decoration: none;
 }
+/* Story points end */
+
+/* Task stage start */
+.task-stage-text{
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  top: 108px;
+  left: 700px;
+  font-size: 16px;
+  font-style: SemiBold;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.task-stage{
+  top: 136px;
+  left: 700px;
+  width: 180px;
+  height: 42px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-image: linear-gradient(180deg, rgb(201, 61, 26) 0%, rgba(100, 20, 0) 100%);
+}
+.task-stage-selection{
+  top: 5px;
+  left: 26px;
+  height: 29px;
+  position: absolute;
+  font-size: 16px;
+  text-align: left;
+  font-family: Poppins;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+/* Task stage end */
+
+/* Task description start */
 .task-description{
   top: 220px;
   left: 90px;
   height: 180px;
-  width: 780px;
   display: flex;
   position: absolute;
   align-items: flex-start;
@@ -141,6 +195,9 @@
   font-stretch: normal;
   text-decoration: none;
 }
+/* Task description end */
+
+/* Task status start */
 .dashboard-dark-pop-up-add-task-product-backlog-default-task-status {
   top: 522px;
   left: 650px;
@@ -190,7 +247,9 @@
   font-stretch: normal;
   text-decoration: none;
 }
-/*Tags box */
+/* Task status end */
+
+/*Tags box start */
 .tags-text{
   color: rgba(255, 255, 255, 1);
   height: auto;
@@ -225,7 +284,7 @@
   width: 170px;
   text-align: left;
   font-family: Poppins;
-  font-size: 15px;
+  font-size: 16px;
   line-height: normal;
   font-stretch: normal;
   text-decoration: none;
@@ -267,7 +326,7 @@
   display: block;
   position:relative;
   font-family: Poppins;
-  font-size: 15px;
+  font-size: 16px;
   line-height: normal;
   font-stretch: normal;
   text-decoration: none;
@@ -276,21 +335,7 @@
 }
 /* Tags box end */
 
-.dashboard-dark-pop-up-add-task-product-backlog-text12 {
-  top: 8px;
-  color: rgba(0, 0, 0, 1);
-  width: 75px;
-  height: auto;
-  position: absolute;
-  font-size: 16px;
-  font-style: SemiBold;
-  text-align: center;
-  font-family: Poppins;
-  font-weight: 600;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
+/* Priority start */
 .dashboard-dark-pop-up-add-task-product-backlog-priority {
   top: 520px;
   left: 440px;
@@ -323,13 +368,9 @@
   font-stretch: normal;
   text-decoration: none;
 }
-/* .dashboard-dark-pop-up-add-task-product-backlog-flagiconicons7 {
-  top: 29px;
-  left: 9px;
-  width: 38px;
-  height: 29px;
-  position: absolute;
-} */
+/* Priority end */
+
+/* Create task start */
 .dashboard-dark-pop-up-add-task-product-backlog-create-task {
   top: 630px;
   left: 180px;
@@ -365,6 +406,8 @@
   font-stretch: normal;
   text-decoration: none;
 }
+/* Create task end */
+
 /* .dashboard-dark-pop-up-add-task-product-backlog-drop-down-arrow {
   top: 321px;
   left: 414px;
