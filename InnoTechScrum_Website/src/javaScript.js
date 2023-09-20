@@ -160,9 +160,9 @@ function chooseStorypoint(){
 //   //   $('#modalCase').modal('hide');
 //   // }
 // }
-window.closeModal = function(){
-  parent.$('#taskIFrame').modal('hide');
-};
+// window.closeModal = function(){
+//   parent.$('#taskIFrame').modal('hide');
+// };
 // function closeModalAndIframe() {
 //   // Close the modal containing the iframe
 //   $('#modalCase').modal('hide');

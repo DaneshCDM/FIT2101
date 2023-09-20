@@ -960,6 +960,7 @@
 }
 .dashboard-dark-sprint-view-text64 {
   top: 3px;
+  right: 30px;
   color: rgba(255, 255, 255, 1);
   height: auto;
   position: absolute;
@@ -997,4 +998,60 @@
   line-height: normal;
   font-stretch: normal;
   text-decoration: none;
+}
+.modal{
+  display: fixed;
+  position: fixed;
+  width: 100%; height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.modal-header{
+  display: block;
+  padding: 2px 16px;
+  background: transparent;
+  border: none;
+}
+.modal-body{
+  display: flex;
+  padding: 2px 16px;
+  width: 100%; height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.modal-content{
+  position: flex;
+  margin: auto;
+  bottom:20px;
+  right:300px;
+  padding: 20px;
+  height: 790px;/*535 cross|515 no cross*/
+  width: 1400px;/*1050 cross|1050 no cross*/
+  max-width: 200%; max-height: 200%;
+  background-color: transparent;
+  border: none; border-radius: 30px;
+  justify-content: center;
+  align-items: center;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+.modal-footer{
+  border: none;
+}
+.iframeTask{
+  width: 100%; height: 100%;
+  overflow: hidden;
+  border-radius: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.close{
+  color: #fff;
+  opacity: 1.5;
+}
+
+
+@keyframes animatetop {
+  from {top: -500px; opacity: 0}
+  to {top: 0; opacity: 1}
 }
