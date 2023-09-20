@@ -12,7 +12,7 @@
   justify-content: center;
 }
 .dashboard-dark-pop-up-add-task-product-backlog-dashboard-dark-popupfor-adding-task {
-  width: 1000px;
+  width: 900px;
   height: 700px;
   display: flex;
   overflow: hidden;
@@ -33,7 +33,7 @@
 
 .dashboard-dark-pop-up-add-task-product-backlog-text {
   top: 21px;
-  left: 425px;
+  left: 375px;
   color: rgba(255, 255, 255, 1);
   height: auto;
   position: absolute;
@@ -51,7 +51,7 @@
 /* Task name start */
 .dashboard-dark-pop-up-add-task-product-backlog-task-name {
   top: 136px;
-  left: 90px;
+  left: 55px;
   width: 350px;
   height: 40px;
   display: flex;
@@ -80,7 +80,7 @@
 /* Assign member start */
 .dashboard-dark-pop-up-add-task-product-backlog-assign-member {
   top: 440px;
-  left: 90px;
+  left: 55px;
   width: 780px;
   height: 40px;
   display: flex;
@@ -109,7 +109,7 @@
 /* Story points start */
 .dashboard-dark-pop-up-add-task-product-backlog-story-points {
   top: 136px;
-  left: 480px;
+  left: 445px;
   width: 180px;
   height: 40px;
   display: flex;
@@ -141,7 +141,7 @@
   height: auto;
   position: absolute;
   top: 108px;
-  left: 700px;
+  left: 665px;
   font-size: 16px;
   font-style: SemiBold;
   font-family: Poppins;
@@ -152,7 +152,7 @@
 }
 .task-stage{
   top: 136px;
-  left: 700px;
+  left: 665px;
   width: 180px;
   height: 42px;
   display: flex;
@@ -178,7 +178,7 @@
 /* Task description start */
 .task-description{
   top: 220px;
-  left: 90px;
+  left: 55px;
   height: 180px;
   display: flex;
   position: absolute;
@@ -200,7 +200,7 @@
 /* Task status start */
 .dashboard-dark-pop-up-add-task-product-backlog-default-task-status {
   top: 522px;
-  left: 650px;
+  left: 615px;
   width: 233px;
   height: 63px;
   display: flex;
@@ -255,7 +255,7 @@
   height: auto;
   position: absolute;
   top: 522px;
-  left: 90px;
+  left: 55px;
   font-size: 15px;
   font-style: SemiBold;
   font-family: Poppins;
@@ -267,7 +267,7 @@
 .add-tags {
   border-radius: 5px;
   top: 545px;
-  left: 90px;
+  left: 55px;
   width: 253px;
   height: 42px;
   position: absolute;
@@ -338,7 +338,7 @@
 /* Priority start */
 .dashboard-dark-pop-up-add-task-product-backlog-priority {
   top: 520px;
-  left: 440px;
+  left: 395px;
   width: 120px;
   height: 64px;
   display: flex;
@@ -349,7 +349,7 @@
 .dashboard-dark-pop-up-add-task-product-backlog-rectangle7 {
   top: 24px;
   left: 0px;
-  width: 120px;
+  width: 140px;
   height: 40px;
   position: absolute;
   border-radius: 3px;
@@ -373,7 +373,7 @@
 /* Create task start */
 .dashboard-dark-pop-up-add-task-product-backlog-create-task {
   top: 630px;
-  left: 180px;
+  left: 115px;
   width: 668px;
   height: 35px;
   display: flex;
