@@ -165,12 +165,25 @@
               <span>Default Task Status:</span>
             </span>
           </div>
-          <div class="dashboard-dark-pop-up-add-task-product-backlog-tag">
+          <!-- Add multiple tags -->
+          <span class="tags-text">Tags Selected:</span>
+          <div id="tag-list" class="add-tags" tabindex="100">
+            <span class="tag-anchor">Select Tags</span>
+            <ul class="task-tags">
+              <li><input type="checkbox" id="tag1" class="tag-checkbox" name="tag1" value="Frontend">Frontend</li>
+              <li><input type="checkbox" id="tag2" class="tag-checkbox" name="tag2" value="Backend">Backend</li>
+              <li><input type="checkbox" id="tag3" class="tag-checkbox" name="tag3" value="Database">Database</li>
+              <li><input type="checkbox" id="tag4" class="tag-checkbox" name="tag4" value="Framework">Framework</li>
+              <li><input type="checkbox" id="tag5" class="tag-checkbox" name="tag5" value="UI/UX">UI/UX</li>
+              <li><input type="checkbox" id="tag6" class="tag-checkbox" name="tag6" value="Testing">Testing</li>
+            </ul>
+          </div>
+          <!-- <div class="dashboard-dark-pop-up-add-task-product-backlog-tag">
             <span class="dashboard-dark-pop-up-add-task-product-backlog-text12">
               <input type = "text" id = "Tag_text" placeholder="Tag"
               style="background-color:white; color: black;">
             </span>
-          </div>
+          </div> -->
           <div class="dashboard-dark-pop-up-add-task-product-backlog-priority">
              <img
               alt="Rectangle76435"
@@ -205,7 +218,7 @@
                     <!--<span class="close">Create Task</span>
                   </button>
                   </span> --> 
-              <a href="#" class="close" data-bs-dismiss="modal" aria-label="close">
+              <a href="#" class="close" data-bs-dismiss="modal" aria-label="close" onclick="closeModal">
               <span class="dashboard-dark-pop-up-add-task-product-backlog-text16"> 
                 <button id="btnAddTaskClose" type="submit" class = "close" data-bs-dismiss="modal" aria-label="close"></button>
                   <span class="close">Create Task</span>
@@ -272,6 +285,15 @@
        
     </script>
     <script>
+      var checkList = document.getElementById('tag-list');
+      checkList.getElementsByClassName('tag-anchor')[0].onclick = function(evt) {
+      if (checkList.classList.contains('visible'))
+        checkList.classList.remove('visible');
+      else
+        checkList.classList.add('visible');
+      }
+    </script>
+    <script>
     //   $('#btnAddTaskClose').click(function() {
     //     parent.$('#modelCase').modal('hide');
     // });
@@ -317,10 +339,35 @@
     var Task_Name = document.getElementById('Task_Name_text').value;
     var Assign_Member = document.getElementById('Assign_Member_text').value; 
     var Story_Points = document.getElementById('Story_Points_text').value;
-    var Tag = document.getElementById('Tag_text').value;
+    var Tag1 = document.getElementById('tag1');
+    var Tag2 = document.getElementById('tag2');
+    var Tag3 = document.getElementById('tag3');
+    var Tag4 = document.getElementById('tag4');
+    var Tag5 = document.getElementById('tag5');
+    var Tag6 = document.getElementById('tag6');
     var Progress = document.getElementById('progress').value;
     var Priority = document.getElementById('priority').value;
 
+    var Tag = " ";
+    if (Tag1.checked){
+      Tag = Tag + Tag1.value + ", ";
+    }
+    if (Tag2.checked){
+      Tag = Tag + Tag2.value + ", ";
+    }
+    if (Tag3.checked){
+      Tag = Tag + Tag3.value + ", ";
+    }
+    if (Tag4.checked){
+      Tag = Tag + Tag4.value + ", ";
+    }
+    if (Tag5.checked){
+      Tag = Tag + Tag5.value + ", ";
+    }
+    if (Tag6.checked){
+      Tag = Tag + Tag6.value + ", ";
+    }
+    Tag = Tag.slice(0, -2);
     const userId = push(child(ref(database), 'product-backlog-tasks')).key;
 
     set(ref(database, 'product-backlog-tasks/' + userId), {
