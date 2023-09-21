@@ -129,21 +129,12 @@
               <span class="dashboard-dark-product-backlog-text">
                 <span>Theme:</span>
               </span>
-              <img
-                alt="Ellipse12557"
-                src="public/external/ellipse12557-bc39-200h.png"
-                class="dashboard-dark-product-backlog-ellipse1"
-              />
-              <img
-                alt="DarkTheme2557"
-                src="public/external/darktheme2557-x5ks.svg"
-                class="dashboard-dark-product-backlog-dark-theme"
-              />
-              <img
-                alt="LightTheme2558"
-                src="public/external/lighttheme2558-ktxp.svg"
-                class="dashboard-dark-product-backlog-light-theme"
-              />
+              <input id="darktheme" type="image" src="public/external/darktheme2557-x5ks.svg"
+              class="dashboard-dark-product-backlog-dark-theme"> 
+
+              <input id="newtheme" type="image" src="public/external/lighttheme2558-ktxp.svg"
+              class="dashboard-dark-product-backlog-light-theme"> 
+
             </div>
             <div class="dashboard-dark-product-backlog-dashboard-home-page">
               <span class="dashboard-dark-product-backlog-text02">
@@ -664,5 +655,27 @@ function filterData(searchText, sortBy) {
     const sortBy = $("#sort_by").val(); // Get the selected sorting option
     filterData(searchText, sortBy); // Filter and sort data based on search text and sorting option
     alert('Data Refreshed');
+  });
+</script>
+
+<script>
+  var darkThemeButton = document.getElementById("darktheme");
+  var newThemeButton = document.getElementById("newtheme");
+  var body = document.body;
+
+  newThemeButton.addEventListener("click", function() {
+    // Add a CSS class to change the background for dark theme
+    body.classList.add("dark-theme-background");
+    
+    // Remove the class for the other theme (if it was previously applied)
+    body.classList.remove("new-theme-background");
+  });
+
+  darkThemeButton.addEventListener("click", function(){
+    // Add a CSS class to change the background for new theme
+    body.classList.add("new-theme-background");
+    
+    // Remove the class for the other theme (if it was previously applied)
+    body.classList.remove("dark-theme-background");
   });
 </script>

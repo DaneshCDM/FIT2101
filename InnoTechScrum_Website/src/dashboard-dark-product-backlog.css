@@ -1146,6 +1146,16 @@ select option {
   opacity: 1.5;
 }
 
+body.dark-theme-background {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(13, 13, 13, 1) 100%);
+}
+
+body.dark-theme-background {
+  background-image: url(https://static.vecteezy.com/system/resources/previews/009/355/214/non_2x/new-design-of-malaysia-independence-day-malaysia-flag-with-abstract-brush-free-vector.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+
 
 @keyframes animatetop {
   from {top: -500px; opacity: 0}
