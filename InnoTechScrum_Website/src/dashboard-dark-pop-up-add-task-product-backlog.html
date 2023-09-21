@@ -363,6 +363,7 @@
     var Task_Stage = document.getElementById('task_stage_choice').value;
     var Progress = document.getElementById('progress').value;
     var Priority = document.getElementById('priority').value;
+    var date = Date();
 
     var Tag = " ";
     if (Tag1.checked){
@@ -393,6 +394,7 @@
       Tag: Tag,
       Progress: Progress,
       Priority: Priority,
+      date: date,
       Task_Description: Task_Description,
       Task_Stage: Task_Stage
     });
