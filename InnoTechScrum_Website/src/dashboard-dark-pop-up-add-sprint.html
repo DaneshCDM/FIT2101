@@ -134,12 +134,21 @@
               style="background-color: rgba(109, 21, 0, 1); color: rgba(255, 255, 255, 1);">
             </span>
           </div>
+
           <div class="dashboard-dark-pop-up-add-sprint-default-sprint-status">
             <div class="dashboard-dark-pop-up-add-sprint-default-task-status">
               <span class="dashboard-dark-pop-up-add-sprint-text08">
-                <span>Not Started</span>
+                <!-- <span>Not Started</span> -->
+                  <select id="SprintSta">
+                    <!-- option tag starts -->
+                        <option value="Not Started">Not Started</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Completed">Completed</option>
+                    <!-- option tag ends -->
+                  </select>
               </span>
             </div>
+            
             <span class="dashboard-dark-pop-up-add-sprint-text10">
               <span>Default Sprint Status:</span>
             </span>
@@ -152,9 +161,12 @@
           </span>
           <div class="dashboard-dark-pop-up-add-sprint-create-sprint">
             <div class="dashboard-dark-pop-up-add-sprint-group1">
-              <span class="dashboard-dark-pop-up-add-sprint-text16">
-                <span>Create Sprint</span>
-              </span>
+              <a href="#" class="close" data-bs-dismiss="modal" aria-label="close">
+                <span class="dashboard-dark-pop-up-add-sprint-text16">
+                  <button id="btnCreateSprint" type="submit" class = "close" data-bs-dismiss="modal" aria-label="close"></button>
+                  <span>Create Sprint</span>
+                </span>
+              </a>
             </div>
           </div>
           <div class="dashboard-dark-pop-up-add-sprint-calendar-enddate">

@@ -124,7 +124,7 @@
           <div class="dashboard-dark-pop-up-add-task-product-backlog-task-name">
             <span class="dashboard-dark-pop-up-add-task-product-backlog-text02">
               <input type = "text" id = "Task_Name_text" placeholder="Task Name"
-              style="background-color: white; color: black;">
+              style="background-color: white; color: black; width: 260px">
             </span>
           </div>
           <div
@@ -140,8 +140,22 @@
           >
             <span class="dashboard-dark-pop-up-add-task-product-backlog-text06">
               <input type = "text" id = "Story_Points_text" placeholder="Story Points (1 - 10)"
-              style="background-color:white; color: black;">
+              style="background-color:white; color: black; width: 160px;">
             </span>
+          </div>
+          <div class="task-description">
+            <input type = "text" class="task-description-text" id = "Task_Description_text" placeholder="Task Description"
+            style="background-color:white;color:black; height: 180px; width:780px">
+          </div>
+          <span class="task-stage-text">Task Stage:</span>
+          <div class="task-stage">
+            <select id = 'task_stage_choice' class="task-stage-selection">
+              <option value = "None">None</option>
+              <option value = "Planning">Planning</option>
+              <option value = "Development">Development</option>
+              <option value = "Testing">Testing</option>
+              <option value = "Integration">Integration</option>
+            </select>
           </div>
           <div
             class="dashboard-dark-pop-up-add-task-product-backlog-default-task-status"
@@ -165,12 +179,25 @@
               <span>Default Task Status:</span>
             </span>
           </div>
-          <div class="dashboard-dark-pop-up-add-task-product-backlog-tag">
+          <!-- Add multiple tags -->
+          <span class="tags-text">Tags Selected:</span>
+          <div id="tag-list" class="add-tags" tabindex="100">
+            <span class="tag-anchor">Select Tags</span>
+            <ul class="task-tags">
+              <li><input type="checkbox" id="tag1" class="tag-checkbox" name="tag1" value="Frontend">Frontend</li>
+              <li><input type="checkbox" id="tag2" class="tag-checkbox" name="tag2" value="Backend">Backend</li>
+              <li><input type="checkbox" id="tag3" class="tag-checkbox" name="tag3" value="Database">Database</li>
+              <li><input type="checkbox" id="tag4" class="tag-checkbox" name="tag4" value="Framework">Framework</li>
+              <li><input type="checkbox" id="tag5" class="tag-checkbox" name="tag5" value="UI/UX">UI/UX</li>
+              <li><input type="checkbox" id="tag6" class="tag-checkbox" name="tag6" value="Testing">Testing</li>
+            </ul>
+          </div>
+          <!-- <div class="dashboard-dark-pop-up-add-task-product-backlog-tag">
             <span class="dashboard-dark-pop-up-add-task-product-backlog-text12">
               <input type = "text" id = "Tag_text" placeholder="Tag"
               style="background-color:white; color: black;">
             </span>
-          </div>
+          </div> -->
           <div class="dashboard-dark-pop-up-add-task-product-backlog-priority">
              <img
               alt="Rectangle76435"
@@ -180,11 +207,11 @@
             <span class="dashboard-dark-pop-up-add-task-product-backlog-text14">
               <span>Priority:</span>
             </span>
-            <select id = 'priority' style="position: absolute; top: 34px; left: 4px;">
-              <option value = "none">None</option>
-              <option value = "low">Low</option>
-              <option value = "medium">Medium</option>
-              <option value = "high">High</option>
+            <select id = 'priority' style="position: absolute; top: 30px; left: 18px; height: 24px;">
+              <option value = "Low">Low</option>
+              <option value = "Medium">Medium</option>
+              <option value = "Important">Important</option>
+              <option value = "Urgent">Urgent</option>
             </select>
             <!-- <img
               alt="flagiconicons76435"
@@ -272,6 +299,15 @@
        
     </script>
     <script>
+      var checkList = document.getElementById('tag-list');
+      checkList.getElementsByClassName('tag-anchor')[0].onclick = function(evt) {
+      if (checkList.classList.contains('visible'))
+        checkList.classList.remove('visible');
+      else
+        checkList.classList.add('visible');
+      }
+    </script>
+    <script>
     //   $('#btnAddTaskClose').click(function() {
     //     parent.$('#modelCase').modal('hide');
     // });
@@ -317,10 +353,37 @@
     var Task_Name = document.getElementById('Task_Name_text').value;
     var Assign_Member = document.getElementById('Assign_Member_text').value; 
     var Story_Points = document.getElementById('Story_Points_text').value;
-    var Tag = document.getElementById('Tag_text').value;
+    var Task_Description = document.getElementById('Task_Description_text').value
+    var Tag1 = document.getElementById('tag1');
+    var Tag2 = document.getElementById('tag2');
+    var Tag3 = document.getElementById('tag3');
+    var Tag4 = document.getElementById('tag4');
+    var Tag5 = document.getElementById('tag5');
+    var Tag6 = document.getElementById('tag6');
+    var Task_Stage = document.getElementById('task_stage_choice').value;
     var Progress = document.getElementById('progress').value;
     var Priority = document.getElementById('priority').value;
 
+    var Tag = " ";
+    if (Tag1.checked){
+      Tag = Tag + Tag1.value + ", ";
+    }
+    if (Tag2.checked){
+      Tag = Tag + Tag2.value + ", ";
+    }
+    if (Tag3.checked){
+      Tag = Tag + Tag3.value + ", ";
+    }
+    if (Tag4.checked){
+      Tag = Tag + Tag4.value + ", ";
+    }
+    if (Tag5.checked){
+      Tag = Tag + Tag5.value + ", ";
+    }
+    if (Tag6.checked){
+      Tag = Tag + Tag6.value + ", ";
+    }
+    Tag = Tag.slice(0, -2);
     const userId = push(child(ref(database), 'product-backlog-tasks')).key;
 
     set(ref(database, 'product-backlog-tasks/' + userId), {
@@ -329,7 +392,9 @@
       Story_Points: Story_Points,
       Tag: Tag,
       Progress: Progress,
-      Priority: Priority
+      Priority: Priority,
+      Task_Description: Task_Description,
+      Task_Stage: Task_Stage
     });
 
     alert('Task Added to Product Backlog');
