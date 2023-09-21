@@ -24,7 +24,6 @@
         line-height: 1.15;
         color: var(--dl-color-gray-black);
         background-image: linear-gradient(180deg, rgba(13, 13, 13, 1) 0%, rgba(61, 25, 1, 1) 100%)
-
       }
     </style>
     <link
@@ -122,21 +121,13 @@
               <span class="dashboard-dark-mainpagefor-admin-text">
                 <span>Theme:</span>
               </span>
-              <img
-                alt="Ellipse12083"
-                src="public/external/ellipse12083-v528-200h.png"
-                class="dashboard-dark-mainpagefor-admin-ellipse1"
-              />
-              <img
-                alt="DarkTheme2083"
-                src="public/external/darktheme2083-4vir.svg"
-                class="dashboard-dark-mainpagefor-admin-dark-theme"
-              />
-              <img
-                alt="LightTheme2083"
-                src="public/external/lighttheme2083-u9qm.svg"
-                class="dashboard-dark-mainpagefor-admin-light-theme"
-              />
+              <input id="darktheme" type="image" src="public/external/darktheme2083-4vir.svg"
+              class="dashboard-dark-mainpagefor-admin-dark-theme"> 
+
+              <input id="newtheme" type="image" src="public/external/lighttheme2083-u9qm.svg"
+              class="dashboard-dark-mainpagefor-admin-light-theme"> 
+              
+            
             </div>
             <div class="dashboard-dark-mainpagefor-admin-dashboard-home-page">
               <span class="dashboard-dark-mainpagefor-admin-text02">
@@ -286,5 +277,26 @@
         </div>
       </div>
     </div>
+    <script>
+      var darkThemeButton = document.getElementById("darktheme");
+      var newThemeButton = document.getElementById("newtheme");
+      var body = document.body;
+
+      newThemeButton.addEventListener("click", function() {
+        // Add a CSS class to change the background for dark theme
+        body.classList.add("dark-theme-background");
+        
+        // Remove the class for the other theme (if it was previously applied)
+        body.classList.remove("new-theme-background");
+      });
+
+      darkThemeButton.addEventListener("click", function(){
+        // Add a CSS class to change the background for new theme
+        body.classList.add("new-theme-background");
+        
+        // Remove the class for the other theme (if it was previously applied)
+        body.classList.remove("dark-theme-background");
+      });
+    </script>
   </body>
 </html>
