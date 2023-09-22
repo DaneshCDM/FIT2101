@@ -665,8 +665,27 @@ function filterData(searchText, sortBy) {
           childData.Tag + "</td>";
         $(row).appendTo('#dataTable');
       });
+      changeTdColor();
     });
   }
+
+  // function f_color() {
+
+  // if (document.getElementById('Priority').innerHTML  == 'Low') { 
+  //   document.getElementById('Priority').style.color = "Green";
+  // }
+  // else if (document.getElementById('Priority').innerHTML == 'Medium') {
+  //   document.getElementById('Priority').style.color = "Orange";
+  // }
+  // else if (document.getElementById('Priority').innerHTML == 'Important'){
+  //   document.getElementById('Priority').style.color = "Yellow";
+  // }
+  // else if (document.getElementById('Priority').innerHTML == 'Urgent') {
+  //   document.getElementById('Priority').style.color = "Red";
+  // }
+  // };
+
+  //   f_color();
 
   // Event listener for the search button
   $("#search").click(function (e) {
