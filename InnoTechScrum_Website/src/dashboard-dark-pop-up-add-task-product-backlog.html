@@ -157,6 +157,14 @@
               <option value = "Integration">Integration</option>
             </select>
           </div>
+          <span class="task-type-text">Task Type:</span>
+          <div class="task-type">
+            <select id = 'task_type_choice' class="task-type-selection">
+              <option value = "None">None</option>
+              <option value = "Story">Story</option>
+              <option value = "Bug">Bug</option>
+            </select>
+          </div>
           <div
             class="dashboard-dark-pop-up-add-task-product-backlog-default-task-status"
           >
@@ -363,6 +371,7 @@
     var Task_Stage = document.getElementById('task_stage_choice').value;
     var Progress = document.getElementById('progress').value;
     var Priority = document.getElementById('priority').value;
+    var Task_Type = document.getElementById('task_type_choice').value;
     var date = Date();
 
     var Tag = " ";
@@ -396,7 +405,8 @@
       Priority: Priority,
       date: date,
       Task_Description: Task_Description,
-      Task_Stage: Task_Stage
+      Task_Stage: Task_Stage,
+      Task_Type: Task_Type
     });
 
     alert('Task Added to Product Backlog');

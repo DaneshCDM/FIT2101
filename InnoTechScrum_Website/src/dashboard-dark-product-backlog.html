@@ -510,9 +510,8 @@
               <th>Tasks</th>
               <th>Priority</th>
               <th>Story Points</th>
-              <th>Progress</th>
+              <th>Task Type</th>
               <th>Tag</th>
-              <th>Assigned Member</th>
             </thead>
             <tbody>
             </tbody>
@@ -649,9 +648,8 @@ function filterData(searchText, sortBy) {
         var row = "<tr><td>" + childData.Task_Name + "</td><td>" + 
           childData.Priority + "</td><td>" +
           childData.Story_Points + "</td><td>" + 
-          childData.Progress + "</td><td>" + 
-          childData.Tag + "</td><td>" +
-          childData.Assign_Member + "</td></tr>";
+          childData.Task_Type + "</td><td>" + 
+          childData.Tag + "</td>";
 
         $(row).appendTo('#dataTable');
       });
