@@ -24,9 +24,9 @@
   position: top;
   /* align-items: flex-start; */
   flex-shrink: 0;
-  border-color: rgba(231, 231, 231, 1);
+  /* border-color: rgba(231, 231, 231, 1);
   border-style: solid;
-  border-width: 0 0 1px;
+  border-width: 0 0 1px; */
   background-color: rgba(0, 0, 0, 1);
 }
 .dashboard-dark-product-backlog-logo {
@@ -869,9 +869,9 @@
   position: absolute;
 }
 .dashboard-dark-product-backlog-add-task {
-  top: 755px;
-  left: 1202px;
-  width: 117px;
+  top: 757px;
+  left: 1215px;
+  width: 125px;
   height: 30px;
   display: flex;
   z-index: 14;
@@ -880,15 +880,15 @@
   flex-shrink: 1;
 }
 .dashboard-dark-product-backlog-linear-essentional-ui-add-circle {
-  top: 20px;
-  left: 87px;
+  top: 28px;
+  left: 90px;
   width: 30px;
   height: 30px;
   position: absolute;
 }
 .dashboard-dark-product-backlog-text45 {
-  top: 20px;
-  right: 12px;
+  top: 28px;
+  right: 17px;
   color: rgba(255, 255, 255, 1);
   height: auto;
   position: absolute;
@@ -902,7 +902,6 @@
   text-decoration: none;
   padding-right: 20px;
   max-width: 100ch;
-
 }
 .dashboard-dark-product-backlog-image1 {
   top: 358px;
