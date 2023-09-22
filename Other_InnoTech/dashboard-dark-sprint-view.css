@@ -1,6 +1,6 @@
 .dashboard-dark-sprint-view-container {
   width: 100%;
-  /* display: flex; */
+  display: flex;
   overflow: auto;
   min-height: 100vh;
   align-items: center;
@@ -173,7 +173,7 @@
   height: 25px;
   position: absolute;
 }
-/* .dashboard-dark-sprint-view-body {
+.dashboard-dark-sprint-view-body {
   top: 59px;
   left: 0px;
   width: 100%;
@@ -184,7 +184,7 @@
   align-items: flex-start;
   flex-shrink: 0;
   background-image: linear-gradient(180deg, rgba(13, 13, 13, 1) 0%, rgba(61, 25, 1, 1) 100%);
-} */
+}
 .dashboard-dark-sprint-view-sprint-boardview {
   top: 145px;
   left: 70px;
@@ -391,8 +391,8 @@
   flex-shrink: 1;
 }
 .dashboard-dark-sprint-view-drop-down-arrow1 {
-  top: 10px;
-  left: 107px;
+  top: 5px;
+  right: 0px;
   width: 13px;
   height: 13px;
   position: absolute;
@@ -421,9 +421,9 @@
   flex-shrink: 1;
 }
 .dashboard-dark-sprint-view-linear-essentional-ui-add-circle {
-  top: 21.21320343017578px;
-  left: 95.78679656982422px;
+  right: 15px;
   width: 30px;
+  bottom: 6px;
   height: 30px;
   position: absolute;
 }
@@ -491,8 +491,8 @@
   flex-shrink: 1;
 }
 .dashboard-dark-sprint-view-drop-down-arrow2 {
-  top: 10px;
-  left: 108px;
+  top: 5px;
+  right: 0px;
   width: 13px;
   height: 13px;
   position: absolute;
@@ -521,9 +521,9 @@
   flex-shrink: 1;
 }
 .dashboard-dark-sprint-view-linear-essentional-ui-add-circle1 {
-  top: 21.21320343017578px;
-  left: 95.78662109375px;
+  right: 13px;
   width: 30px;
+  bottom: 5px;
   height: 30px;
   position: absolute;
 }
@@ -591,8 +591,8 @@
   flex-shrink: 1;
 }
 .dashboard-dark-sprint-view-drop-down-arrow3 {
-  top: 10px;
-  left: 108px;
+  top: 5px;
+  right: 0px;
   width: 13px;
   height: 13px;
   position: absolute;
@@ -691,8 +691,8 @@
   flex-shrink: 1;
 }
 .dashboard-dark-sprint-view-drop-down-arrow4 {
-  top: 10px;
-  left: 108px;
+  top: 5px;
+  right: 0px;
   width: 13px;
   height: 13px;
   position: absolute;
@@ -791,8 +791,8 @@
   flex-shrink: 1;
 }
 .dashboard-dark-sprint-view-drop-down-arrow5 {
-  top: 10px;
-  left: 108px;
+  top: 5px;
+  right: 0px;
   width: 13px;
   height: 13px;
   position: absolute;
@@ -891,8 +891,8 @@
   flex-shrink: 1;
 }
 .dashboard-dark-sprint-view-drop-down-arrow6 {
-  top: 10px;
-  left: 108px;
+  top: 5px;
+  right: 0px;
   width: 13px;
   height: 13px;
   position: absolute;
@@ -960,7 +960,6 @@
 }
 .dashboard-dark-sprint-view-text64 {
   top: 3px;
-  right: 30px;
   color: rgba(255, 255, 255, 1);
   height: auto;
   position: absolute;
@@ -998,112 +997,4 @@
   line-height: normal;
   font-stretch: normal;
   text-decoration: none;
-}
-
-#dataTable {
-  border-collapse: collapse; /* Collapse borders */
-  table-layout: fixed;
-  width: 80%; 
-  position: absolute;
-  /* position: sticky; */
-  top: 360px;
-  left: 50%; /* Center the table horizontally */
-  transform: translateX(-50%); /* Centering trick */
-
-}
-
-#dataTable tbody {
-  table-layout: fixed;
-  width: 100%;
-  height: 320px;
-  position: absolute;
-  overflow-y: scroll;
-  background-color: rgb(202, 84, 69);
-}
-
-#dataTable th {
-  font-style: bold;
-  font-size: 20px;
-  height: 90px;
-  text-align: center;
-  color: white; /* Change the text color to red */
-  background-color: rgb(116, 20, 7);  
-}
-
-#dataTable td {
-  height: 80px;
-  font-size: 20px;
-  text-align: center;
-  color: rgb(46, 9, 3); /* Change the text color to red */
-  background-color: rgb(202, 84, 69);
-}
-
-#dataTable tr {
-  width: 100%; /* Make sure table rows span the entire width */
-  display: table; /* Add this to ensure proper rendering */
-  table-layout: fixed; /* Necessary for fixed table layout */
-}
-
-select option {
-  margin: 40px;
-  background: rgba(0, 0, 0, 0.3);
-  color: #000000;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
-  font-size: 14px;
-}
-
-.modal{
-  display: fixed;
-  position: fixed;
-  width: 100%; height: 100%;
-  justify-content: center;
-  align-items: center;
-}
-.modal-header{
-  display: block;
-  padding: 2px 16px;
-  background: transparent;
-  border: none;
-}
-.modal-body{
-  display: flex;
-  padding: 2px 16px;
-  width: 100%; height: 100%;
-  justify-content: center;
-  align-items: center;
-}
-.modal-content{
-  position: flex;
-  margin: auto;
-  bottom:20px;
-
-  padding: 20px;
-  height: 790px;/*535 cross|515 no cross*/
-  width: 700px;/*1050 cross|1050 no cross 1400*/
-  max-width: 200%; max-height: 200%;
-  background-color: transparent;
-  border: none; border-radius: 30px;
-  justify-content: center;
-  align-items: center;
-  animation-name: animatetop;
-  animation-duration: 0.4s
-}
-.modal-footer{
-  border: none;
-}
-.iframeTask{
-  width: 100%; height: 100%;
-  overflow: hidden;
-  border-radius: 30px;
-  justify-content: center;
-  align-items: center;
-}
-.close{
-  color: #fff;
-  opacity: 1.5;
-}
-
-@keyframes animatetop {
-  from {top: -500px; opacity: 0}
-  to {top: 0; opacity: 1}
 }

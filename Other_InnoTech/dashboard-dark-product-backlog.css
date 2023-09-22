@@ -1,16 +1,15 @@
 .dashboard-dark-product-backlog-container {
   width: 100%;
-  /* display: flex; */
+  display: flex;
   overflow: hidden;
   min-height: 100vh;
-  /* max-height: none; */
   align-items: center;
   flex-direction: column;
   justify-content: center;
 }
 .dashboard-dark-product-backlog-dashboard-dark-product-backlog {
   width: 100%;
-  height: 100%;
+  height: 850px;
   display: flex;
   overflow: hidden;
   align-items: flex-start;
@@ -19,10 +18,10 @@
 .dashboard-dark-product-backlog-top-nevigation {
   width: 100%;
   height: 60px;
-  /* display: flex; */
+  display: flex;
   overflow: hidden;
-  position: top;
-  /* align-items: flex-start; */
+  position: relative;
+  align-items: flex-start;
   flex-shrink: 0;
   border-color: rgba(231, 231, 231, 1);
   border-style: solid;
@@ -174,7 +173,7 @@
   height: 25px;
   position: absolute;
 }
-/* .dashboard-dark-product-backlog-body {
+.dashboard-dark-product-backlog-body {
   width: 100%;
   height: 790px;
   display: flex;
@@ -184,10 +183,10 @@
   align-items: flex-start;
   flex-shrink: 0;
   background-image: linear-gradient(180deg, rgba(13, 13, 13, 1) 0%, rgba(61, 25, 1, 1) 100%);
-} */
+}
 .dashboard-dark-product-backlog-searhbarfliter {
-  top: 275px;
-  left: 155px;
+  top: 214px;
+  left: 106px;
   width: 315px;
   height: 34px;
   display: flex;
@@ -236,21 +235,18 @@
   height: 20px;
   position: absolute;
 }
-/* .dashboard-dark-product-backlog-sprint-boardview {
-  top: 100px;
-  left: 100px;
-  width: 300px;
-  height: 160px;
+.dashboard-dark-product-backlog-sprint-boardview {
+  width: 247px;
+  height: 154px;
   display: flex;
   z-index: 3;
   position: relative;
   align-items: flex-start;
   flex-shrink: 0;
-} */
+}
 .dashboard-dark-product-backlog-text10 {
+  left: 8px;
   color: rgba(255, 255, 255, 1);
-  top: 220px;
-  left: 140px;
   width: 294px;
   height: auto;
   position: absolute;
@@ -264,9 +260,9 @@
   text-decoration: none;
 }
 .dashboard-dark-product-backlog-text12 {
+  top: 127px;
+  left: 64px;
   color: rgba(255, 255, 255, 1);
-  top: 330px;
-  left: 155px;
   height: auto;
   position: absolute;
   font-size: 12px;
@@ -356,8 +352,8 @@
   text-decoration: underline;
 }
 .dashboard-dark-product-backlog-story-point {
-  top: 15px;
-  left: 358px;
+  top: 6px;
+  left: 400px;
   width: 27px;
   height: 27px;
   display: flex;
@@ -468,7 +464,7 @@
 }
 .dashboard-dark-product-backlog-story-point1 {
   top: 240px;
-  left: 358px;
+  left: 362px;
   width: 27px;
   height: 27px;
   display: flex;
@@ -617,7 +613,7 @@
 }
 .dashboard-dark-product-backlog-story-point2 {
   top: 7px;
-  left: 358px;
+  left: 362px;
   width: 27px;
   height: 27px;
   display: flex;
@@ -728,8 +724,8 @@
 }
 .dashboard-dark-product-backlog-story-point3 {
   top: 8px;
-  left: 358px;
-  width: 27px;
+  left: 354px;
+  width: 30px;
   height: 27px;
   display: flex;
   position: absolute;
@@ -855,15 +851,15 @@
   flex-shrink: 1;
 }
 .dashboard-dark-product-backlog-linear-arrows-alt-arrow-right {
-  top: 20px;
-  left: 20px;
+  top: 0px;
+  left: 25px;
   width: 25px;
   height: 25px;
   position: absolute;
 }
 .dashboard-dark-product-backlog-linear-arrows-alt-arrow-left {
-  top: 20px;
-  left: 55px;
+  top: 0px;
+  left: 60px;
   width: 25px;
   height: 25px;
   position: absolute;
@@ -880,15 +876,14 @@
   flex-shrink: 1;
 }
 .dashboard-dark-product-backlog-linear-essentional-ui-add-circle {
-  top: 20px;
+  top: 0px;
   left: 87px;
   width: 30px;
   height: 30px;
   position: absolute;
 }
 .dashboard-dark-product-backlog-text45 {
-  top: 20px;
-  right: 12px;
+  top: 3px;
   color: rgba(255, 255, 255, 1);
   height: auto;
   position: absolute;
@@ -899,10 +894,6 @@
   font-weight: 500;
   line-height: normal;
   font-stretch: normal;
-  text-decoration: none;
-  padding-right: 20px;
-  max-width: 100ch;
-
 }
 .dashboard-dark-product-backlog-image1 {
   top: 358px;
@@ -1000,154 +991,4 @@
   height: 29px;
   z-index: 22;
   position: absolute;
-}
-#popup {
-  width: 400px;
-  background: #fff;
-  border-radius: 6px;
-  position: absolute;
-  top: 0%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.1);
-  text-align: center;
-  padding: 0 30px 30px;
-  color: #333;
-  visibility: hidden;
-  transition: transform 0.4s, top 0,4s;
-}  
-
-.open-popup{
-  visibility: visible;
-  top: 50%;
-  transform: translate(-50%, -50%) scale(1);
-}
-
-/* .table-container {
-  height: 400px;
-  overflow-y: scroll;
-} */
-
-#dataTable {
-  border-collapse: collapse; /* Collapse borders */
-  table-layout: fixed;
-  width: 80%; 
-  position: absolute;
-  /* position: sticky; */
-  top: 360px;
-  left: 50%; /* Center the table horizontally */
-  transform: translateX(-50%); /* Centering trick */
-
-}
-
-#dataTable tbody {
-  table-layout: fixed;
-  width: 100%;
-  height: 320px;
-  position: absolute;
-  overflow-y: scroll;
-  background-color: rgb(202, 84, 69);
-}
-
-#dataTable th {
-  font-style: bold;
-  font-size: 20px;
-  height: 90px;
-  text-align: center;
-  color: white; /* Change the text color to red */
-  background-color: rgb(116, 20, 7);  
-}
-
-#dataTable td {
-  height: 80px;
-  font-size: 20px;
-  text-align: center;
-  color: rgb(46, 9, 3); /* Change the text color to red */
-  background-color: rgb(202, 84, 69);
-}
-
-#dataTable tr {
-  width: 100%; /* Make sure table rows span the entire width */
-  display: table; /* Add this to ensure proper rendering */
-  table-layout: fixed; /* Necessary for fixed table layout */
-}
-
-select option {
-  margin: 40px;
-  background: rgba(0, 0, 0, 0.3);
-  color: #000000;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
-  font-size: 14px;
-}
-/* .overlay {
-  display: none;
-  position: fixed;
-  width: 100%; height: 100%;
-  top: 50%; left: 50%;
-  background: rgba(0,0,0,0.5);
-  z-index: 2;
-}
-#overlay{
-  -webkit-box-shadow:0px 0px 0px 9999px rgba(0, 0, 0, 0.5);
-  box-shadow:  0px 0px 0px 9999px rgba(0, 0, 0, 0.5);
-}
-.popup {
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  background: transparent;
-  padding: 20px;
-  border-radius: 5px;
-  z-index: 3; 
-} */
-.modal{
-  display: fixed;
-  position: fixed;
-  width: 100%; height: 100%;
-  justify-content: center;
-  align-items: center;
-}
-.modal-header{
-  display: block;
-  /* padding: 2px 16px; */
-  background: transparent;
-  border: none;
-}
-.modal-body{
-  display: flex;
-  /* padding: 2px 16px; */
-  width: 100%; height: 100%;
-  justify-content: center;
-  align-items: center;
-}
-.modal-content{
-  position: relative;
-  margin: auto;
-  /* padding: 20px; */
-  height: 515px;/*535 cross|515 no cross*/
-  width: 940px;/*1050 cross|1050 no cross*/
-  /* max-width: 100%; */
-  max-height: 100%; 
-  background-color: transparent;
-  border: none; border-radius: 30px;
-  animation-name: animatetop;
-  animation-duration: 0.4s
-}
-.modal-footer{
-  border: none;
-}
-.iframeTask{
-  width: 900px; height: 700px;
-  overflow: hidden;
-  border-radius: 30px;
-  transform: scale(0.8);
-}
-.close{
-  color: #fff;
-  opacity: 1.5;
-}
-
-
-@keyframes animatetop {
-  from {top: -500px; opacity: 0}
-  to {top: 0; opacity: 1}
 }
