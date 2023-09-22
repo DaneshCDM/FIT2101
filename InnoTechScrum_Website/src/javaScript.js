@@ -17,6 +17,7 @@ function chooseStorypoint(){
 }
 
 //Test
+//test
 // // const draggabletask2 = document.querySelector(".draggable-task2")
 
 // // const drag = (position) => {
