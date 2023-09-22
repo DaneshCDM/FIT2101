@@ -408,8 +408,6 @@
                   <option value = "none">Sort by Priority</option>
                   <option value = "low_to_high">low_to_high</option>
                   <option value = "high_to_low">high_to_low</option>
-                  <option value = "oldest">oldest</option>
-                  <option value = "newest">newest</option>
                   <!-- option tag ends -->
                   </select>
               </span>
@@ -500,7 +498,7 @@
         <button type="submit" id = "refreshData" style = "
         width: 120px;
         height: 27px;
-        background-color: rgb(224, 109, 33);">
+        background-color: #0074f0;">
         Refresh</button>
         
         <div>
@@ -510,8 +508,9 @@
               <th>Tasks</th>
               <th>Priority</th>
               <th>Story Points</th>
-              <th>Task Type</th>
+              <th>Progress</th>
               <th>Tag</th>
+              <th>Assigned Member</th>
             </thead>
             <tbody>
             </tbody>
@@ -613,10 +612,6 @@ function filterData(searchText, sortBy) {
         if (childData.Task_Name.toLowerCase().includes(searchText.toLowerCase())) {
           filteredData.push(childData);
         }
-        // Check if the tag type contains in the search text
-        else if (childData.Tag.toLowerCase().includes(searchText.toLowerCase())){
-          filteredData.push(childData);
-        }
       });
 
       // Sort the data based on the selected sorting option
@@ -630,15 +625,6 @@ function filterData(searchText, sortBy) {
           // Compare the Story_Points values as integers in reverse order
           return parseInt(b.Story_Points) - parseInt(a.Story_Points);
         });
-      // Sort the data based on date added
-      } else if (sortBy === 'oldest') {
-        filteredData.sort((a, b) => {
-          return Date.parse(a.date) - Date.parse(b.date)
-        });
-      } else if (sortBy === 'newest') {
-        filteredData.sort((a, b) => {
-          return Date.parse(b.date) - Date.parse(a.date)
-        });   
       } else {
         // If sortBy is "none" or any other value, do not apply sorting
       }
@@ -648,8 +634,9 @@ function filterData(searchText, sortBy) {
         var row = "<tr><td>" + childData.Task_Name + "</td><td>" + 
           childData.Priority + "</td><td>" +
           childData.Story_Points + "</td><td>" + 
-          childData.Task_Type + "</td><td>" + 
-          childData.Tag + "</td>";
+          childData.Progress + "</td><td>" + 
+          childData.Tag + "</td><td>" +
+          childData.Assign_Member + "</td></tr>";
 
         $(row).appendTo('#dataTable');
       });

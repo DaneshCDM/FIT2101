@@ -213,7 +213,6 @@
   left: 0px;
   width: 233px;
   height: 40px;
-  border-radius: 5px;
   display: flex;
   position: absolute;
   align-items: flex-start;
@@ -269,7 +268,7 @@
   border-radius: 5px;
   top: 545px;
   left: 55px;
-  width: 220px;
+  width: 253px;
   height: 42px;
   position: absolute;
   display: inline-block;
@@ -277,7 +276,7 @@
 }
 .add-tags .tag-anchor{  
   top: 6px;
-  left: 25px;
+  left: 40px;
   position: relative;
   cursor: pointer;
   display: inline-block;
@@ -336,48 +335,10 @@
 }
 /* Tags box end */
 
-/* Task type start */
-.task-type-text{
-  top: 518px;
-  left: 470px;
-  color: rgba(255, 255, 255, 1);
-  height: auto;
-  position: absolute;
-  font-size: 16px;
-  font-style: SemiBold;
-  text-align: left;
-  font-family: Poppins;
-  font-weight: 600;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.task-type{
-  border-radius: 5px;
-  top: 545px;
-  left: 470px;
-  width: 100px;
-  height: 42px;
-  position: absolute;
-  display: inline-block;
-  background-image: linear-gradient(180deg, rgb(201, 61, 26) 0%, rgba(100, 20, 0) 100%);
-}
-.task-type-selection{
-  top: 5px;
-  left: 18px;
-  height: 29px;
-  position: absolute;
-  font-size: 16px;
-  text-align: left;
-  font-family: Poppins;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
 /* Priority start */
 .dashboard-dark-pop-up-add-task-product-backlog-priority {
   top: 520px;
-  left: 300px;
+  left: 395px;
   width: 120px;
   height: 64px;
   display: flex;

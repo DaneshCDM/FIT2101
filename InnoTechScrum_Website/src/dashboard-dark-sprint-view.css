@@ -187,7 +187,7 @@
 } */
 .dashboard-dark-sprint-view-sprint-boardview {
   top: 145px;
-  left: 135px;
+  left: 70px;
   width: 247px;
   height: 154px;
   display: flex;
@@ -196,8 +196,8 @@
   flex-shrink: 0;
 }
 .dashboard-dark-sprint-view-sprint {
-  top: 80px;
-  /* left: 64px; */
+  top: 66px;
+  left: 64px;
   width: 219px;
   height: 49px;
   display: flex;
@@ -229,7 +229,7 @@
   position: absolute;
   font-size: 32px;
   font-style: SemiBold;
-  text-align: left;
+  text-align: center;
   font-family: Poppins;
   font-weight: 600;
   line-height: normal;
@@ -251,7 +251,7 @@
   font-stretch: normal;
   text-decoration: none;
 }
-/* .dashboard-dark-sprint-view-sortby {
+.dashboard-dark-sprint-view-sortby {
   top: 257px;
   left: 1181px;
   width: 89px;
@@ -260,33 +260,7 @@
   position: absolute;
   align-items: flex-start;
   flex-shrink: 1;
-} */
-
-.dashboard-dark-sprint-view-sortby {
-  top: 172px;
-  left: 1067px;
-  width: 89px;
-  height: 27px;
-  display: flex;
-  z-index: 12;
-  position: absolute;
-  align-items: flex-start;
-  flex-shrink: 1;
 }
-.dashboard-dark-sprint-view-text43 {
-  color: rgba(255, 255, 255, 1);
-  height: auto;
-  position: absolute;
-  font-size: 18px;
-  font-style: Medium;
-  text-align: center;
-  font-family: Poppins;
-  font-weight: 500;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-
 .dashboard-dark-sprint-view-drop-down-arrow {
   top: 7px;
   left: 76px;
@@ -978,15 +952,15 @@
   flex-shrink: 1;
 }
 .dashboard-dark-sprint-view-linear-essentional-ui-add-circle6 {
-  top: 88px;
-  left: 150px;
+  top: 0px;
+  left: 101px;
   width: 30px;
   height: 30px;
   position: absolute;
 }
 .dashboard-dark-sprint-view-text64 {
-  top: 88px;
-  right: -38px;
+  top: 3px;
+  right: 30px;
   color: rgba(255, 255, 255, 1);
   height: auto;
   position: absolute;
@@ -998,12 +972,10 @@
   line-height: normal;
   font-stretch: normal;
   text-decoration: none;
-  padding-right: 20px;
-  max-width: 100ch;
 }
 .dashboard-dark-sprint-view-burn-down-chart {
-  top: 780px;
-  left: 1020px;
+  top: 697px;
+  left: 953px;
   width: 185px;
   height: 37px;
   display: flex;
@@ -1026,56 +998,6 @@
   line-height: normal;
   font-stretch: normal;
   text-decoration: none;
-}
-.modal{
-  display: fixed;
-  position: fixed;
-  width: 100%; height: 100%;
-  justify-content: center;
-  align-items: center;
-}
-.modal-header{
-  display: block;
-  padding: 2px 16px;
-  background: transparent;
-  border: none;
-}
-.modal-body{
-  display: flex;
-  padding: 2px 16px;
-  width: 100%; height: 100%;
-  justify-content: center;
-  align-items: center;
-}
-.modal-content{
-  position: flex;
-  margin: auto;
-  bottom:20px;
-  right:300px;
-  padding: 20px;
-  height: 790px;/*535 cross|515 no cross*/
-  width: 1400px;/*1050 cross|1050 no cross*/
-  max-width: 200%; max-height: 200%;
-  background-color: transparent;
-  border: none; border-radius: 30px;
-  justify-content: center;
-  align-items: center;
-  animation-name: animatetop;
-  animation-duration: 0.4s
-}
-.modal-footer{
-  border: none;
-}
-.iframeTask{
-  width: 100%; height: 100%;
-  overflow: hidden;
-  border-radius: 30px;
-  justify-content: center;
-  align-items: center;
-}
-.close{
-  color: #fff;
-  opacity: 1.5;
 }
 
 #dataTable {
@@ -1139,27 +1061,30 @@ select option {
 }
 .modal-header{
   display: block;
-  /* padding: 2px 16px; */
+  padding: 2px 16px;
   background: transparent;
   border: none;
 }
 .modal-body{
   display: flex;
-  /* padding: 2px 16px; */
+  padding: 2px 16px;
   width: 100%; height: 100%;
   justify-content: center;
   align-items: center;
 }
 .modal-content{
-  position: relative;
+  position: flex;
   margin: auto;
-  /* padding: 20px; */
-  height: 515px;/*535 cross|515 no cross*/
-  width: 940px;/*1050 cross|1050 no cross*/
-  /* max-width: 100%; */
-  max-height: 100%; 
+  bottom:20px;
+
+  padding: 20px;
+  height: 790px;/*535 cross|515 no cross*/
+  width: 700px;/*1050 cross|1050 no cross 1400*/
+  max-width: 200%; max-height: 200%;
   background-color: transparent;
   border: none; border-radius: 30px;
+  justify-content: center;
+  align-items: center;
   animation-name: animatetop;
   animation-duration: 0.4s
 }
@@ -1167,16 +1092,16 @@ select option {
   border: none;
 }
 .iframeTask{
-  width: 900px; height: 700px;
+  width: 100%; height: 100%;
   overflow: hidden;
   border-radius: 30px;
-  transform: scale(0.8);
+  justify-content: center;
+  align-items: center;
 }
 .close{
   color: #fff;
   opacity: 1.5;
 }
-
 
 @keyframes animatetop {
   from {top: -500px; opacity: 0}

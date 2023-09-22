@@ -1,0 +1,276 @@
+.dashboard-dark-pop-up-add-task-product-backlog-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.dashboard-dark-pop-up-add-task-product-backlog-dashboard-dark-popupfor-adding-task {
+  width: 800px;
+  height: 445px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-self: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 30px;
+  justify-content: center;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(46, 0, 0, 1) 100%, rgba(78, 0, 0, 1) 100%);
+}
+.dashboard-dark-pop-up-add-task-product-backlog-add-task {
+  top: 0px;
+  left: 0px;
+  width: 800px;
+  height: 90px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-image: linear-gradient(180deg, rgba(210, 55, 17, 1) 0%, rgba(116, 28, 6, 1) 100%);
+}
+.dashboard-dark-pop-up-add-task-product-backlog-text {
+  top: 21px;
+  left: 325px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 32px;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.dashboard-dark-pop-up-add-task-product-backlog-task-name {
+  top: 136px;
+  left: 69px;
+  width: 353px;
+  height: 40px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(255, 255, 255, 1);
+}
+.dashboard-dark-pop-up-add-task-product-backlog-text02 {
+  top: 8px;
+  color: rgba(0, 0, 0, 1);
+  width: 137px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.dashboard-dark-pop-up-add-task-product-backlog-assign-member {
+  top: 223px;
+  left: 69px;
+  width: 662px;
+  height: 40px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(255, 255, 255, 1);
+}
+.dashboard-dark-pop-up-add-task-product-backlog-text04 {
+  top: 8px;
+  color: rgba(0, 0, 0, 1);
+  width: 169px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.dashboard-dark-pop-up-add-task-product-backlog-story-points {
+  top: 136px;
+  left: 498px;
+  width: 233px;
+  height: 40px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(255, 255, 255, 1);
+}
+.dashboard-dark-pop-up-add-task-product-backlog-text06 {
+  top: 8px;
+  color: rgba(0, 0, 0, 1);
+  width: 199px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.dashboard-dark-pop-up-add-task-product-backlog-default-task-status {
+  top: 287px;
+  left: 498px;
+  width: 233px;
+  height: 63px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.dashboard-dark-pop-up-add-task-product-backlog-default-task-status1 {
+  top: 23px;
+  left: 0px;
+  width: 233px;
+  height: 40px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-image: linear-gradient(180deg, rgba(155, 35, 4, 1) 0%, rgba(200, 61, 25, 1) 0%, rgba(99, 20, 0, 1) 100%);
+}
+.dashboard-dark-pop-up-add-task-product-backlog-text08 {
+  top: 7px;
+  left: 17px;
+  color: rgba(255, 255, 255, 1);
+  width: 199px;
+  height: auto;
+  position: absolute;
+  font-size: 17px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.dashboard-dark-pop-up-add-task-product-backlog-text10 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 15px;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.dashboard-dark-pop-up-add-task-product-backlog-tag {
+  top: 310px;
+  left: 69px;
+  width: 233px;
+  height: 40px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(255, 255, 255, 1);
+}
+.dashboard-dark-pop-up-add-task-product-backlog-text12 {
+  top: 8px;
+  color: rgba(0, 0, 0, 1);
+  width: 75px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.dashboard-dark-pop-up-add-task-product-backlog-priority {
+  top: 286px;
+  left: 355px;
+  width: 89px;
+  height: 64px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.dashboard-dark-pop-up-add-task-product-backlog-rectangle7 {
+  top: 24px;
+  left: 0px;
+  width: 89px;
+  height: 40px;
+  position: absolute;
+  border-radius: 3px;
+}
+.dashboard-dark-pop-up-add-task-product-backlog-text14 {
+  color: rgba(255, 255, 255, 1);
+  width: 67px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.dashboard-dark-pop-up-add-task-product-backlog-flagiconicons7 {
+  top: 29px;
+  left: 9px;
+  width: 38px;
+  height: 29px;
+  position: absolute;
+}
+.dashboard-dark-pop-up-add-task-product-backlog-create-task {
+  top: 384px;
+  left: 69px;
+  width: 668px;
+  height: 35px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-image: linear-gradient(180deg, rgba(208, 59, 22, 1) 0%, rgba(89, 17, 0, 1) 100%);
+}
+.dashboard-dark-pop-up-add-task-product-backlog-group1 {
+  top: 5px;
+  left: 146.63397216796875px;
+  width: 358.43902587890625px;
+  height: 24px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.dashboard-dark-pop-up-add-task-product-backlog-text16 {
+  color: rgba(255, 255, 255, 1);
+  width: 358px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}

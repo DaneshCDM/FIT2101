@@ -54,6 +54,7 @@
 }
 .dashboard-dark-pop-up-add-sprint-text02 {
   top: 8px;
+  left: 450px;
   color: rgba(255, 255, 255, 1);
   width: 137px;
   height: auto;
@@ -68,9 +69,9 @@
   text-decoration: none;
 }
 .dashboard-dark-pop-up-add-sprint-sprint-name1 {
-  top: 239px;
-  left: 69px;
-  width: 250px;
+  top: 250px;
+  left: 520px;
+  width: 270px;
   height: 40px;
   display: flex;
   position: absolute;
@@ -94,9 +95,9 @@
   text-decoration: none;
 }
 .dashboard-dark-pop-up-add-sprint-sprint-name2 {
-  top: 342px;
-  left: 69px;
-  width: 250px;
+  top: 380px;
+  left: 520px;
+  width: 270px;
   height: 40px;
   display: flex;
   position: absolute;
@@ -107,7 +108,7 @@
 .dashboard-dark-pop-up-add-sprint-text06 {
   top: 8px;
   color: rgba(255, 255, 255, 1);
-  width: 107px;
+  width: 119px;
   height: auto;
   position: absolute;
   font-size: 16px;
@@ -120,8 +121,8 @@
   text-decoration: none;
 }
 .dashboard-dark-pop-up-add-sprint-default-sprint-status {
-  top: 568px;
-  left: 69px;
+  top: 500px;
+  left: 539px;
   width: 233px;
   height: 63px;
   display: flex;
