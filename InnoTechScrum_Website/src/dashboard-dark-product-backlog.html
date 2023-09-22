@@ -615,7 +615,7 @@ function filterData(searchText, sortBy) {
           filteredData.push(childData);
         }
         // Check if the tag type contains in the search text
-        elif (childData.Tag.toLowerCase().includes(searchText.toLowerCase())){
+        else if (childData.Tag.toLowerCase().includes(searchText.toLowerCase())){
           filteredData.push(childData);
         }
       });
