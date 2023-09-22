@@ -182,11 +182,29 @@
             <span class="dashboard-dark-sprint-view-text10">
               <span>Sprint View</span>
             </span>
-            <span class="dashboard-dark-sprint-view-text12">
+            <!-- <span class="dashboard-dark-sprint-view-text12">
               <span>Page 1 of x Showing Item 1 - 5</span>
-            </span>
+            </span> -->
+            <div class="dashboard-dark-sprint-view-sortby">
+              <img
+                alt="DropDownArrow4153"
+                src="public/external/dropdownarrow4153-vyvw.svg"
+                class="dashboard-dark-sprint-view-drop-down-arrow8"
+              />
+              <span class="dashboard-dark-sprint-view-text43">
+                  <select id="sort_by">
+                    <!-- option tag starts -->
+                    <option value = "none">Sort by Priority</option>
+                    <option value = "low_to_high">low_to_high</option>
+                    <option value = "high_to_low">high_to_low</option>
+                    <option value = "oldest">oldest</option>
+                    <option value = "newest">newest</option>
+                    <!-- option tag ends -->
+                  </select>
+              </span>
+            </div>
           </div>
-          <div class="dashboard-dark-sprint-view-sortby">
+          <!-- <div class="dashboard-dark-sprint-view-sortby">
             <img
               alt="DropDownArrow3732"
               src="public/external/dropdownarrow3732-a9m.svg"
@@ -195,8 +213,8 @@
             <span class="dashboard-dark-sprint-view-text14">
               <span>Sort by</span>
             </span>
-          </div>
-          <div class="dashboard-dark-sprint-view-next-previouspage">
+          </div> -->
+          <!-- <div class="dashboard-dark-sprint-view-next-previouspage">
             <img
               alt="LinearArrowsAltArrowRight3732"
               src="public/external/lineararrowsaltarrowright3732-568j.svg"
@@ -207,18 +225,18 @@
               src="public/external/lineararrowsaltarrowleft3732-8veu.svg"
               class="dashboard-dark-sprint-view-linear-arrows-alt-arrow-left"
             />
-          </div>
-          <img
+          </div> -->
+          <!-- <img
             alt="Rectangle183732"
             src="https:/aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/a09f2969-09bc-4eb1-8ae9-8d143cdeae95/a6195fe5-39f2-4aa0-80c1-a7bec3abb68d?org_if_sml=12732"
             class="dashboard-dark-sprint-view-rectangle18"
-          />
-          <img
+          /> -->
+          <!-- <img
             alt="Rectangle193732"
             src="https:/aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/a09f2969-09bc-4eb1-8ae9-8d143cdeae95/3a34e277-f595-46fe-9a4a-e87a055af1b1?org_if_sml=1653"
             class="dashboard-dark-sprint-view-rectangle19"
-          />
-          <img
+          /> -->
+          <!-- <img
             alt="Rectangle203733"
             src="https:/aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/a09f2969-09bc-4eb1-8ae9-8d143cdeae95/e65263ea-8487-4d27-8878-a5288168aa5e?org_if_sml=1544"
             class="dashboard-dark-sprint-view-rectangle20"
@@ -227,8 +245,8 @@
             alt="Rectangle213733"
             src="https:/aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/a09f2969-09bc-4eb1-8ae9-8d143cdeae95/e85b0c98-0945-4fdc-a8c7-556b955ce171?org_if_sml=1544"
             class="dashboard-dark-sprint-view-rectangle21"
-          />
-          <div class="dashboard-dark-sprint-view-sprint1">
+          /> -->
+          <!-- <div class="dashboard-dark-sprint-view-sprint1">
             <span class="dashboard-dark-sprint-view-text16">
               <span>11/08/23 1:30am - 18/08/23 1:30am</span>
             </span>
@@ -255,8 +273,8 @@
                 <span>End Sprint</span>
               </span>
             </div>
-          </div>
-          <div class="dashboard-dark-sprint-view-sprint2">
+          </div> -->
+          <!-- <div class="dashboard-dark-sprint-view-sprint2">
             <span class="dashboard-dark-sprint-view-text24">
               <span>13/08/23 12:00am - 20/08/23 12:00am</span>
             </span>
@@ -395,6 +413,28 @@
                 <span>End Sprint</span>
               </span>
             </div>
+          </div> -->
+          <button type="submit" id = "refreshData" style = "
+          width: 120px;
+          height: 27px;
+          background-color: rgb(224, 109, 33);">
+          Refresh</button>
+          
+          <div>
+          <!-- Live Table from Firebase -->
+            <table id = "dataTable", style ="height: 320px; overflow-y: scroll;">
+              <thead> 
+                <th>Tasks</th>
+                <th>Priority</th>
+                <th>Story Points</th>
+                <th>Progress</th>
+                <th>Tag</th>
+                <th>Assigned Member</th>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+            <!-- Live Table From Firebase -->
           </div>
           <div class="dashboard-dark-sprint-view-add-sprint">
             <button id="btnModal1" type="button" class = "btn" data-toggle="modal" data-target="#modalCase">
@@ -408,16 +448,14 @@
               </span>
             </button>
           </div>
-          </div>
-
-          <div id="modalCase" class="modal fade" role="dialog" tabindex="-1">
+          <!-- <div id="modalCase" class="modal fade" role="dialog" tabindex="-1">
             <div class="modal-dialog modal-lg" role="document" style="width:90%; height: 90%;">
               <div id="modal-content" class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header"> -->
                   <!-- <button type="button" class="close" data-dismiss="modal" aria-label="close">
                     <span class="close">&times;</span>
                   </button> -->
-                </div>
+                <!-- </div>
                 <div id="modal-body" class="modal-body">
                   <iframe id="taskIFrame"scrolling="no"class="iframeTask" src="dashboard-dark-pop-up-add-sprint.html"></iframe>
                 </div>
@@ -425,7 +463,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
           
           <div class="dashboard-dark-sprint-view-burn-down-chart">
             <span class="dashboard-dark-sprint-view-text66">
