@@ -406,6 +406,8 @@
                 <select id="sort_by">
                   <!-- option tag starts -->
                   <option value = "none">Sort by Priority</option>
+                  <option value = "high_priority">High priority first</option>
+                  <option value = "low_priority">Low priority first</option>
                   <option value = "low_to_high">low_to_high</option>
                   <option value = "high_to_low">high_to_low</option>
                   <option value = "oldest">oldest</option>
@@ -620,7 +622,19 @@ function filterData(searchText, sortBy) {
       });
 
       // Sort the data based on the selected sorting option
-      if (sortBy === 'low_to_high') {
+      const priorityOrder = { 'Low': 1, 'Medium': 2, 'Important': 3, 'Urgent': 4};
+      const priorityColor = { 'Low': 'transparent','Medium': 'green', 'Important': 'yellow', 'Urgent': 'red'}
+      if (sortBy === 'high_priority') {
+      // Custom sorting function to sort by priority (Low < Medium < High)
+       filteredData.sort((a, b) => {
+          return priorityOrder[b.Priority] - priorityOrder[a.Priority];
+      });
+       } else if (sortBy === 'low_priority') {
+      // Custom sorting function to sort by priority in reverse order (High > Medium > Low)
+        filteredData.sort((a, b) => {
+         return priorityOrder[a.Priority] - priorityOrder[b.Priority];
+      });
+      } else if (sortBy === 'low_to_high') {
         filteredData.sort((a, b) => {
           // Compare the Story_Points values as integers
           return parseInt(a.Story_Points) - parseInt(b.Story_Points);
@@ -642,19 +656,36 @@ function filterData(searchText, sortBy) {
       } else {
         // If sortBy is "none" or any other value, do not apply sorting
       }
-
       // Iterate through the filtered data and append it to the table
       filteredData.forEach((childData) => {
-        var row = "<tr><td>" + childData.Task_Name + "</td><td>" + 
+        var row = "<tr><td>" + childData.Task_Name + "</td><td class = priority_color>" + 
           childData.Priority + "</td><td>" +
           childData.Story_Points + "</td><td>" + 
           childData.Task_Type + "</td><td>" + 
           childData.Tag + "</td>";
-
         $(row).appendTo('#dataTable');
       });
+      changeTdColor();
     });
   }
+
+  // function f_color() {
+
+  // if (document.getElementById('Priority').innerHTML  == 'Low') { 
+  //   document.getElementById('Priority').style.color = "Green";
+  // }
+  // else if (document.getElementById('Priority').innerHTML == 'Medium') {
+  //   document.getElementById('Priority').style.color = "Orange";
+  // }
+  // else if (document.getElementById('Priority').innerHTML == 'Important'){
+  //   document.getElementById('Priority').style.color = "Yellow";
+  // }
+  // else if (document.getElementById('Priority').innerHTML == 'Urgent') {
+  //   document.getElementById('Priority').style.color = "Red";
+  // }
+  // };
+
+  //   f_color();
 
   // Event listener for the search button
   $("#search").click(function (e) {
