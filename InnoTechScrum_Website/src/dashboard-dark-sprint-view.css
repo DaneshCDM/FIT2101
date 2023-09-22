@@ -1051,10 +1051,10 @@
   position: flex;
   margin: auto;
   bottom:20px;
-  right:300px;
+
   padding: 20px;
   height: 790px;/*535 cross|515 no cross*/
-  width: 1400px;/*1050 cross|1050 no cross*/
+  width: 700px;/*1050 cross|1050 no cross 1400*/
   max-width: 200%; max-height: 200%;
   background-color: transparent;
   border: none; border-radius: 30px;
