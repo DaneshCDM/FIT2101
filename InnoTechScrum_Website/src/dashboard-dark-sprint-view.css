@@ -187,7 +187,7 @@
 } */
 .dashboard-dark-sprint-view-sprint-boardview {
   top: 145px;
-  left: 70px;
+  left: 135px;
   width: 247px;
   height: 154px;
   display: flex;
@@ -196,8 +196,8 @@
   flex-shrink: 0;
 }
 .dashboard-dark-sprint-view-sprint {
-  top: 66px;
-  left: 64px;
+  top: 80px;
+  /* left: 64px; */
   width: 219px;
   height: 49px;
   display: flex;
@@ -229,7 +229,7 @@
   position: absolute;
   font-size: 32px;
   font-style: SemiBold;
-  text-align: center;
+  text-align: left;
   font-family: Poppins;
   font-weight: 600;
   line-height: normal;
@@ -251,7 +251,7 @@
   font-stretch: normal;
   text-decoration: none;
 }
-.dashboard-dark-sprint-view-sortby {
+/* .dashboard-dark-sprint-view-sortby {
   top: 257px;
   left: 1181px;
   width: 89px;
@@ -260,7 +260,33 @@
   position: absolute;
   align-items: flex-start;
   flex-shrink: 1;
+} */
+
+.dashboard-dark-sprint-view-sortby {
+  top: 172px;
+  left: 1067px;
+  width: 89px;
+  height: 27px;
+  display: flex;
+  z-index: 12;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
 }
+.dashboard-dark-sprint-view-text43 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 18px;
+  font-style: Medium;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
 .dashboard-dark-sprint-view-drop-down-arrow {
   top: 7px;
   left: 76px;
@@ -952,15 +978,15 @@
   flex-shrink: 1;
 }
 .dashboard-dark-sprint-view-linear-essentional-ui-add-circle6 {
-  top: 0px;
-  left: 101px;
+  top: 88px;
+  left: 150px;
   width: 30px;
   height: 30px;
   position: absolute;
 }
 .dashboard-dark-sprint-view-text64 {
-  top: 3px;
-  right: 30px;
+  top: 88px;
+  right: -38px;
   color: rgba(255, 255, 255, 1);
   height: auto;
   position: absolute;
@@ -972,10 +998,12 @@
   line-height: normal;
   font-stretch: normal;
   text-decoration: none;
+  padding-right: 20px;
+  max-width: 100ch;
 }
 .dashboard-dark-sprint-view-burn-down-chart {
-  top: 697px;
-  left: 953px;
+  top: 780px;
+  left: 1020px;
   width: 185px;
   height: 37px;
   display: flex;
@@ -999,6 +1027,60 @@
   font-stretch: normal;
   text-decoration: none;
 }
+
+
+#dataTable {
+  border-collapse: collapse; /* Collapse borders */
+  table-layout: fixed;
+  width: 80%; 
+  position: absolute;
+  /* position: sticky; */
+  top: 360px;
+  left: 50%; /* Center the table horizontally */
+  transform: translateX(-50%); /* Centering trick */
+
+}
+
+#dataTable tbody {
+  table-layout: fixed;
+  width: 100%;
+  height: 320px;
+  position: absolute;
+  overflow-y: scroll;
+  background-color: rgb(202, 84, 69);
+}
+
+#dataTable th {
+  font-style: bold;
+  font-size: 20px;
+  height: 90px;
+  text-align: center;
+  color: white; /* Change the text color to red */
+  background-color: rgb(116, 20, 7);  
+}
+
+#dataTable td {
+  height: 80px;
+  font-size: 20px;
+  text-align: center;
+  color: rgb(46, 9, 3); /* Change the text color to red */
+  background-color: rgb(202, 84, 69);
+}
+
+#dataTable tr {
+  width: 100%; /* Make sure table rows span the entire width */
+  display: table; /* Add this to ensure proper rendering */
+  table-layout: fixed; /* Necessary for fixed table layout */
+}
+
+select option {
+  margin: 40px;
+  background: rgba(0, 0, 0, 0.3);
+  color: #000000;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+}
+
 .modal{
   display: fixed;
   position: fixed;
@@ -1023,10 +1105,9 @@
   position: flex;
   margin: auto;
   bottom:20px;
-  right:300px;
   padding: 20px;
   height: 790px;/*535 cross|515 no cross*/
-  width: 1400px;/*1050 cross|1050 no cross*/
+  width: 700px;/*1050 cross|1050 no cross*/
   max-width: 200%; max-height: 200%;
   background-color: transparent;
   border: none; border-radius: 30px;

@@ -16,7 +16,33 @@ function chooseStorypoint(){
 
 }
 
+function changeTdColor() {
+  const values = document.querySelectorAll("td");
+  for (let i = 0; i < values.length; i++) { // iterate all thorugh td
+      if (values[i].innerText.trim() === "Low") { // check if td has desired value
+          values[i].style.color = "green"; // if matches, change color
+          console.log("Changing color for element: " + values[i].innerText);
+      }
+      else if (values[i].innerText.trim() === "Medium") { // check if td has desired value
+        values[i].style.color = "yellow"; // if matches, change color
+        console.log("Changing color for element: " + values[i].innerText);
+      }
+      else if (values[i].innerText.trim() === "Important") { // check if td has desired value
+        values[i].style.color = "orange"; // if matches, change color
+        console.log("Changing color for element: " + values[i].innerText);
+      }
+      else if (values[i].innerText.trim() === "Urgent") { // check if td has desired value
+        values[i].style.color = "red"; // if matches, change color
+        console.log("Changing color for element: " + values[i].innerText);
+      }
+  }
+  console.log("changeTdColor function executed");
+}
 
+// changeTdColor();
+
+//Test
+//test
 // // const draggabletask2 = document.querySelector(".draggable-task2")
 
 // // const drag = (position) => {
