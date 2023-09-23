@@ -28,7 +28,7 @@ function changeTdColor() {
         console.log("Changing color for element: " + values[i].innerText);
       }
       else if (values[i].innerText.trim() === "Important") { // check if td has desired value
-        values[i].style.color = "orange"; // if matches, change color
+        values[i].style.color = "purple"; // if matches, change color
         console.log("Changing color for element: " + values[i].innerText);
       }
       else if (values[i].innerText.trim() === "Urgent") { // check if td has desired value
