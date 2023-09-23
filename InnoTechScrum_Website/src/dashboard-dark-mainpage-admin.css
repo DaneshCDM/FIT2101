@@ -27,9 +27,9 @@
   position: absolute;
   align-items: flex-start;
   flex-shrink: 0;
-  border-color: rgba(231, 231, 231, 1);
+  /* border-color: rgba(231, 231, 231, 1);
   border-style: solid;
-  border-width: 0 0 1px;
+  border-width: 0 0 1px; */
   background-color: rgba(0, 0, 0, 1);
 }
 .dashboard-dark-mainpagefor-admin-logo {
