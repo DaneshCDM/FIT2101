@@ -355,6 +355,12 @@
   const analytics = getAnalytics(app);
   const database = getDatabase(app);
 
+  const params = new Proxy(new URLSearchParams(window.location.search), {
+    get: (searchParams, prop) => searchParams.get(prop),
+  });
+  let value = params.id;
+  //continue here
+  
   submitbtn.addEventListener('click',(e)=>{
     console.log('Button clicked');
 
@@ -408,8 +414,9 @@
       Task_Stage: Task_Stage,
       Task_Type: Task_Type
     });
-
     alert('Task Have Been Editted');
     // closePopUp()
   });
+
+
 </script>

@@ -112,7 +112,7 @@
       
       <div class="dashboard-dark-product-backlog-container">
         <div
-          class="dashboard-dark-product-backlog-dashboard-dark-product-backlog"
+          class="dashboard-dark-product-backlog-dashboard-dark-product-backlog" id="product-backlog"
         >
           <div class="dashboard-dark-product-backlog-top-nevigation">
             <img
@@ -405,7 +405,7 @@
             <span class="dashboard-dark-product-backlog-text43">
                 <select id="sort_by">
                   <!-- option tag starts -->
-                  <option value = "none">Sort by Priority</option>
+                  <option value = "none">Default</option>
                   <option value = "high_priority">High priority first</option>
                   <option value = "low_priority">Low priority first</option>
                   <option value = "low_to_high">low_to_high</option>
@@ -472,7 +472,7 @@
                 <div class="modal-header">
                 </div>
                 <div id="modal-body" class="modal-body">
-                  <iframe id="taskIFrame"scrolling="no"class="iframeTask" src="dashboard-dark-pop-up-edit-task-product-backlog.html"></iframe>
+                  <iframe id="taskIFrame2"scrolling="no"class="iframeTask"></iframe>
                 </div>
                 <div class="modal-footer">
                 </div>
@@ -625,14 +625,15 @@ function filterData(searchText, sortBy) {
       const filteredData = []; // Create an array to store filtered data
 
       snapshot.forEach((childSnapshot) => {
-        const childData = childSnapshot.val();
+        //const childData = childSnapshot.val();
+        const childData = childSnapshot;
 
         // Check if the Task_Name contains the search text
-        if (childData.Task_Name.toLowerCase().includes(searchText.toLowerCase())) {
+        if (childData.val().Task_Name.toLowerCase().includes(searchText.toLowerCase())) {
           filteredData.push(childData);
         }
         // Check if the tag type contains in the search text
-        else if (childData.Tag.toLowerCase().includes(searchText.toLowerCase())){
+        else if (childData.val().Tag.toLowerCase().includes(searchText.toLowerCase())){
           filteredData.push(childData);
         }
       });
@@ -642,44 +643,46 @@ function filterData(searchText, sortBy) {
       if (sortBy === 'high_priority') {
       // Custom sorting function to sort by priority (Low < Medium < High)
        filteredData.sort((a, b) => {
-          return priorityOrder[b.Priority] - priorityOrder[a.Priority];
+          return priorityOrder[b.val().Priority] - priorityOrder[a.val().Priority];
       });
        } else if (sortBy === 'low_priority') {
       // Custom sorting function to sort by priority in reverse order (High > Medium > Low)
         filteredData.sort((a, b) => {
-         return priorityOrder[a.Priority] - priorityOrder[b.Priority];
+         return priorityOrder[a.val().Priority] - priorityOrder[b.val().Priority];
       });
       } else if (sortBy === 'low_to_high') {
         filteredData.sort((a, b) => {
           // Compare the Story_Points values as integers
-          return parseInt(a.Story_Points) - parseInt(b.Story_Points);
+          return parseInt(a.val().Story_Points) - parseInt(b.val().Story_Points);
         });
       } else if (sortBy === 'high_to_low') {
         filteredData.sort((a, b) => {
           // Compare the Story_Points values as integers in reverse order
-          return parseInt(b.Story_Points) - parseInt(a.Story_Points);
+          return parseInt(b.val().Story_Points) - parseInt(a.val().Story_Points);
         });
       // Sort the data based on date added
       } else if (sortBy === 'oldest') {
         filteredData.sort((a, b) => {
-          return Date.parse(a.date) - Date.parse(b.date)
+          return Date.parse(a.val().date) - Date.parse(b.val().date)
         });
       } else if (sortBy === 'newest') {
         filteredData.sort((a, b) => {
-          return Date.parse(b.date) - Date.parse(a.date)
+          return Date.parse(b.val().date) - Date.parse(a.val().date)
         });   
       } else {
         // If sortBy is "none" or any other value, do not apply sorting
       }
       // Iterate through the filtered data and append it to the table
+      var buttonid = 0;
       filteredData.forEach((childData) => {
-        var row = "<tr><td>" + childData.Task_Name + "</td><td>" + 
-          childData.Priority + "</td><td>" +
-          childData.Story_Points + "</td><td>" + 
-          childData.Task_Type + "</td><td>" + 
-          childData.Tag + 
-          //TODO: Need to query database for the data in the same line as the button and transfer it to the iframe 
-          "</td><td><button id='btnModal' type='button' class = 'btn' data-toggle='modal' data-target='#modalCase2'><img src='https://www.freeiconspng.com/uploads/edit-new-icon-22.png' width='40' alt='Edit, new, icon'/></button></td>";
+        var row = "<tr><td>" + childData.val().Task_Name + "</td><td>" + 
+          childData.val().Priority + "</td><td>" +
+          childData.val().Story_Points + "</td><td>" + 
+          childData.val().Task_Type + "</td><td>" + 
+          childData.val().Tag + 
+          "</td><td><button type='button' class = 'editbtn' data-toggle='modal' data-target='#modalCase2' value=" + childData.key + 
+            "><img src='https://www.freeiconspng.com/uploads/edit-new-icon-22.png' width='40' alt='Edit'/></button></td>";
+          buttonid ++;
         $(row).appendTo('#dataTable');
       });
       changeTdColor();
@@ -725,5 +728,14 @@ function filterData(searchText, sortBy) {
     const sortBy = $("#sort_by").val(); // Get the selected sorting option
     filterData(searchText, sortBy); // Filter and sort data based on search text and sorting option
     alert('Data Refreshed');
+  });
+
+  document.addEventListener("click", function(e){
+    const target = e.target.closest(".editbtn"); // Or any other selector.
+  
+    if(target){
+      var targetid = target.value;
+      document.getElementById('taskIFrame2').src = "dashboard-dark-pop-up-edit-task-product-backlog.html?id="+targetid
+    }
   });
 </script>
