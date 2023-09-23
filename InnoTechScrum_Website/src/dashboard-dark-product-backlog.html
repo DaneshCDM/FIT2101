@@ -448,6 +448,7 @@
               <button id="close-button" onclick="closePopUp()">Close</button>
             </div> 
           </div>
+          <!-- Modal for add task button -->
           <div id="modalCase" class="modal fade" role="dialog" tabindex="-1">
             <div class="modal-dialog modal-lg" role="document" style="width:90%; height: 90%;">
               <div id="modal-content" class="modal-content">
@@ -464,13 +465,11 @@
               </div>
             </div>
           </div>
+          <!-- Modal for edit task button-->
           <div id="modalCase2" class="modal fade" role="dialog" tabindex="-1">
             <div class="modal-dialog modal-lg" role="document" style="width:90%; height: 90%;">
               <div id="modal-content" class="modal-content">
                 <div class="modal-header">
-                  <!-- <button type="button" class="close" data-dismiss="modal" aria-label="close">
-                    <span class="close">&times;</span>
-                  </button> -->
                 </div>
                 <div id="modal-body" class="modal-body">
                   <iframe id="taskIFrame"scrolling="no"class="iframeTask" src="dashboard-dark-pop-up-edit-task-product-backlog.html"></iframe>
@@ -679,6 +678,7 @@ function filterData(searchText, sortBy) {
           childData.Story_Points + "</td><td>" + 
           childData.Task_Type + "</td><td>" + 
           childData.Tag + 
+          //TODO: Need to query database for the data in the same line as the button and transfer it to the iframe 
           "</td><td><button id='btnModal' type='button' class = 'btn' data-toggle='modal' data-target='#modalCase2'><img src='https://www.freeiconspng.com/uploads/edit-new-icon-22.png' width='40' alt='Edit, new, icon'/></button></td>";
         $(row).appendTo('#dataTable');
       });
