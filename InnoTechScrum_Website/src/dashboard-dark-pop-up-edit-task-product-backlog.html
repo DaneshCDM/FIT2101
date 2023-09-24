@@ -3,7 +3,6 @@
   <head>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
     <title>exported project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
@@ -332,7 +331,7 @@
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-analytics.js";
-  import { getDatabase, ref, set, push, child } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-database.js";
+  import { getDatabase, ref, set, push, child, get } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-database.js";
   
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
@@ -360,6 +359,90 @@
   });
   let value = params.id;
   //continue here
+  
+  // obtain data from id and pre-populate edit task
+  const editRef = ref(database, 'product-backlog-tasks/' + value);
+  
+  get(editRef)
+  .then((snapshot) => {
+    if (snapshot.exists()) {
+      const Assign_Member = snapshot.val().Assign_Member;
+      const Task_Name = snapshot.val().Task_Name;
+      const Priority = snapshot.val().Priority;
+      const Story_Points = snapshot.val().Story_Points;
+      const Task_Type = snapshot.val().Task_Type;
+      const Tag = snapshot.val().Tag;
+      const Task_Stage = snapshot.val().Task_Stage;
+
+      const Task_Description = snapshot.val().Task_Description;
+      const Progress = snapshot.val().Progress;
+
+      const Task_Name_input = document.getElementById('Task_Name_text');
+      Task_Name_input.value = Task_Name;
+
+      const Assign_Member_input = document.getElementById('Assign_Member_text');
+      Assign_Member_input.value = Assign_Member;
+
+      const Story_Points_input = document.getElementById('Story_Points_text');
+      Story_Points_input.value = Story_Points;
+
+      const Task_Description_input = document.getElementById('Task_Description_text');
+      Task_Description_input.value = Task_Description;
+
+      const Priority_input = document.getElementById('priority');
+
+      for (let i = 0; i < Priority_input.options.length; i++) {
+        if (Priority_input.options[i].value === Priority) {
+          Priority_input.options[i].selected = true;
+          break;
+        }
+      }
+      const Task_Type_input = document.getElementById('task_type_choice');
+      
+      for (let i = 0; i < Task_Type_input.options.length; i++) {
+        if (Task_Type_input.options[i].value === Task_Type) {
+          Task_Type_input.options[i].selected = true;
+          break;
+        }
+      }
+
+      const Task_Stage_input = document.getElementById('task_stage_choice');
+      
+      for (let i = 0; i < Task_Stage_input.options.length; i++) {
+        if (Task_Stage_input.options[i].value === Task_Stage) {
+          Task_Stage_input.options[i].selected = true;
+          break;
+        }
+      }
+
+      const Progress_input = document.getElementById('progress');
+
+      for (let i = 0; i < Progress_input.options.length; i++) {
+        if (Progress_input.options[i].value === Progress) {
+          Progress_input.options[i].selected = true;
+          break;
+        }
+      }
+
+      const tags = Tag.split(', ');
+
+      for (const tag of tags) {
+        for (let i = 1; i <= 6; i++) {
+          const checkbox = document.getElementById(`tag${i}`);
+          if (checkbox && checkbox.value === tag.trim()) {
+            checkbox.checked = true;
+            break;
+          }
+        }
+      }
+
+      console.log(`${Assign_Member}/${Task_Name}/${Priority}/${Story_Points}/${Task_Type}/${Tag}`);
+      } else {
+          console.log("Data not found");
+      }
+  }).catch((error) => {
+      console.error(error.message);
+  });
   
   submitbtn.addEventListener('click',(e)=>{
     console.log('Button clicked');
