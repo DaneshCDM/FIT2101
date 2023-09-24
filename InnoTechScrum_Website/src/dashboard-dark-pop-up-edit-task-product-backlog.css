@@ -449,7 +449,7 @@
 /* Edit task end */
 
 /* Cancel task start */
-.cancel-task {
+.delete-task {
   top: 630px;
   left: 115px;
   width: 300px;
@@ -471,7 +471,7 @@
   align-items: flex-start;
   flex-shrink: 1;
 }
-.cancel-text {
+.delete-text {
   color: rgba(255, 255, 255, 1);
   width: 150px;
   height: auto;
