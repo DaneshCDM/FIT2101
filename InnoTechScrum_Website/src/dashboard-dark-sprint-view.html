@@ -418,12 +418,15 @@
           <button type="submit" id = "refreshData" style = "
           width: 120px;
           height: 27px;
-          background-color: rgb(224, 109, 33);">
+          background-color: rgb(224, 109, 33);
+          position: absolute; 
+          top: 70px; 
+          left: 20px;">
           Refresh</button>
           
-          <div>
+          <!-- <div> -->
           <!-- Live Table from Firebase -->
-            <table id = "dataTable", style ="height: 320px; overflow-y: scroll;">
+            <!-- <table id = "dataTable", style ="height: 320px; overflow-y: scroll;">
               <thead> 
                 <th>Tasks</th>
                 <th>Priority</th>
@@ -434,9 +437,10 @@
               </thead>
               <tbody>
               </tbody>
-            </table>
+            </table> -->
             <!-- Live Table From Firebase -->
-          </div>
+          <!-- </div> -->
+
           <div class="dashboard-dark-sprint-view-add-sprint">
             <button id="btnModal1" type="button" class = "btn" data-toggle="modal" data-target="#modalCase">
               <img
@@ -472,6 +476,8 @@
               <span>Burn down Chart</span>
             </span>
           </div>
+
+          
         </div>
       </div>
       
@@ -479,7 +485,8 @@
         <table id = "dataTable", style ="height: 320px; overflow-y: scroll;">
           <thead> 
             <th>Sprint Name</th>
-            <th>Sprint Start - End Dates</th>
+            <th>Start Date</th>
+            <th>End Date</th>
             <th>Progress</th>
             <th>End Sprint</th>
           </thead>
@@ -592,10 +599,10 @@ function filterData(searchText, sortBy) {
       // Iterate through the filtered data and append it to the table
       filteredData.forEach((childData) => {
         var row = "<tr><td>" + childData.Sprint_Name + "</td><td>" + 
-          childData.Start_DateTime + "</td><td>" +
-          childData.End_DateTime + "</td><td>" +
-          childData.Progress + "</td><td>" + 
-          childData.End + "</td><td>" + 
+          childData.Start_Date + "</td><td>" +
+          childData.End_Date + "</td><td>" +
+          childData.Progress + "</td>";
+          // childData.End + "</td>";
 
         $(row).appendTo('#dataTable');
       });
