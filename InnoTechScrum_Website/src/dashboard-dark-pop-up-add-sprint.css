@@ -1,647 +1,484 @@
-.dashboard-dark-pop-up-add-sprint-container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  position: relative;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-}
-.dashboard-dark-pop-up-add-sprint-dashboard-dark-popupfor-adding-task {
-  width: 1328px;
-  height: 720px;
-  display: flex;
-  overflow: hidden;
-  position: relative;
-  align-items: flex-start;
-  flex-shrink: 0;
-  border-radius: 8px;
-  background-image: linear-gradient(180deg, rgba(9, 0, 0, 1) 0%, rgba(46, 0, 0, 1) 100%);
-}
-.dashboard-dark-pop-up-add-sprint-rectangle23 {
-  top: 0px;
-  left: 0px;
-  width: 1340px;
-  height: 90px;
-  position: absolute;
-  border-radius: 8px 8px 0 0;
-}
-.dashboard-dark-pop-up-add-sprint-text {
-  top: 21px;
-  left: 584px;
-  color: rgba(255, 255, 255, 1);
-  height: auto;
-  position: absolute;
-  font-size: 32px;
-  font-style: SemiBold;
-  text-align: center;
-  font-family: Poppins;
-  font-weight: 600;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.dashboard-dark-pop-up-add-sprint-sprint-name {
-  top: 136px;
-  left: 69px;
-  width: 1216px;
-  height: 40px;
-  display: flex;
-  position: absolute;
-  align-items: flex-start;
-  flex-shrink: 1;
-  background-color: rgba(109, 21, 0, 1);
-}
-.dashboard-dark-pop-up-add-sprint-text02 {
-  top: 8px;
-  left: 520px;
-  color: rgba(255, 255, 255, 1);
-  width: 137px;
-  height: auto;
-  position: absolute;
-  font-size: 16px;
-  font-style: SemiBold;
-  text-align: center;
-  font-family: Poppins;
-  font-weight: 600;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.dashboard-dark-pop-up-add-sprint-sprint-name1 {
-  top: 250px;
-  left: 520px;
-  width: 270px;
-  height: 40px;
-  display: flex;
-  position: absolute;
-  align-items: flex-start;
-  flex-shrink: 1;
-  background-color: rgba(109, 21, 0, 1);
-}
-.dashboard-dark-pop-up-add-sprint-text04 {
-  top: 8px;
-  color: rgba(255, 255, 255, 1);
-  width: 119px;
-  height: auto;
-  position: absolute;
-  font-size: 16px;
-  font-style: SemiBold;
-  text-align: center;
-  font-family: Poppins;
-  font-weight: 600;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.dashboard-dark-pop-up-add-sprint-sprint-name2 {
-  top: 380px;
-  left: 520px;
-  width: 270px;
-  height: 40px;
-  display: flex;
-  position: absolute;
-  align-items: flex-start;
-  flex-shrink: 1;
-  background-color: rgba(109, 21, 0, 1);
-}
-.dashboard-dark-pop-up-add-sprint-text06 {
-  top: 8px;
-  color: rgba(255, 255, 255, 1);
-  width: 119px;
-  height: auto;
-  position: absolute;
-  font-size: 16px;
-  font-style: SemiBold;
-  text-align: center;
-  font-family: Poppins;
-  font-weight: 600;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.dashboard-dark-pop-up-add-sprint-default-sprint-status {
-  top: 500px;
-  left: 539px;
-  width: 233px;
-  height: 63px;
-  display: flex;
-  position: absolute;
-  align-items: flex-start;
-  flex-shrink: 1;
-}
-.dashboard-dark-pop-up-add-sprint-default-task-status {
-  top: 23px;
-  left: 0px;
-  width: 233px;
-  height: 40px;
-  display: flex;
-  position: absolute;
-  align-items: flex-start;
-  flex-shrink: 1;
-  background-image: linear-gradient(180deg, rgba(209, 55, 17, 1) 0%, rgba(120, 29, 7, 1) 100%);
-}
-.dashboard-dark-pop-up-add-sprint-text08 {
-  top: 7px;
-  left: 17px;
-  color: rgba(254, 254, 254, 1);
-  width: 199px;
-  height: auto;
-  position: absolute;
-  font-size: 17px;
-  font-style: Bold;
-  text-align: center;
-  font-family: Poppins;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.dashboard-dark-pop-up-add-sprint-text10 {
-  color: rgba(226, 102, 71, 1);
-  height: auto;
-  position: absolute;
-  font-size: 15px;
-  font-style: SemiBold;
-  text-align: center;
-  font-family: Poppins;
-  font-weight: 600;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.dashboard-dark-pop-up-add-sprint-text12 {
-  top: 207px;
-  left: 422px;
-  color: rgba(226, 102, 71, 1);
-  height: auto;
-  position: absolute;
-  font-size: 15px;
-  font-style: SemiBold;
-  text-align: center;
-  font-family: Poppins;
-  font-weight: 600;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.dashboard-dark-pop-up-add-sprint-text14 {
-  top: 207px;
-  left: 875px;
-  color: rgba(226, 102, 71, 1);
-  height: auto;
-  position: absolute;
-  font-size: 15px;
-  font-style: SemiBold;
-  text-align: center;
-  font-family: Poppins;
-  font-weight: 600;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.dashboard-dark-pop-up-add-sprint-create-sprint {
-  top: 664px;
-  left: 69px;
-  width: 1190px;
-  height: 35px;
-  display: flex;
-  position: absolute;
-  align-items: flex-start;
-  flex-shrink: 1;
-  background-image: linear-gradient(180deg, rgba(207, 54, 17, 1) 0%, rgba(123, 30, 7, 1) 97%, rgba(157, 31, 0, 0) 100%, rgba(120, 29, 7, 1) 100%);
-}
-.dashboard-dark-pop-up-add-sprint-group1 {
-  top: 5px;
-  left: 261.21868896484375px;
-  width: 638.5365600585938px;
-  height: 24px;
-  display: flex;
-  position: absolute;
-  align-items: flex-start;
-  flex-shrink: 1;
-}
-.dashboard-dark-pop-up-add-sprint-text16 {
-  color: rgba(255, 255, 255, 1);
-  width: 639px;
-  height: auto;
-  position: absolute;
-  font-size: 16px;
-  font-style: Bold;
-  text-align: center;
-  font-family: Poppins;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.dashboard-dark-pop-up-add-sprint-calendar-enddate {
-  top: 230px;
-  left: 875px;
-  width: 410px;
-  height: 388px;
-  display: flex;
-  position: absolute;
-  align-items: flex-start;
-  flex-shrink: 1;
-  background-color: rgba(226, 102, 71, 1);
-}
-.dashboard-dark-pop-up-add-sprint-rectangle17 {
-  top: 0px;
-  left: 0px;
-  width: 410px;
-  height: 82px;
-  position: absolute;
-  border-radius: 5px;
-}
-.dashboard-dark-pop-up-add-sprint-text18 {
-  top: 89px;
-  left: 113px;
-  color: rgba(255, 242, 233, 1);
-  width: 183px;
-  height: auto;
-  position: absolute;
-  font-size: 17px;
-  font-style: SemiBold;
-  text-align: center;
-  font-family: Poppins;
-  font-weight: 600;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.dashboard-dark-pop-up-add-sprint-text20 {
-  top: 289px;
-  left: 48px;
-  color: rgb(255, 217, 190);
-  width: 91px;
-  height: auto;
-  position: absolute;
-  font-size: 17px;
-  font-style: SemiBold;
-  text-align: center;
-  font-family: Poppins;
-  font-weight: 600;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.dashboard-dark-pop-up-add-sprint-text21 {
-  top: 247px;
-  left: 15px;
-  color: rgb(255, 217, 190);
-  width: 380px;
-  height: auto;
-  position: absolute;
-  font-size: 17px;
-  font-style: SemiBold;
-  text-align: center;
-  font-family: Poppins;
-  font-weight: 600;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.dashboard-dark-pop-up-add-sprint-text22 {
-  top: 209px;
-  left: 15px;
-  color: rgb(255, 217, 190);
-  width: 380px;
-  height: auto;
-  position: absolute;
-  font-size: 17px;
-  font-style: SemiBold;
-  text-align: center;
-  font-family: Poppins;
-  font-weight: 600;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.dashboard-dark-pop-up-add-sprint-text23 {
-  top: 167px;
-  left: 15px;
-  color: rgb(255, 217, 190);
-  width: 380px;
-  height: auto;
-  position: absolute;
-  font-size: 17px;
-  font-style: SemiBold;
-  text-align: center;
-  font-family: Poppins;
-  font-weight: 600;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.dashboard-dark-pop-up-add-sprint-text24 {
-  top: 126px;
-  left: 15px;
-  color: rgba(88, 69, 52, 0.85);
-  width: 380px;
-  height: auto;
-  position: absolute;
-  font-size: 17px;
-  font-style: SemiBold;
-  text-align: center;
-  font-family: Poppins;
-  font-weight: 600;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.dashboard-dark-pop-up-add-sprint-text25 {
-  color: rgba(88, 69, 52, 0.85);
-}
-.dashboard-dark-pop-up-add-sprint-text26 {
-  color: rgba(126, 96, 67, 0.85);
-}
-.dashboard-dark-pop-up-add-sprint-text27 {
-  color: rgba(175, 134, 97, 0.85);
-}
-.dashboard-dark-pop-up-add-sprint-text28 {
-  color: #ffffff;
-}
-.dashboard-dark-pop-up-add-sprint-currentdate {
-  top: 284px;
-  left: 95px;
-  width: 35px;
-  height: 35px;
-  opacity: 0.55;
-  position: absolute;
-}
-.dashboard-dark-pop-up-add-sprint-calendar-startdate {
-  top: 230px;
-  left: 422px;
-  width: 410px;
-  height: 388px;
-  display: flex;
-  position: absolute;
-  align-items: flex-start;
-  flex-shrink: 1;
-  background-color: rgba(226, 102, 71, 1);
-}
-.dashboard-dark-pop-up-add-sprint-rectangle171 {
-  top: 0px;
-  left: 0px;
-  width: 410px;
-  height: 82px;
-  position: absolute;
-  border-radius: 5px;
-}
-.dashboard-dark-pop-up-add-sprint-text30 {
-  top: 289px;
-  left: 48px;
-  color: rgb(255, 217, 190);
-  width: 91px;
-  height: auto;
-  position: absolute;
-  font-size: 17px;
-  font-style: SemiBold;
-  text-align: center;
-  font-family: Poppins;
-  font-weight: 600;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.dashboard-dark-pop-up-add-sprint-text31 {
-  top: 247px;
-  left: 15px;
-  color: rgb(255, 217, 190);
-  width: 380px;
-  height: auto;
-  position: absolute;
-  font-size: 17px;
-  font-style: SemiBold;
-  text-align: center;
-  font-family: Poppins;
-  font-weight: 600;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.dashboard-dark-pop-up-add-sprint-text32 {
-  top: 209px;
-  left: 15px;
-  color: rgb(255, 217, 190);
-  width: 380px;
-  height: auto;
-  position: absolute;
-  font-size: 17px;
-  font-style: SemiBold;
-  text-align: center;
-  font-family: Poppins;
-  font-weight: 600;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.dashboard-dark-pop-up-add-sprint-text33 {
-  top: 167px;
-  left: 15px;
-  color: rgb(255, 217, 190);
-  width: 380px;
-  height: auto;
-  position: absolute;
-  font-size: 17px;
-  font-style: SemiBold;
-  text-align: center;
-  font-family: Poppins;
-  font-weight: 600;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.dashboard-dark-pop-up-add-sprint-text34 {
-  top: 126px;
-  left: 15px;
-  color: rgba(88, 69, 52, 0.85);
-  width: 380px;
-  height: auto;
-  position: absolute;
-  font-size: 17px;
-  font-style: SemiBold;
-  text-align: center;
-  font-family: Poppins;
-  font-weight: 600;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.dashboard-dark-pop-up-add-sprint-text35 {
-  color: rgba(88, 69, 52, 0.85);
-}
-.dashboard-dark-pop-up-add-sprint-text36 {
-  color: rgba(126, 96, 67, 0.85);
-}
-.dashboard-dark-pop-up-add-sprint-text37 {
-  color: rgba(175, 134, 97, 0.85);
-}
-.dashboard-dark-pop-up-add-sprint-text38 {
-  color: #ffffff;
-}
-.dashboard-dark-pop-up-add-sprint-text40 {
-  top: 89px;
-  left: 113px;
-  color: rgba(255, 242, 233, 1);
-  width: 183px;
-  height: auto;
-  position: absolute;
-  font-size: 17px;
-  font-style: SemiBold;
-  text-align: center;
-  font-family: Poppins;
-  font-weight: 600;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.dashboard-dark-pop-up-add-sprint-text42 {
-  top: 25px;
-  left: 146px;
-  color: rgba(255, 255, 255, 1);
-  width: 120px;
-  height: auto;
-  position: absolute;
-  font-size: 23px;
-  font-style: SemiBold;
-  text-align: center;
-  font-family: Poppins;
-  font-weight: 600;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.dashboard-dark-pop-up-add-sprint-text44 {
-  top: 26px;
-  color: rgba(255, 255, 255, 1);
-  right: -308px;
-  width: 120px;
-  height: auto;
-  position: absolute;
-  font-size: 23px;
-  font-style: SemiBold;
-  text-align: center;
-  font-family: Poppins;
-  font-weight: 600;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.dashboard-dark-pop-up-add-sprint-currentdate1 {
-  top: 284px;
-  left: 47px;
-  width: 35px;
-  height: 35px;
-  opacity: 0.55;
-  position: absolute;
-}
-.dashboard-dark-pop-up-add-sprint-next-previouspage {
-  top: 31px;
-  left: 15px;
-  width: 373px;
-  height: 25px;
-  display: flex;
-  position: absolute;
-  align-items: flex-start;
-  flex-shrink: 1;
-}
-.dashboard-dark-pop-up-add-sprint-linear-arrows-alt-arrow-right {
-  top: 0px;
-  left: 11px;
-  width: 25px;
-  height: 25px;
-  position: absolute;
-}
-.dashboard-dark-pop-up-add-sprint-linear-arrows-alt-arrow-left {
-  top: -1px;
-  right: 1px;
-  width: 25px;
-  height: 25px;
-  position: absolute;
-}
-.dashboard-dark-pop-up-add-sprint-next-previouspage1 {
-  top: 32px;
-  right: -430px;
-  width: 373px;
-  height: 25px;
-  display: flex;
-  position: absolute;
-  align-items: flex-start;
-  flex-shrink: 1;
-}
-.dashboard-dark-pop-up-add-sprint-linear-arrows-alt-arrow-right1 {
-  top: 0px;
-  left: 11px;
-  width: 25px;
-  height: 25px;
-  position: absolute;
-}
-.dashboard-dark-pop-up-add-sprint-linear-arrows-alt-arrow-left1 {
-  top: -1px;
-  right: 1px;
-  width: 25px;
-  height: 25px;
-  position: absolute;
-}
-.dashboard-dark-pop-up-add-sprint-next-previouspage2 {
-  left: 12px;
-  width: 373px;
-  bottom: 19px;
-  height: 25px;
-  display: flex;
-  position: absolute;
-  align-items: flex-start;
-  flex-shrink: 1;
-}
-.dashboard-dark-pop-up-add-sprint-linear-arrows-alt-arrow-right2 {
-  top: 0px;
-  left: 11px;
-  width: 25px;
-  height: 25px;
-  position: absolute;
-}
-.dashboard-dark-pop-up-add-sprint-linear-arrows-alt-arrow-left2 {
-  top: -1px;
-  right: 1px;
-  width: 25px;
-  height: 25px;
-  position: absolute;
-}
-.dashboard-dark-pop-up-add-sprint-next-previouspage3 {
-  right: -432px;
-  width: 373px;
-  bottom: 13px;
-  height: 25px;
-  display: flex;
-  position: absolute;
-  align-items: flex-start;
-  flex-shrink: 1;
-}
-.dashboard-dark-pop-up-add-sprint-linear-arrows-alt-arrow-right3 {
-  top: 0px;
-  left: 11px;
-  width: 25px;
-  height: 25px;
-  position: absolute;
-}
-.dashboard-dark-pop-up-add-sprint-linear-arrows-alt-arrow-left3 {
-  top: -1px;
-  right: 1px;
-  width: 25px;
-  height: 25px;
-  position: absolute;
-}
-select option {
-  display: fixed;
-  position: fixed;
-  margin: 40px;
-  bottom: 100px;
-  max-width: 100%; max-height: 100%;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.3);
-  color: #000000;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
-}
+/* Quick color choices */
+/* dark orange => linear-gradient(180deg, rgb(201, 61, 26) 0%, rgba(100, 20, 0) 100%); */
+
+/* Container formatting start */
+.dashboard-dark-pop-up-add-task-product-backlog-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .dashboard-dark-pop-up-add-task-product-backlog-dashboard-dark-popupfor-adding-task {
+    width: 900px;
+    height: 700px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 30px;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(46, 0, 0, 1) 100%, rgba(78, 0, 0, 1) 100%);
+  }
+  .dashboard-dark-pop-up-add-task-product-backlog-rectangle23 {
+    top: 0px;
+    left: 0px;
+    width: 1000px;
+    height: 90px;
+    position: absolute;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .dashboard-dark-pop-up-add-task-product-backlog-text {
+    top: 21px;
+    left: 375px;
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    position: absolute;
+    font-size: 32px;
+    font-style: SemiBold;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  /* Container formatting end */
+  
+  /* Task name start */
+  .dashboard-dark-pop-up-add-task-product-backlog-task-name {
+    top: 136px;
+    left: 55px;
+    width: 350px;
+    height: 40px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+    background-color: rgba(255, 255, 255, 1);
+  }
+  .dashboard-dark-pop-up-add-task-product-backlog-text02 {
+    top: 8px;
+    color: rgba(0, 0, 0, 1);
+    width: 137px;
+    height: auto;
+    position: absolute;
+    font-size: 16px;
+    font-style: SemiBold;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  /* Task name end */
+  
+  /* Assign member start */
+  .dashboard-dark-pop-up-add-task-product-backlog-assign-member {
+    top: 440px;
+    left: 55px;
+    width: 780px;
+    height: 40px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+    background-color: rgba(255, 255, 255, 1);
+  }
+  .dashboard-dark-pop-up-add-task-product-backlog-text04 {
+    top: 8px;
+    color: rgba(0, 0, 0, 1);
+    width: 169px;
+    height: auto;
+    position: absolute;
+    font-size: 16px;
+    font-style: SemiBold;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  /* Assign member end */
+  
+  /* Story points start */
+  .dashboard-dark-pop-up-add-task-product-backlog-story-points {
+    top: 136px;
+    left: 445px;
+    width: 180px;
+    height: 40px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+    background-color: rgba(255, 255, 255, 1);
+  }
+  .dashboard-dark-pop-up-add-task-product-backlog-text06 {
+    top: 8px;
+    color: rgba(0, 0, 0, 1);
+    width: 199px;
+    height: auto;
+    position: absolute;
+    font-size: 16px;
+    font-style: SemiBold;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  /* Story points end */
+  
+  /* Task stage start */
+  .task-stage-text{
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    position: absolute;
+    top: 108px;
+    left: 665px;
+    font-size: 16px;
+    font-style: SemiBold;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .task-stage{
+    top: 136px;
+    left: 665px;
+    width: 180px;
+    height: 42px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+    background-image: linear-gradient(180deg, rgb(201, 61, 26) 0%, rgba(100, 20, 0) 100%);
+  }
+  .task-stage-selection{
+    top: 5px;
+    left: 26px;
+    height: 29px;
+    position: absolute;
+    font-size: 16px;
+    text-align: left;
+    font-family: Poppins;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  /* Task stage end */
+  
+  /* Task description start */
+  .task-description{
+    top: 220px;
+    left: 55px;
+    height: 180px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+    background-color: rgba(255, 255, 255, 1);
+  }
+  .task-description-text{
+    position: absolute;
+    font-size: 16px;
+    text-align: left;
+    font-family: Poppins;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  /* Task description end */
+  
+  /* Task status start */
+  .dashboard-dark-pop-up-add-task-product-backlog-default-task-status {
+    top: 522px;
+    left: 615px;
+    width: 233px;
+    height: 63px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  .dashboard-dark-pop-up-add-task-product-backlog-default-task-status1 {
+    top: 23px;
+    left: 0px;
+    width: 233px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+    background-image: linear-gradient(180deg, rgba(155, 35, 4, 1) 0%, rgba(200, 61, 25, 1) 0%, rgba(99, 20, 0, 1) 100%);
+  }
+  .dashboard-dark-pop-up-add-task-product-backlog-text08 {
+    top: 5px;
+    left: 15px;
+    color: rgba(255, 255, 255, 1);
+    width: 199px;
+    height: auto;
+    position: absolute;
+    font-size: 17px;
+    font-style: Bold;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 700;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .dashboard-dark-pop-up-add-task-product-backlog-text10 {
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    position: absolute;
+    font-size: 15px;
+    font-style: SemiBold;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  /* Task status end */
+  
+  /*Tags box start */
+  .tags-text{
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    position: absolute;
+    top: 522px;
+    left: 55px;
+    font-size: 15px;
+    font-style: SemiBold;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .add-tags {
+    border-radius: 5px;
+    top: 545px;
+    left: 55px;
+    width: 220px;
+    height: 42px;
+    position: absolute;
+    display: inline-block;
+    background-image: linear-gradient(180deg, rgb(201, 61, 26) 0%, rgba(100, 20, 0) 100%);
+  }
+  .add-tags .tag-anchor{  
+    top: 6px;
+    left: 25px;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    height: 25px;
+    width: 170px;
+    text-align: left;
+    font-family: Poppins;
+    font-size: 16px;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 1;
+  }
+  .add-tags .tag-anchor:after {
+    position: absolute;
+    content: "";
+    border-left: 2px solid rgb(117, 117, 117);
+    border-top: 2px solid rgb(117, 117, 117);
+    padding: 3px;
+    right: 10px;
+    top: 30%;
+    -moz-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+  }
+  
+  .add-tags ul.task-tags {
+    width: 170px;
+    height: 80px;
+    display: none;
+    margin: 0;
+    border-top: none;
+    background-color: rgb(174, 174, 174);
+  }
+  .add-tags ul.task-tags li {
+    list-style: none;
+  }
+  
+  .add-tags.visible .task-tags {
+    top: 6px;
+    left: 40px;
+    display: block;
+    position:relative;
+    font-family: Poppins;
+    font-size: 16px;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+    z-index: 2;
+    overflow-y: scroll;
+  }
+  /* Tags box end */
+  
+  /* Task type start */
+  .task-type-text{
+    top: 518px;
+    left: 470px;
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    position: absolute;
+    font-size: 16px;
+    font-style: SemiBold;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .task-type{
+    border-radius: 5px;
+    top: 545px;
+    left: 470px;
+    width: 100px;
+    height: 42px;
+    position: absolute;
+    display: inline-block;
+    background-image: linear-gradient(180deg, rgb(201, 61, 26) 0%, rgba(100, 20, 0) 100%);
+  }
+  .task-type-selection{
+    top: 5px;
+    left: 18px;
+    height: 29px;
+    position: absolute;
+    font-size: 16px;
+    text-align: left;
+    font-family: Poppins;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  /* Priority start */
+  .dashboard-dark-pop-up-add-task-product-backlog-priority {
+    top: 520px;
+    left: 300px;
+    width: 120px;
+    height: 64px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  .dashboard-dark-pop-up-add-task-product-backlog-rectangle7 {
+    top: 24px;
+    left: 0px;
+    width: 140px;
+    height: 40px;
+    position: absolute;
+    border-radius: 3px;
+  }
+  .dashboard-dark-pop-up-add-task-product-backlog-text14 {
+    color: rgba(255, 255, 255, 1);
+    width: 67px;
+    height: auto;
+    position: absolute;
+    font-size: 16px;
+    font-style: SemiBold;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  /* Priority end */
+  
+  /* Create task start */
+  .dashboard-dark-pop-up-add-task-product-backlog-create-task {
+    top: 630px;
+    left: 115px;
+    width: 668px;
+    height: 35px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+    background-image: linear-gradient(180deg, rgba(208, 59, 22, 1) 0%, rgba(89, 17, 0, 1) 100%);
+  }
+  .dashboard-dark-pop-up-add-task-product-backlog-group1 {
+    top: 5px;
+    left: 146.63397216796875px;
+    width: 358.43902587890625px;
+    height: 24px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  .dashboard-dark-pop-up-add-task-product-backlog-text16 {
+    color: rgba(255, 255, 255, 1);
+    width: 358px;
+    height: auto;
+    position: absolute;
+    font-size: 16px;
+    font-style: Bold;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 700;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  /* Create task end */
+  
+  /* .dashboard-dark-pop-up-add-task-product-backlog-drop-down-arrow {
+    top: 321px;
+    left: 414px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+  } */
+  /* .overlay {
+    display: none;
+    position: fixed;
+    width: 100%; height: 100%;
+    top: 50%; left: 50%;
+    background: rgba(0,0,0,0.5);
+    z-index: 2;
+  }
+  #overlay{
+    -webkit-box-shadow:0px 0px 0px 9999px rgba(0, 0, 0, 0.5);
+    box-shadow:  0px 0px 0px 9999px rgba(0, 0, 0, 0.5);
+  }
+  .popup {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 3; 
+  } */
+  select option {
+    margin: 40px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #000000;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+  }
+  

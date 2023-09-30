@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="english">
   <head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     <title>exported project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
 
     <style data-tag="reset-style-sheet">
-      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: blue;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
     </style>
     <style data-tag="default-style-sheet">
       html {
@@ -99,231 +102,230 @@
     />
     <link rel="stylesheet" href="./style.css" />
   </head>
+
   <body>
     <div>
-      <link href="./dashboard-dark-pop-up-add-sprint.css" rel="stylesheet" />
-      <div class="dashboard-dark-pop-up-add-sprint-container">
+      <link
+        href="./dashboard-dark-pop-up-add-sprint.css"
+        rel="stylesheet"
+      />
+      <div class="dashboard-dark-pop-up-add-task-product-backlog-container">
         <div
-          class="dashboard-dark-pop-up-add-sprint-dashboard-dark-popupfor-adding-task"
+          class="dashboard-dark-pop-up-add-task-product-backlog-dashboard-dark-popupfor-adding-task"
         >
           <img
-            alt="Rectangle234211"
-            src="public/external/rectangle234211-j6tk-200h.png"
-            class="dashboard-dark-pop-up-add-sprint-rectangle23"
+            alt="Rectangle235895"
+            src="public/external/rectangle235895-c4av-200h.png"
+            class="dashboard-dark-pop-up-add-task-product-backlog-rectangle23"
           />
-          <span class="dashboard-dark-pop-up-add-sprint-text">
+          <span class="dashboard-dark-pop-up-add-task-product-backlog-text">
             <span>Add Sprint</span>
           </span>
-          <div class="dashboard-dark-pop-up-add-sprint-sprint-name">
-            <span class="dashboard-dark-pop-up-add-sprint-text02">
-              <input type = "text" id = "Sprint_Name_text" placeholder="Sprint Name" 
-              style="background-color: rgba(109, 21, 0, 1); color: rgba(255, 255, 255, 1);">
+          <div class="dashboard-dark-pop-up-add-task-product-backlog-task-name">
+            <span class="dashboard-dark-pop-up-add-task-product-backlog-text02">
+              <input type = "text" id = "Sprint_Name_text" placeholder="Sprint Name"
+              style="background-color: white; color: black; width: 260px">
             </span>
           </div>
-          <div class="dashboard-dark-pop-up-add-sprint-sprint-name1">
-            <span class="dashboard-dark-pop-up-add-sprint-text04">
-              <span>Start Date:</span>
-              <input type="date" id="Startdate"
-              style="background-color: rgba(109, 21, 0, 1); color: rgba(255, 255, 255, 1);left:110px;bottom:23px;position: relative;">
+          <div
+            class="dashboard-dark-pop-up-add-task-product-backlog-assign-member"
+          >
+            <!-- <span class="dashboard-dark-pop-up-add-task-product-backlog-text04">
+              <input type = "text" id = "Start_Date_text" placeholder="Start Date Time"
+              style="background-color:white; color: black;">
             </span>
           </div>
-          <div class="dashboard-dark-pop-up-add-sprint-sprint-name2">
-            <span class="dashboard-dark-pop-up-add-sprint-text06">
-              <span>End Date:</span>
-              <input type="date" id="Enddate"
-              style="background-color: rgba(109, 21, 0, 1); color: rgba(255, 255, 255, 1);left:110px;bottom:23px;position: relative;">
+          <div
+            class="dashboard-dark-pop-up-add-task-product-backlog-story-points"
+          > -->
+            <span class="dashboard-dark-pop-up-add-task-product-backlog-text06">
+              <input type = "text" id = "End_Date_text" placeholder="End Date-Time"
+              style="background-color:white; color: black; width: 160px;">
             </span>
           </div>
-
-          
-          <div class="dashboard-dark-pop-up-add-sprint-default-sprint-status">
-            <div class="dashboard-dark-pop-up-add-sprint-default-task-status">
-              <span class="dashboard-dark-pop-up-add-sprint-text08">
-                <!-- <span>Not Started</span> -->
-                  <select id="Progress_text">
-                    <!-- option tag starts -->
-                        <option value="Not Started">Not Started</option>
-                        <option value="In Progress">In Progress</option>
-                        <option value="Completed">Completed</option>
-                    <!-- option tag ends -->
+          <div class="task-description">
+            <input type = "text" class="task-description-text" id = "Start_Date_text" placeholder="Start Date-Time"
+            style="background-color:white;color:black; height: 180px; width:780px">
+          </div>
+          <!-- <span class="task-stage-text">Task Stage:</span>
+          <div class="task-stage">
+            <select id = 'task_stage_choice' class="task-stage-selection">
+              <option value = "None">None</option>
+              <option value = "Planning">Planning</option>
+              <option value = "Development">Development</option>
+              <option value = "Testing">Testing</option>
+              <option value = "Integration">Integration</option>
+            </select>
+          </div> -->
+          <!-- <span class="task-type-text">Task Type:</span>
+          <div class="task-type">
+            <select id = 'task_type_choice' class="task-type-selection">
+              <option value = "None">None</option>
+              <option value = "Story">Story</option>
+              <option value = "Bug">Bug</option>
+            </select>
+          </div> -->
+          <div
+            class="dashboard-dark-pop-up-add-task-product-backlog-default-task-status"
+          >
+            <div
+              class="dashboard-dark-pop-up-add-task-product-backlog-default-task-status1"
+            >
+              <span
+                class="dashboard-dark-pop-up-add-task-product-backlog-text08"
+              >
+                <select id="Sprint_Progress_Text">
+                  <!-- option tag starts -->
+                      <option value="Not Started">Not Started</option>
+                      <option value="In Progress">In Progress</option>
+                      <option value="Completed">Completed</option>
+                  <!-- option tag ends -->
                   </select>
               </span>
             </div>
-            
-            <span class="dashboard-dark-pop-up-add-sprint-text10">
-              <span>Default Sprint Status:</span>
+            <span class="dashboard-dark-pop-up-add-task-product-backlog-text10">
+              <span>Sprint Status:</span>
             </span>
           </div>
-          <!-- <span class="dashboard-dark-pop-up-add-sprint-text12">
-            <span>Select Start Date:</span>
-          </span>
-          <span class="dashboard-dark-pop-up-add-sprint-text14">
-            <span>Select End Date:</span>
-          </span> -->
-          <div class="dashboard-dark-pop-up-add-sprint-create-sprint">
-            <div class="dashboard-dark-pop-up-add-sprint-group1">
-              <a href="#" class="close" data-bs-dismiss="modal" aria-label="close">
-              <span class="dashboard-dark-pop-up-add-sprint-text16">
-                <button id="btnCreateSprintClose" type="submit" class = "close" data-bs-dismiss="modal" aria-label="close" style=" 
-                  width: 37px;
-                  height: 27px;
-                  background-color: #0074f0;"></button>
-                  <span>Create Sprint</span>
+
+          <!-- Add multiple tags -->
+          <!-- <span class="tags-text">Tags Selected:</span>
+          <div id="tag-list" class="add-tags" tabindex="100">
+            <span class="tag-anchor">Select Tags</span>
+            <ul class="task-tags">
+              <li><input type="checkbox" id="tag1" class="tag-checkbox" name="tag1" value="Frontend">Frontend</li>
+              <li><input type="checkbox" id="tag2" class="tag-checkbox" name="tag2" value="Backend">Backend</li>
+              <li><input type="checkbox" id="tag3" class="tag-checkbox" name="tag3" value="Database">Database</li>
+              <li><input type="checkbox" id="tag4" class="tag-checkbox" name="tag4" value="Framework">Framework</li>
+              <li><input type="checkbox" id="tag5" class="tag-checkbox" name="tag5" value="UI/UX">UI/UX</li>
+              <li><input type="checkbox" id="tag6" class="tag-checkbox" name="tag6" value="Testing">Testing</li>
+            </ul>
+          </div> -->
+          <!-- <div class="dashboard-dark-pop-up-add-task-product-backlog-tag">
+            <span class="dashboard-dark-pop-up-add-task-product-backlog-text12">
+              <input type = "text" id = "Tag_text" placeholder="Tag"
+              style="background-color:white; color: black;">
+            </span>
+          </div> -->
+          <!-- <div class="dashboard-dark-pop-up-add-task-product-backlog-priority">
+             <img
+              alt="Rectangle76435"
+              src="public/external/rectangle76435-exmp-200h.png"
+              class="dashboard-dark-pop-up-add-task-product-backlog-rectangle7"
+            /> 
+            <span class="dashboard-dark-pop-up-add-task-product-backlog-text14">
+              <span>Priority:</span>
+            </span>
+            <select id = 'priority' style="position: absolute; top: 30px; left: 18px; height: 24px;">
+              <option value = "Low">Low</option>
+              <option value = "Medium">Medium</option>
+              <option value = "Important">Important</option>
+              <option value = "Urgent">Urgent</option>
+            </select> -->
+            <!-- <img
+              alt="flagiconicons76435"
+              src="public/external/flagiconicons76435-w46d-200h.png"
+              class="dashboard-dark-pop-up-add-task-product-backlog-flagiconicons7"
+            /> -->
+          <!-- </div> -->
+          <div class="dashboard-dark-pop-up-add-task-product-backlog-create-task", id = "submitbtn">
+            <div class="dashboard-dark-pop-up-add-task-product-backlog-group1">
+              <!-- <a href="dashboard-dark-product-backlog.html"> -->
+              <!-- <a href="dashboard-dark-product-backlog.html" class="close"data-bs-dismiss="modal" aria-label="close"data-toggle="modal" data-target="#modalCase" onclick="closeWindow(event);"> -->
+                <!-- <span class="dashboard-dark-pop-up-add-task-product-backlog-text16"> -->
+                  <!--<button id="btnModal" type="button" class = "close" data-dismiss="modal" aria-label="close"onclick="window.parent.closeModal();"></button>-->
+                  <!-- <button id="btnAddTaskClose" type="submit" class = "close" onclick="closeModalAndIframe"></button> -->
+                  <!-- <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                  <span class="close">&times;</span>
+                  </button> -->
+                    <!--<span class="close">Create Task</span>
+                  </button>
+                  </span> --> 
+              <a href="#" class="close" data-bs-dismiss="modal" aria-label="close" onclick="closeModal">
+              <span class="dashboard-dark-pop-up-add-task-product-backlog-text16"> 
+                <button id="btnAddTaskClose" type="submit" class = "close" data-bs-dismiss="modal" aria-label="close"></button>
+                  <span class="close">Create Sprint</span>
               </span>
               </a>
+              <!-- <span class="dashboard-dark-pop-up-add-task-product-backlog-text16"> 
+                <button id="btnAddTaskClose" type="submit" class = "close" data-bs-dismiss="modal" aria-label="close" onclick="closeModal()"></button>
+                  <span class="close">Create Task</span>
+              </span> -->
             </div>
           </div>
-          <!-- <div class="dashboard-dark-pop-up-add-sprint-calendar-enddate">
-            <img
-              alt="Rectangle174212"
-              src="public/external/rectangle174212-lxh8-200h.png"
-              class="dashboard-dark-pop-up-add-sprint-rectangle17"
-            />
-            <span class="dashboard-dark-pop-up-add-sprint-text18">
-              <span>30 Aug 2023</span>
-            </span>
-            <span class="dashboard-dark-pop-up-add-sprint-text20">
-              30&nbsp; &nbsp; &nbsp; &nbsp;31&nbsp; &nbsp;
-            </span>
-            <span class="dashboard-dark-pop-up-add-sprint-text21">
-              &nbsp; &nbsp;24&nbsp; &nbsp; &nbsp; &nbsp;25&nbsp; &nbsp; &nbsp;
-              &nbsp;26&nbsp; &nbsp; &nbsp; &nbsp;27&nbsp; &nbsp; &nbsp;
-              &nbsp;28&nbsp; &nbsp; &nbsp; &nbsp;29&nbsp; &nbsp; &nbsp; &nbsp;30
-            </span>
-            <span class="dashboard-dark-pop-up-add-sprint-text22">
-              &nbsp; 16&nbsp; &nbsp; &nbsp; 17&nbsp; &nbsp; &nbsp; 18&nbsp;
-              &nbsp; &nbsp; 19&nbsp; &nbsp; &nbsp; 20&nbsp; &nbsp; &nbsp;
-              21&nbsp; &nbsp; &nbsp; 22&nbsp; &nbsp; &nbsp; 23
-            </span>
-            <span class="dashboard-dark-pop-up-add-sprint-text23">
-              &nbsp; &nbsp; &nbsp;7&nbsp; &nbsp; &nbsp; &nbsp;8&nbsp; &nbsp;
-              &nbsp; &nbsp; 9&nbsp; &nbsp; &nbsp; &nbsp;10&nbsp; &nbsp;
-              &nbsp;11&nbsp; &nbsp; 12&nbsp; &nbsp; &nbsp;13&nbsp; &nbsp;
-              14&nbsp; &nbsp; 15&nbsp; &nbsp;
-            </span>
-            <span class="dashboard-dark-pop-up-add-sprint-text24">
-              <span class="dashboard-dark-pop-up-add-sprint-text25">
-                29&nbsp; &nbsp; &nbsp;30&nbsp; &nbsp; &nbsp; 31&nbsp; &nbsp;
-                &nbsp;&nbsp;
-              </span>
-              <span class="dashboard-dark-pop-up-add-sprint-text26"></span>
-              <span class="dashboard-dark-pop-up-add-sprint-text27"></span>
-              <span class="dashboard-dark-pop-up-add-sprint-text28"></span>
-              <span>
-                1&nbsp; &nbsp; &nbsp; 2&nbsp; &nbsp; &nbsp; 3&nbsp; &nbsp;
-                &nbsp; 4&nbsp; &nbsp; &nbsp; 5&nbsp; &nbsp; &nbsp;6
-              </span>
-            </span>
-            <img
-              alt="Currentdate4212"
-              src="public/external/currentdate4212-0jaj-200h.png"
-              class="dashboard-dark-pop-up-add-sprint-currentdate"
-            />
+          <!-- <div class="overlay" id="overlay">
+            <div class="popup" id="popup">
+              <h2>Pop-up Window</h2>
+              <p>This is a pop-up window.</p>
+              <button id="open-button" type="submit" class="btn" onclick="openPopUp()">Open</button>
+              <button id="close-button" onclick="closePopUp()">Close</button>
+            </div> 
           </div> -->
-          <!-- <div class="dashboard-dark-pop-up-add-sprint-calendar-startdate">
-            <img
-              alt="Rectangle174212"
-              src="public/external/rectangle174212-judo-200h.png"
-              class="dashboard-dark-pop-up-add-sprint-rectangle171"
-            />
-            <span class="dashboard-dark-pop-up-add-sprint-text30">
-              30&nbsp; &nbsp; &nbsp; &nbsp;31&nbsp; &nbsp;
-            </span>
-            <span class="dashboard-dark-pop-up-add-sprint-text31">
-              &nbsp; &nbsp;24&nbsp; &nbsp; &nbsp; &nbsp;25&nbsp; &nbsp; &nbsp;
-              &nbsp;26&nbsp; &nbsp; &nbsp; &nbsp;27&nbsp; &nbsp; &nbsp;
-              &nbsp;28&nbsp; &nbsp; &nbsp; &nbsp;29&nbsp; &nbsp; &nbsp; &nbsp;30
-            </span>
-            <span class="dashboard-dark-pop-up-add-sprint-text32">
-              &nbsp; 16&nbsp; &nbsp; &nbsp; 17&nbsp; &nbsp; &nbsp; 18&nbsp;
-              &nbsp; &nbsp; 19&nbsp; &nbsp; &nbsp; 20&nbsp; &nbsp; &nbsp;
-              21&nbsp; &nbsp; &nbsp; 22&nbsp; &nbsp; &nbsp; 23
-            </span>
-            <span class="dashboard-dark-pop-up-add-sprint-text33">
-              &nbsp; &nbsp; &nbsp;7&nbsp; &nbsp; &nbsp; &nbsp;8&nbsp; &nbsp;
-              &nbsp; &nbsp; 9&nbsp; &nbsp; &nbsp; &nbsp;10&nbsp; &nbsp;
-              &nbsp;11&nbsp; &nbsp; 12&nbsp; &nbsp; &nbsp;13&nbsp; &nbsp;
-              14&nbsp; &nbsp; 15&nbsp; &nbsp;
-            </span>
-            <span class="dashboard-dark-pop-up-add-sprint-text34">
-              <span class="dashboard-dark-pop-up-add-sprint-text35">
-                29&nbsp; &nbsp; &nbsp;30&nbsp; &nbsp; &nbsp; 31&nbsp; &nbsp;
-                &nbsp;&nbsp;
-              </span>
-              <span class="dashboard-dark-pop-up-add-sprint-text36"></span>
-              <span class="dashboard-dark-pop-up-add-sprint-text37"></span>
-              <span class="dashboard-dark-pop-up-add-sprint-text38"></span>
-              <span>
-                1&nbsp; &nbsp; &nbsp; 2&nbsp; &nbsp; &nbsp; 3&nbsp; &nbsp;
-                &nbsp; 4&nbsp; &nbsp; &nbsp; 5&nbsp; &nbsp; &nbsp;6
-              </span>
-            </span>
-            <span class="dashboard-dark-pop-up-add-sprint-text40">
-              <span>30 Aug 2023</span>
-            </span>
-            <span class="dashboard-dark-pop-up-add-sprint-text42">
-              <span>Calendar</span>
-            </span>
-            <span class="dashboard-dark-pop-up-add-sprint-text44">
-              <span>Calendar</span>
-            </span>
-            <img
-              alt="Currentdate4212"
-              src="public/external/currentdate4212-0jaj-200h.png"
-              class="dashboard-dark-pop-up-add-sprint-currentdate1"
-            />
-            <div class="dashboard-dark-pop-up-add-sprint-next-previouspage">
-              <img
-                alt="LinearArrowsAltArrowRight4213"
-                src="public/external/lineararrowsaltarrowright4213-1alg.svg"
-                class="dashboard-dark-pop-up-add-sprint-linear-arrows-alt-arrow-right"
-              />
-              <img
-                alt="LinearArrowsAltArrowLeft4213"
-                src="public/external/lineararrowsaltarrowleft4213-y32n.svg"
-                class="dashboard-dark-pop-up-add-sprint-linear-arrows-alt-arrow-left"
-              />
-            </div>
-            <div class="dashboard-dark-pop-up-add-sprint-next-previouspage1">
-              <img
-                alt="LinearArrowsAltArrowRight4213"
-                src="public/external/lineararrowsaltarrowright4213-1alg.svg"
-                class="dashboard-dark-pop-up-add-sprint-linear-arrows-alt-arrow-right1"
-              />
-              <img
-                alt="LinearArrowsAltArrowLeft4213"
-                src="public/external/lineararrowsaltarrowleft4213-y32n.svg"
-                class="dashboard-dark-pop-up-add-sprint-linear-arrows-alt-arrow-left1"
-              />
-            </div>
-            <div class="dashboard-dark-pop-up-add-sprint-next-previouspage2">
-              <img
-                alt="LinearArrowsAltArrowRight4213"
-                src="public/external/lineararrowsaltarrowright4213-1alg.svg"
-                class="dashboard-dark-pop-up-add-sprint-linear-arrows-alt-arrow-right2"
-              />
-              <img
-                alt="LinearArrowsAltArrowLeft4213"
-                src="public/external/lineararrowsaltarrowleft4213-y32n.svg"
-                class="dashboard-dark-pop-up-add-sprint-linear-arrows-alt-arrow-left2"
-              />
-            </div>
-            <div class="dashboard-dark-pop-up-add-sprint-next-previouspage3">
-              <img
-                alt="LinearArrowsAltArrowRight4213"
-                src="public/external/lineararrowsaltarrowright4213-1alg.svg"
-                class="dashboard-dark-pop-up-add-sprint-linear-arrows-alt-arrow-right3"
-              />
-              <img
-                alt="LinearArrowsAltArrowLeft4213"
-                src="public/external/lineararrowsaltarrowleft4213-y32n.svg"
-                class="dashboard-dark-pop-up-add-sprint-linear-arrows-alt-arrow-left3"
-              />
-            </div>
+          
+          <!-- Submitting the Form
+          Slight Error: Clicking in the area where cursor changes to hand does not add to Database,
+          Need to clikc on bar area with deafult cursor to add to Database -->
+          <!-- <div class="dashboard-dark-pop-up-add-task-product-backlog-create-task", id = "submitbtn">
+            <a href="dashboard-dark-product-backlog.html">
+              <div class="dashboard-dark-pop-up-add-task-product-backlog-group1">
+                <span class="dashboard-dark-pop-up-add-task-product-backlog-text16">
+                  <span>Create Task</span>
+                </span>
+              </div>
+            </a>
           </div> -->
+          
+          <!-- Working Button -->
+          <!-- <div class="dashboard-dark-pop-up-add-task-product-backlog-create-task">
+            <button type="submit" id="submitbtn" style=" 
+            width: 37px;
+            height: 27px;
+            background-color: #0074f0;
+            ">Click Me</button>
+          </div> -->
+          
+          <!-- Priority Pop Up Not Working for Now -->
+          <!-- <div id="popup">
+            <h2>Pop-up Window</h2>
+            <p>This is a pop-up window.</p>
+            <button id="close-button" onclick="closePopUp()">Close</button>
+          </div>  -->
+
+          <!-- <img
+            alt="DropDownArrow3733"
+            src="public/external/dropdownarrow3733-cbq6.svg"
+            class="dashboard-dark-pop-up-add-task-product-backlog-drop-down-arrow"
+          /> -->
         </div>
       </div>
     </div>
+    <script type="text/javascript">
+ 
+      function closeWindow(e)
+      {
+          this.parent.$("#Window").data("tWindow").close();
+      }
+       
+    </script>
+    <script>
+      var checkList = document.getElementById('tag-list');
+      checkList.getElementsByClassName('tag-anchor')[0].onclick = function(evt) {
+      if (checkList.classList.contains('visible'))
+        checkList.classList.remove('visible');
+      else
+        checkList.classList.add('visible');
+      }
+    </script>
+    <script>
+    //   $('#btnAddTaskClose').click(function() {
+    //     parent.$('#modelCase').modal('hide');
+    // });
+    //   window.parent.closeModal();
+    //   $('#modelCase').on('click', 'button.close', function (eventObject) {
+    //   $('#modelCase').modal('hide');
+    // });
+    </script>
+    <script src="javaScript.js"></script>
   </body>
 </html>
 
@@ -354,15 +356,13 @@
   const analytics = getAnalytics(app);
   const database = getDatabase(app);
 
-  btnCreateSprint.addEventListener('click',(e)=>{
+  submitbtn.addEventListener('click',(e)=>{
     console.log('Button clicked');
 
     var Sprint_Name = document.getElementById('Sprint_Name_text').value;
-    var Start_DateTime = document.getElementById('Start_DateTime_text').value; 
-    var End_DateTime = document.getElementById('End_DateTime_text').value; 
-    var Progress = document.getElementById('Progress_text').value;
-    var End = document.getElementById('End_text').value;
-
+    var Start_Date = document.getElementById('Start_Date_text').value; 
+    var End_Date = document.getElementById('End_Date_text').value;
+    var Progress = document.getElementById('Sprint_Progress_Text').value;
     // var Tag1 = document.getElementById('tag1');
     // var Tag2 = document.getElementById('tag2');
     // var Tag3 = document.getElementById('tag3');
@@ -372,6 +372,7 @@
     // var Task_Stage = document.getElementById('task_stage_choice').value;
     // var Progress = document.getElementById('progress').value;
     // var Priority = document.getElementById('priority').value;
+    // var Task_Type = document.getElementById('task_type_choice').value;
     // var date = Date();
 
     // var Tag = " ";
@@ -394,18 +395,22 @@
     //   Tag = Tag + Tag6.value + ", ";
     // }
     // Tag = Tag.slice(0, -2);
+    const userId = push(child(ref(database), 'sprint-view-sprints')).key;
 
-    const userId = push(child(ref(database), 'sprint-view-tasks')).key;
-
-    set(ref(database, 'sprint-view-tasks/' + userId), {
+    set(ref(database, 'sprint-view-sprints/' + userId), {
       Sprint_Name: Sprint_Name,
-      Start_DateTime: Start_DateTime,
-      End_DateTime: End_DateTime,
-      Progress: Progress,
-      End: End
+      Start_Date: Start_Date,
+      End_Date: End_Date,
+      Progress: Progress
+    //   Progress: Progress,
+    //   Priority: Priority,
+    //   date: date,
+    //   Task_Description: Task_Description,
+    //   Task_Stage: Task_Stage,
+    //   Task_Type: Task_Type
     });
 
-    alert('Sprint Added to Sprint View');
+    alert('Task Added to Sprint View');
     // closePopUp()
   });
 </script>
