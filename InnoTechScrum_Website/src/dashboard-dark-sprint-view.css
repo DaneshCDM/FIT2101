@@ -1090,13 +1090,13 @@ select option {
 }
 .modal-header{
   display: block;
-  padding: 2px 16px;
+  /* padding: 2px 16px; */
   background: transparent;
   border: none;
 }
 .modal-body{
   display: flex;
-  padding: 2px 16px;
+  /* padding: 2px 16px; */
   width: 100%; height: 100%;
   justify-content: center;
   align-items: center;
@@ -1104,11 +1104,10 @@ select option {
 .modal-content{
   position: flex;
   margin: auto;
-  bottom:20px;
   padding: 20px;
-  height: 790px;/*535 cross|515 no cross*/
-  width: 700px;/*1050 cross|1050 no cross*/
-  max-width: 200%; max-height: 200%;
+  height: 515px;/*535 cross|515 no cross*/
+  width: 940px;/*1050 cross|1050 no cross*/
+  max-height: 100%;
   background-color: transparent;
   border: none; border-radius: 30px;
   justify-content: center;
@@ -1120,11 +1119,12 @@ select option {
   border: none;
 }
 .iframeTask{
-  width: 100%; height: 100%;
+  width: 900px; height: 700px;
   overflow: hidden;
   border-radius: 30px;
   justify-content: center;
   align-items: center;
+  transform: scale(0.8);
 }
 .close{
   color: #fff;
