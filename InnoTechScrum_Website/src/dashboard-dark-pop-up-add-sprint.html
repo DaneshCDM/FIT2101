@@ -128,24 +128,13 @@
             </span>
           </div>
           <div
-            class="dashboard-dark-pop-up-add-task-product-backlog-assign-member"
-          >
-            <!-- <span class="dashboard-dark-pop-up-add-task-product-backlog-text04">
-              <input type = "text" id = "Start_Date_text" placeholder="Start Date Time"
-              style="background-color:white; color: black;">
-            </span>
-          </div>
-          <div
-            class="dashboard-dark-pop-up-add-task-product-backlog-story-points"
-          > -->
-            <span class="dashboard-dark-pop-up-add-task-product-backlog-text06">
-              <input type = "text" id = "End_Date_text" placeholder="End Date-Time"
-              style="background-color:white; color: black; width: 160px;">
-            </span>
+            class="dashboard-dark-pop-up-add-task-product-backlog-assign-member">
+              <input type = "datetime-local" id = "End_Date_text" placeholder="End Date-Time"
+              style="background-color:white; color: black; width:780px; height: 100px;">
           </div>
           <div class="task-description">
-            <input type = "text" class="task-description-text" id = "Start_Date_text" placeholder="Start Date-Time"
-            style="background-color:white;color:black; height: 180px; width:780px">
+            <input type = "datetime-local" class="task-description-text" id = "Start_Date_text" placeholder="Start Date-Time"
+            style="background-color:white;color:black; height: 100px; width:780px">
           </div>
           <!-- <span class="task-stage-text">Task Stage:</span>
           <div class="task-stage">
@@ -174,7 +163,7 @@
               <span
                 class="dashboard-dark-pop-up-add-task-product-backlog-text08"
               >
-                <select id="Sprint_Progress_Text">
+                <select id="Sprint_Progress_Text" style="width:250px; text-align:center;">
                   <!-- option tag starts -->
                       <option value="Not Started">Not Started</option>
                       <option value="In Progress">In Progress</option>

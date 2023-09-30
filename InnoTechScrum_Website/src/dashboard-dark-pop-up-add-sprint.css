@@ -52,7 +52,7 @@
   .dashboard-dark-pop-up-add-task-product-backlog-task-name {
     top: 136px;
     left: 55px;
-    width: 350px;
+    width: 780px;
     height: 40px;
     display: flex;
     position: absolute;
@@ -79,38 +79,9 @@
   
   /* Assign member start */
   .dashboard-dark-pop-up-add-task-product-backlog-assign-member {
-    top: 440px;
+    top: 380px;
     left: 55px;
     width: 780px;
-    height: 40px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-    background-color: rgba(255, 255, 255, 1);
-  }
-  .dashboard-dark-pop-up-add-task-product-backlog-text04 {
-    top: 8px;
-    color: rgba(0, 0, 0, 1);
-    width: 169px;
-    height: auto;
-    position: absolute;
-    font-size: 16px;
-    font-style: SemiBold;
-    text-align: center;
-    font-family: Poppins;
-    font-weight: 600;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-  /* Assign member end */
-  
-  /* Story points start */
-  .dashboard-dark-pop-up-add-task-product-backlog-story-points {
-    top: 136px;
-    left: 445px;
-    width: 180px;
     height: 40px;
     display: flex;
     position: absolute;
@@ -132,6 +103,20 @@
     line-height: normal;
     font-stretch: normal;
     text-decoration: none;
+  }
+  /* Assign member end */
+  
+  /* Story points start */
+  .dashboard-dark-pop-up-add-task-product-backlog-story-points {
+    top: 136px;
+    left: 445px;
+    width: 180px;
+    height: 40px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+    background-color: rgba(255, 255, 255, 1);
   }
   /* Story points end */
   
@@ -200,8 +185,8 @@
   /* Task status start */
   .dashboard-dark-pop-up-add-task-product-backlog-default-task-status {
     top: 522px;
-    left: 615px;
-    width: 233px;
+    left: 280px;
+    width: 500px;
     height: 63px;
     display: flex;
     position: absolute;
@@ -211,7 +196,7 @@
   .dashboard-dark-pop-up-add-task-product-backlog-default-task-status1 {
     top: 23px;
     left: 0px;
-    width: 233px;
+    width: 350px;
     height: 40px;
     border-radius: 5px;
     display: flex;
@@ -222,9 +207,9 @@
   }
   .dashboard-dark-pop-up-add-task-product-backlog-text08 {
     top: 5px;
-    left: 15px;
+    left: 30px;
     color: rgba(255, 255, 255, 1);
-    width: 199px;
+    width: 300px;
     height: auto;
     position: absolute;
     font-size: 17px;
