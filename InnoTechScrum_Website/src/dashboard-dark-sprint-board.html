@@ -418,7 +418,7 @@
               <span>Add Column</span>
             </span>
           </div>
-          <div class="dashboard-dark-sprint-board-progress-status">
+          <!-- <div class="dashboard-dark-sprint-board-progress-status">
             <img
               alt="ProjectBacklogWidget4243"
               src="public/external/projectbacklogwidget4243-fme-500h.png"
@@ -434,7 +434,67 @@
               src="public/external/projectbacklogwidget4243-t15k-500h.png"
               class="dashboard-dark-sprint-board-project-backlog-widget2"
             />
+          </div> -->
+          <div class="drag-container">
+            <div class="board">
+              <div class="board-column todo">
+                <div class="board-column-container">
+                  <div class="board-column-header">Todo</div>
+                  <div class="board-column-content-wrapper">
+                    <div class="board-column-content">
+                      <div class="board-item1"><div class="board-item-content"><span>Item #</span>1</div></div>
+                      <div class="board-item2"><div class="board-item-content"><span>Item #</span>2</div></div>
+                      <div class="board-item3"><div class="board-item-content"><span>Item #</span>3</div></div>
+                      <div class="board-item4"><div class="board-item-content"><span>Item #</span>4</div></div>
+                      <div class="board-item5"><div class="board-item-content"><span>Item #</span>5</div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+            <div class="drag-container1">
+              <div class="board">
+                <div class="board-column working">
+                  <div class="board-column-container">
+                    <div class="board-column-header">In-Progress</div>
+                    <div class="board-column-content-wrapper">
+                      <div class="board-column-content">
+                        <div class="board-item1"><div class="board-item-content"><span>Item #</span>6</div></div>
+                        <div class="board-item2"><div class="board-item-content"><span>Item #</span>7</div></div>
+                        <div class="board-item3"><div class="board-item-content"><span>Item #</span>8</div></div>
+                        <div class="board-item4"><div class="board-item-content"><span>Item #</span>9</div></div>
+                        <div class="board-item5"><div class="board-item-content"><span>Item #</span>10</div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="drag-container2">
+              <div class="board">
+                <div class="board-column done">
+                  <div class="board-column-container">
+                    <div class="board-column-header">Done</div>
+                    <div class="board-column-content-wrapper">
+                      <div class="board-column-content">
+                        <div class="board-item1"><div class="board-item-content"><span>Item #</span>11</div></div>
+                        <div class="board-item2"><div class="board-item-content"><span>Item #</span>12</div></div>
+                        <div class="board-item3"><div class="board-item-content"><span>Item #</span>13</div></div>
+                        <div class="board-item4"><div class="board-item-content"><span>Item #</span>14</div></div>
+                        <div class="board-item5"><div class="board-item-content"><span>Item #</span>15</div></div>
+                        <div class="board-item6"><div class="board-item-content"><span>Item #</span>16</div></div>
+                        <div class="board-item7"><div class="board-item-content"><span>Item #</span>17</div></div>
+                        <div class="board-item8"><div class="board-item-content"><span>Item #</span>18</div></div>
+                        <div class="board-item9"><div class="board-item-content"><span>Item #</span>19</div></div>
+                        <div class="board-item10"><div class="board-item-content"><span>Item #</span>20</div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!-- </div> -->
           <span class="dashboard-dark-sprint-board-text12">
             <span>Sprint Board</span>
           </span>
@@ -455,7 +515,7 @@
               />
             </div>
           </div>
-          <span class="dashboard-dark-sprint-board-text16">
+          <!-- <span class="dashboard-dark-sprint-board-text16">
             <span>TO DO</span>
           </span>
           <span class="dashboard-dark-sprint-board-text18">
@@ -518,7 +578,7 @@
                 </span>
               </div>
             </div>
-          </div>
+          </div> -->
           <div class="dashboard-dark-sprint-board-sprint">
             <span class="dashboard-dark-sprint-board-text44">
               <span>Sprint 1</span>
@@ -529,3 +589,46 @@
     </div>
   </body>
 </html>
+
+<script src=https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js></script>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-analytics.js";
+  import { getDatabase, ref, set, push, child, onValue } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-database.js";
+  
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCghK_Zy_3Enmz0RJ9pvAxZfWxUYQp-InQ",
+    authDomain: "innotechscrum.firebaseapp.com",
+    databaseURL: "https://innotechscrum-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "innotechscrum",
+    storageBucket: "innotechscrum.appspot.com",
+    messagingSenderId: "365889461120",
+    appId: "1:365889461120:web:42e3ff55449d78b148bf65",
+    measurementId: "G-435J39SW2R"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const database = getDatabase(app);
+
+  const dbRef = ref(database, 'product-backlog-tasks/');
+
+  // Attach an event listener to listen for changes in the data
+  dataRef.on('value', function(snapshot) {
+    // Get the data from the snapshot
+    var data = snapshot.val();
+
+    // Update your HTML elements with the data
+    // Example: 
+    document.querySelector('.board-item1 span').textContent = "Item #" + data.item1;
+    document.querySelector('.board-item2 span').textContent = "Item #" + data.item2;
+    // Repeat this for other elements as needed.
+  });
+</script>
