@@ -353,7 +353,7 @@
   const params = new Proxy(new URLSearchParams(window.location.search), {
     get: (searchParams, prop) => searchParams.get(prop),
   });
-  let value = params.id;
+  let value = params.id.trim();
   //continue here
   
   // obtain data from id and pre-populate edit task
