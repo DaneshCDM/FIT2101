@@ -136,24 +136,7 @@
             <input type = "date" class="task-description-text" id = "Start_Date_text" placeholder="Start Date-Time"
             style="background-color:white;color:black; height: 100px; width:780px">
           </div>
-          <!-- <span class="task-stage-text">Task Stage:</span>
-          <div class="task-stage">
-            <select id = 'task_stage_choice' class="task-stage-selection">
-              <option value = "None">None</option>
-              <option value = "Planning">Planning</option>
-              <option value = "Development">Development</option>
-              <option value = "Testing">Testing</option>
-              <option value = "Integration">Integration</option>
-            </select>
-          </div> -->
-          <!-- <span class="task-type-text">Task Type:</span>
-          <div class="task-type">
-            <select id = 'task_type_choice' class="task-type-selection">
-              <option value = "None">None</option>
-              <option value = "Story">Story</option>
-              <option value = "Bug">Bug</option>
-            </select>
-          </div> -->
+          
           <div
             class="dashboard-dark-pop-up-add-task-product-backlog-default-task-status"
           >
@@ -177,114 +160,16 @@
             </span>
           </div>
 
-          <!-- Add multiple tags -->
-          <!-- <span class="tags-text">Tags Selected:</span>
-          <div id="tag-list" class="add-tags" tabindex="100">
-            <span class="tag-anchor">Select Tags</span>
-            <ul class="task-tags">
-              <li><input type="checkbox" id="tag1" class="tag-checkbox" name="tag1" value="Frontend">Frontend</li>
-              <li><input type="checkbox" id="tag2" class="tag-checkbox" name="tag2" value="Backend">Backend</li>
-              <li><input type="checkbox" id="tag3" class="tag-checkbox" name="tag3" value="Database">Database</li>
-              <li><input type="checkbox" id="tag4" class="tag-checkbox" name="tag4" value="Framework">Framework</li>
-              <li><input type="checkbox" id="tag5" class="tag-checkbox" name="tag5" value="UI/UX">UI/UX</li>
-              <li><input type="checkbox" id="tag6" class="tag-checkbox" name="tag6" value="Testing">Testing</li>
-            </ul>
-          </div> -->
-          <!-- <div class="dashboard-dark-pop-up-add-task-product-backlog-tag">
-            <span class="dashboard-dark-pop-up-add-task-product-backlog-text12">
-              <input type = "text" id = "Tag_text" placeholder="Tag"
-              style="background-color:white; color: black;">
-            </span>
-          </div> -->
-          <!-- <div class="dashboard-dark-pop-up-add-task-product-backlog-priority">
-             <img
-              alt="Rectangle76435"
-              src="public/external/rectangle76435-exmp-200h.png"
-              class="dashboard-dark-pop-up-add-task-product-backlog-rectangle7"
-            /> 
-            <span class="dashboard-dark-pop-up-add-task-product-backlog-text14">
-              <span>Priority:</span>
-            </span>
-            <select id = 'priority' style="position: absolute; top: 30px; left: 18px; height: 24px;">
-              <option value = "Low">Low</option>
-              <option value = "Medium">Medium</option>
-              <option value = "Important">Important</option>
-              <option value = "Urgent">Urgent</option>
-            </select> -->
-            <!-- <img
-              alt="flagiconicons76435"
-              src="public/external/flagiconicons76435-w46d-200h.png"
-              class="dashboard-dark-pop-up-add-task-product-backlog-flagiconicons7"
-            /> -->
-          <!-- </div> -->
           <div class="dashboard-dark-pop-up-add-task-product-backlog-create-task", id = "submitbtn">
             <div class="dashboard-dark-pop-up-add-task-product-backlog-group1">
-              <!-- <a href="dashboard-dark-product-backlog.html"> -->
-              <!-- <a href="dashboard-dark-product-backlog.html" class="close"data-bs-dismiss="modal" aria-label="close"data-toggle="modal" data-target="#modalCase" onclick="closeWindow(event);"> -->
-                <!-- <span class="dashboard-dark-pop-up-add-task-product-backlog-text16"> -->
-                  <!--<button id="btnModal" type="button" class = "close" data-dismiss="modal" aria-label="close"onclick="window.parent.closeModal();"></button>-->
-                  <!-- <button id="btnAddTaskClose" type="submit" class = "close" onclick="closeModalAndIframe"></button> -->
-                  <!-- <button type="button" class="close" data-dismiss="modal" aria-label="close">
-                  <span class="close">&times;</span>
-                  </button> -->
-                    <!--<span class="close">Create Task</span>
-                  </button>
-                  </span> --> 
               <a href="#" class="close" data-bs-dismiss="modal" aria-label="close" onclick="closeModal">
               <span class="dashboard-dark-pop-up-add-task-product-backlog-text16"> 
                 <button id="btnAddTaskClose" type="submit" class = "close" data-bs-dismiss="modal" aria-label="close"></button>
                   <span class="close">Create Sprint</span>
               </span>
               </a>
-              <!-- <span class="dashboard-dark-pop-up-add-task-product-backlog-text16"> 
-                <button id="btnAddTaskClose" type="submit" class = "close" data-bs-dismiss="modal" aria-label="close" onclick="closeModal()"></button>
-                  <span class="close">Create Task</span>
-              </span> -->
             </div>
           </div>
-          <!-- <div class="overlay" id="overlay">
-            <div class="popup" id="popup">
-              <h2>Pop-up Window</h2>
-              <p>This is a pop-up window.</p>
-              <button id="open-button" type="submit" class="btn" onclick="openPopUp()">Open</button>
-              <button id="close-button" onclick="closePopUp()">Close</button>
-            </div> 
-          </div> -->
-          
-          <!-- Submitting the Form
-          Slight Error: Clicking in the area where cursor changes to hand does not add to Database,
-          Need to clikc on bar area with deafult cursor to add to Database -->
-          <!-- <div class="dashboard-dark-pop-up-add-task-product-backlog-create-task", id = "submitbtn">
-            <a href="dashboard-dark-product-backlog.html">
-              <div class="dashboard-dark-pop-up-add-task-product-backlog-group1">
-                <span class="dashboard-dark-pop-up-add-task-product-backlog-text16">
-                  <span>Create Task</span>
-                </span>
-              </div>
-            </a>
-          </div> -->
-          
-          <!-- Working Button -->
-          <!-- <div class="dashboard-dark-pop-up-add-task-product-backlog-create-task">
-            <button type="submit" id="submitbtn" style=" 
-            width: 37px;
-            height: 27px;
-            background-color: #0074f0;
-            ">Click Me</button>
-          </div> -->
-          
-          <!-- Priority Pop Up Not Working for Now -->
-          <!-- <div id="popup">
-            <h2>Pop-up Window</h2>
-            <p>This is a pop-up window.</p>
-            <button id="close-button" onclick="closePopUp()">Close</button>
-          </div>  -->
-
-          <!-- <img
-            alt="DropDownArrow3733"
-            src="public/external/dropdownarrow3733-cbq6.svg"
-            class="dashboard-dark-pop-up-add-task-product-backlog-drop-down-arrow"
-          /> -->
         </div>
       </div>
     </div>
@@ -304,15 +189,6 @@
       else
         checkList.classList.add('visible');
       }
-    </script>
-    <script>
-    //   $('#btnAddTaskClose').click(function() {
-    //     parent.$('#modelCase').modal('hide');
-    // });
-    //   window.parent.closeModal();
-    //   $('#modelCase').on('click', 'button.close', function (eventObject) {
-    //   $('#modelCase').modal('hide');
-    // });
     </script>
     <script src="javaScript.js"></script>
   </body>
@@ -352,38 +228,7 @@
     var Start_Date = document.getElementById('Start_Date_text').value; 
     var End_Date = document.getElementById('End_Date_text').value;
     var Progress = document.getElementById('Sprint_Progress_Text').value;
-    // var Tag1 = document.getElementById('tag1');
-    // var Tag2 = document.getElementById('tag2');
-    // var Tag3 = document.getElementById('tag3');
-    // var Tag4 = document.getElementById('tag4');
-    // var Tag5 = document.getElementById('tag5');
-    // var Tag6 = document.getElementById('tag6');
-    // var Task_Stage = document.getElementById('task_stage_choice').value;
-    // var Progress = document.getElementById('progress').value;
-    // var Priority = document.getElementById('priority').value;
-    // var Task_Type = document.getElementById('task_type_choice').value;
-    // var date = Date();
-
-    // var Tag = " ";
-    // if (Tag1.checked){
-    //   Tag = Tag + Tag1.value + ", ";
-    // }
-    // if (Tag2.checked){
-    //   Tag = Tag + Tag2.value + ", ";
-    // }
-    // if (Tag3.checked){
-    //   Tag = Tag + Tag3.value + ", ";
-    // }
-    // if (Tag4.checked){
-    //   Tag = Tag + Tag4.value + ", ";
-    // }
-    // if (Tag5.checked){
-    //   Tag = Tag + Tag5.value + ", ";
-    // }
-    // if (Tag6.checked){
-    //   Tag = Tag + Tag6.value + ", ";
-    // }
-    // Tag = Tag.slice(0, -2);
+    
     const userId = push(child(ref(database), 'sprint-view-sprints')).key;
 
     set(ref(database, 'sprint-view-sprints/' + userId), {
@@ -391,15 +236,8 @@
       Start_Date: Start_Date,
       End_Date: End_Date,
       Progress: Progress
-    //   Progress: Progress,
-    //   Priority: Priority,
-    //   date: date,
-    //   Task_Description: Task_Description,
-    //   Task_Stage: Task_Stage,
-    //   Task_Type: Task_Type
     });
 
     alert('Task Added to Sprint View');
-    // closePopUp()
   });
 </script>
