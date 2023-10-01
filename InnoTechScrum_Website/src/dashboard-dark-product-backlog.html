@@ -340,12 +340,26 @@
     // Set data in table
     var htmlData = ''
     for(var key in data){
-      var value = data[key]
+      var value = data[key];
+      var priorityClass = ''; // Initialize the priority class variable
       console.log(key);
+
+      if (value.Priority === 'Important') {
+        priorityClass = 'important-priority';
+      }
+      else if (value.Priority === 'Urgent') {
+        priorityClass = 'urgent-priority';
+      }
+      else if (value.Priority === 'Medium') {
+        priorityClass = 'medium-priority';
+      }
+      else if (value.Priority === 'Low') {
+        priorityClass = 'low-priority';
+      } 
       htmlData += `
       <tr>
         <td>${value.Task_Name}</td>
-        <td>${value.Priority}</td>
+        <td class="${priorityClass}">${value.Priority}</td>
         <td>${value.Story_Points}</td>
         <td>${value.Task_Type}</td>
         <td>${value.Tag}</td>
