@@ -1052,7 +1052,7 @@
   font-size: 20px;
   height: 90px;
   text-align: center;
-  color: white; /* Change the text color to red */
+  color: white;
   background-color: rgb(116, 20, 7);  
 }
 
@@ -1149,4 +1149,18 @@ select option {
 @keyframes animatetop {
   from {top: -500px; opacity: 0}
   to {top: 0; opacity: 1}
+}
+
+/* CSS code for priority classes */
+.urgent-priority {
+  color: red; /* Set the color for high priority */
+}
+.important-priority {
+  color: yellow; /*Set the color for important priority */
+}
+.medium-priority {
+  color: orange; /* Set the color for medium priority */
+}
+.low-priority {
+  color: green; /* Set the color for low priority */
 }

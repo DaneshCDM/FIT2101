@@ -1047,7 +1047,7 @@
   height: 320px;
   position: absolute;
   overflow-y: scroll;
-  background-color: rgb(202, 84, 69);
+  background-color: rgb(245, 141, 128);
 }
 
 #dataTable th {
@@ -1055,7 +1055,7 @@
   font-size: 20px;
   height: 90px;
   text-align: center;
-  color: white; /* Change the text color to red */
+  color: white;
   background-color: rgb(116, 20, 7);  
 }
 
@@ -1064,7 +1064,7 @@
   font-size: 20px;
   text-align: center;
   color: rgb(46, 9, 3); /* Change the text color to red */
-  background-color: rgb(202, 84, 69);
+  background-color: rgb(245, 141, 128);
 }
 
 #dataTable tr {
