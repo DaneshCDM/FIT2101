@@ -330,6 +330,34 @@
   const analytics = getAnalytics(app);
   const database = getDatabase(app);
 
+  // Retrieving data to table in realtime
+  var fetchedData = ref(database, 'product-backlog-tasks/');
+  var dataContainer = document.querySelector('tbody')
+  onValue(fetchedData, (snapshot) => {
+    var data = snapshot.val()
+    var buttonid = 0;
+
+    // Set data in table
+    var htmlData = ''
+    for(var key in data){
+      var value = data[key]
+      console.log(key);
+      htmlData += `
+      <tr>
+        <td>${value.Task_Name}</td>
+        <td>${value.Priority}</td>
+        <td>${value.Story_Points}</td>
+        <td>${value.Task_Type}</td>
+        <td>${value.Tag}</td>
+        <td><button type='button' class = 'editbtn' data-toggle='modal' data-target='#modalCase2' value=" + ${key} +
+          "><img src='https://www.freeiconspng.com/uploads/edit-new-icon-22.png' width='40' alt='Edit'/></button></td>
+      `;
+      buttonid ++;
+    }
+    dataContainer.innerHTML = htmlData;
+    changeTdColor();
+  });
+
 // Function to filter and sort data
 function filterData(searchText, sortBy) {
     $("#dataTable td").remove();
@@ -390,6 +418,7 @@ function filterData(searchText, sortBy) {
       // Iterate through the filtered data and append it to the table
       var buttonid = 0;
       filteredData.forEach((childData) => {
+        // console.log(childData.key)
         var row = "<tr><td>" + childData.val().Task_Name + "</td><td>" + 
           childData.val().Priority + "</td><td>" +
           childData.val().Story_Points + "</td><td>" + 
