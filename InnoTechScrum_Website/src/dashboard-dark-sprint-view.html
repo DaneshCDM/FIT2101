@@ -203,14 +203,15 @@
           </div>
 
           <!-- Refresh Button -->
-          <button type="submit" id = "refreshData" style = "
+          <!-- Hidden - Table Now Updates Automatically -->
+          <!-- <button type="submit" id = "refreshData" style = "
           width: 120px;
           height: 27px;
           background-color: rgb(224, 109, 33);
           position: absolute; 
           top: 70px; 
           left: 20px;">
-          Refresh</button>
+          Refresh</button> -->
 
           <div class="dashboard-dark-sprint-view-add-sprint">
             <button id="btnModal1" type="button" class = "btn" data-toggle="modal" data-target="#modalCase">
@@ -291,6 +292,33 @@
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
   const database = getDatabase(app);
+
+  // Retrieving data to table in realtime
+  var fetchedData = ref(database, 'sprint-view-sprints/');
+  var dataContainer = document.querySelector('tbody')
+  onValue(fetchedData, (snapshot) => {
+    var data = snapshot.val()
+    var buttonid = 0;
+
+    // Set data in table
+    var htmlData = ''
+    for(var key in data){
+      var value = data[key];
+      console.log(key);
+
+      htmlData += `
+      <tr>
+        <td>${value.Sprint_Name}</td>
+        <td>${value.Start_Date}</td>
+        <td>${value.End_Date}</td>
+        <td>${value.Progress}</td>
+        <td><button type='button' class = 'editbtn' data-toggle='modal' data-target='#modalCase2' value=" + ${key} +
+          "><img src='https://www.freeiconspng.com/uploads/edit-new-icon-22.png' width='40' alt='Edit'/></button></td>
+      `;
+      buttonid ++;
+    }
+    dataContainer.innerHTML = htmlData;
+  });
 
   // Refresh the Data
   refreshData.addEventListener('click', (e) => {
