@@ -1,0 +1,495 @@
+/* Quick color choices */
+/* dark orange => linear-gradient(180deg, rgb(201, 61, 26) 0%, rgba(100, 20, 0) 100%); */
+
+/* Container formatting start */
+.dashboard-dark-pop-up-edit-task-product-backlog-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.dashboard-dark-pop-up-edit-task-product-backlog-dashboard-dark-popupfor-editting-task {
+  width: 900px;
+  height: 700px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 30px;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(46, 0, 0, 1) 100%, rgba(78, 0, 0, 1) 100%);
+}
+.dashboard-dark-pop-up-edit-task-product-backlog-rectangle23 {
+  top: 0px;
+  left: 0px;
+  width: 1000px;
+  height: 90px;
+  position: absolute;
+  border-radius: 8px 8px 0 0;
+}
+
+.dashboard-dark-pop-up-edit-task-product-backlog-text {
+  top: 21px;
+  left: 375px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 32px;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+/* Container formatting end */
+
+/* Task name start */
+.dashboard-dark-pop-up-edit-task-product-backlog-task-name {
+  top: 136px;
+  left: 55px;
+  width: 350px;
+  height: 40px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(255, 255, 255, 1);
+}
+.dashboard-dark-pop-up-edit-task-product-backlog-text02 {
+  top: 8px;
+  color: rgba(0, 0, 0, 1);
+  width: 137px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+/* Task name end */
+
+/* Assign member start */
+.dashboard-dark-pop-up-edit-task-product-backlog-assign-member {
+  top: 440px;
+  left: 55px;
+  width: 780px;
+  height: 40px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(255, 255, 255, 1);
+}
+.dashboard-dark-pop-up-edit-task-product-backlog-text04 {
+  top: 8px;
+  color: rgba(0, 0, 0, 1);
+  width: 169px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+/* Assign member end */
+
+/* Story points start */
+.dashboard-dark-pop-up-edit-task-product-backlog-story-points {
+  top: 136px;
+  left: 445px;
+  width: 180px;
+  height: 40px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(255, 255, 255, 1);
+}
+.dashboard-dark-pop-up-edit-task-product-backlog-text06 {
+  top: 8px;
+  color: rgba(0, 0, 0, 1);
+  width: 199px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+/* Story points end */
+
+/* Task stage start */
+.task-stage-text{
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  top: 108px;
+  left: 665px;
+  font-size: 16px;
+  font-style: SemiBold;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.task-stage{
+  top: 136px;
+  left: 665px;
+  width: 180px;
+  height: 42px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-image: linear-gradient(180deg, rgb(201, 61, 26) 0%, rgba(100, 20, 0) 100%);
+}
+.task-stage-selection{
+  top: 5px;
+  left: 26px;
+  height: 29px;
+  position: absolute;
+  font-size: 16px;
+  text-align: left;
+  font-family: Poppins;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+/* Task stage end */
+
+/* Task description start */
+.task-description{
+  top: 220px;
+  left: 55px;
+  height: 180px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(255, 255, 255, 1);
+}
+.task-description-text{
+  position: absolute;
+  font-size: 16px;
+  text-align: left;
+  font-family: Poppins;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+/* Task description end */
+
+/* Task status start */
+.dashboard-dark-pop-up-edit-task-product-backlog-default-task-status {
+  top: 522px;
+  left: 615px;
+  width: 233px;
+  height: 63px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.dashboard-dark-pop-up-edit-task-product-backlog-default-task-status1 {
+  top: 23px;
+  left: 0px;
+  width: 233px;
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-image: linear-gradient(180deg, rgba(155, 35, 4, 1) 0%, rgba(200, 61, 25, 1) 0%, rgba(99, 20, 0, 1) 100%);
+}
+.dashboard-dark-pop-up-edit-task-product-backlog-text08 {
+  top: 5px;
+  left: 15px;
+  color: rgba(255, 255, 255, 1);
+  width: 199px;
+  height: auto;
+  position: absolute;
+  font-size: 17px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.dashboard-dark-pop-up-edit-task-product-backlog-text10 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 15px;
+  font-style: SemiBold;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+/* Task status end */
+
+/*Tags box start */
+.tags-text{
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  top: 522px;
+  left: 55px;
+  font-size: 15px;
+  font-style: SemiBold;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.edit-tags {
+  border-radius: 5px;
+  top: 545px;
+  left: 55px;
+  width: 220px;
+  height: 42px;
+  position: absolute;
+  display: inline-block;
+  background-image: linear-gradient(180deg, rgb(201, 61, 26) 0%, rgba(100, 20, 0) 100%);
+}
+.edit-tags .tag-anchor{  
+  top: 6px;
+  left: 25px;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  height: 25px;
+  width: 170px;
+  text-align: left;
+  font-family: Poppins;
+  font-size: 16px;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  border: 1px solid #ccc;
+  z-index: 1;
+}
+.edit-tags .tag-anchor:after {
+  position: absolute;
+  content: "";
+  border-left: 2px solid rgb(117, 117, 117);
+  border-top: 2px solid rgb(117, 117, 117);
+  padding: 3px;
+  right: 10px;
+  top: 30%;
+  -moz-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+.edit-tags ul.task-tags {
+  width: 170px;
+  height: 80px;
+  display: none;
+  margin: 0;
+  border-top: none;
+  background-color: rgb(174, 174, 174);
+}
+.edit-tags ul.task-tags li {
+  list-style: none;
+}
+
+.edit-tags.visible .task-tags {
+  top: 6px;
+  left: 40px;
+  display: block;
+  position:relative;
+  font-family: Poppins;
+  font-size: 16px;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+  z-index: 2;
+  overflow-y: scroll;
+}
+/* Tags box end */
+
+/* Task type start */
+.task-type-text{
+  top: 518px;
+  left: 470px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.task-type{
+  border-radius: 5px;
+  top: 545px;
+  left: 470px;
+  width: 100px;
+  height: 42px;
+  position: absolute;
+  display: inline-block;
+  background-image: linear-gradient(180deg, rgb(201, 61, 26) 0%, rgba(100, 20, 0) 100%);
+}
+.task-type-selection{
+  top: 5px;
+  left: 18px;
+  height: 29px;
+  position: absolute;
+  font-size: 16px;
+  text-align: left;
+  font-family: Poppins;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+/* Priority start */
+.dashboard-dark-pop-up-edit-task-product-backlog-priority {
+  top: 520px;
+  left: 300px;
+  width: 120px;
+  height: 64px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.dashboard-dark-pop-up-edit-task-product-backlog-rectangle7 {
+  top: 24px;
+  left: 0px;
+  width: 140px;
+  height: 40px;
+  position: absolute;
+  border-radius: 3px;
+}
+.dashboard-dark-pop-up-edit-task-product-backlog-text14 {
+  color: rgba(255, 255, 255, 1);
+  width: 67px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+/* Priority end */
+
+/* Edit task start */
+.dashboard-dark-pop-up-edit-task-product-backlog-confirm-task {
+  top: 630px;
+  left: 470px;
+  width: 300px;
+  height: 35px;
+  border-radius: 7px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-image: linear-gradient(180deg, rgba(208, 59, 22, 1) 0%, rgba(89, 17, 0, 1) 100%);
+}
+.dashboard-dark-pop-up-edit-task-product-backlog-group1 {
+  top: 5px;
+  left: 70px;
+  width: 150px;
+  height: 24px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.dashboard-dark-pop-up-edit-task-product-backlog-text16 {
+  color: rgba(255, 255, 255, 1);
+  width: 150px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+/* Edit task end */
+
+/* Cancel task start */
+.delete-task {
+  top: 630px;
+  left: 115px;
+  width: 300px;
+  height: 35px;
+  border-radius: 7px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-image: linear-gradient(180deg, rgb(118, 118, 118) 0%, rgb(79, 79, 79) 100%);
+}
+.dashboard-dark-pop-up-edit-task-product-backlog-group2 {
+  top: 5px;
+  left: 70px;
+  width: 150px;
+  height: 24px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.delete-text {
+  color: rgba(255, 255, 255, 1);
+  width: 150px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+/* Cancel task end */
+
+select option {
+  margin: 40px;
+  background: rgba(0, 0, 0, 0.3);
+  color: #000000;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}

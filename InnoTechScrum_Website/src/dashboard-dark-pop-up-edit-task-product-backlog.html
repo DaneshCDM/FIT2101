@@ -3,7 +3,6 @@
   <head>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
     <title>exported project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
@@ -106,37 +105,48 @@
   <body>
     <div>
       <link
-        href="./dashboard-dark-pop-up-add-sprint.css"
+        href="./dashboard-dark-pop-up-edit-task-product-backlog.css"
         rel="stylesheet"
       />
-      <div class="dashboard-dark-pop-up-add-task-product-backlog-container">
+      <div class="dashboard-dark-pop-up-edit-task-product-backlog-container">
         <div
-          class="dashboard-dark-pop-up-add-task-product-backlog-dashboard-dark-popupfor-adding-task"
+          class="dashboard-dark-pop-up-edit-task-product-backlog-dashboard-dark-popupfor-editting-task"
         >
           <img
             alt="Rectangle235895"
             src="public/external/rectangle235895-c4av-200h.png"
-            class="dashboard-dark-pop-up-add-task-product-backlog-rectangle23"
+            class="dashboard-dark-pop-up-edit-task-product-backlog-rectangle23"
           />
-          <span class="dashboard-dark-pop-up-add-task-product-backlog-text">
-            <span>Add Sprint</span>
+          <span class="dashboard-dark-pop-up-edit-task-product-backlog-text">
+            <span>Edit Task</span>
           </span>
-          <div class="dashboard-dark-pop-up-add-task-product-backlog-task-name">
-            <span class="dashboard-dark-pop-up-add-task-product-backlog-text02">
-              <input type = "text" id = "Sprint_Name_text" placeholder="Sprint Name"
+          <div class="dashboard-dark-pop-up-edit-task-product-backlog-task-name">
+            <span class="dashboard-dark-pop-up-edit-task-product-backlog-text02">
+              <input type = "text" id = "Task_Name_text" placeholder="Task Name"
               style="background-color: white; color: black; width: 260px">
             </span>
           </div>
           <div
-            class="dashboard-dark-pop-up-add-task-product-backlog-assign-member">
-              <input type = "date" id = "End_Date_text" placeholder="End Date-Time"
-              style="background-color:white; color: black; width:780px; height: 100px;">
+            class="dashboard-dark-pop-up-edit-task-product-backlog-assign-member"
+          >
+            <span class="dashboard-dark-pop-up-edit-task-product-backlog-text04">
+              <input type = "text" id = "Assign_Member_text" placeholder="Assign Member"
+              style="background-color:white; color: black;">
+            </span>
+          </div>
+          <div
+            class="dashboard-dark-pop-up-edit-task-product-backlog-story-points"
+          >
+            <span class="dashboard-dark-pop-up-edit-task-product-backlog-text06">
+              <input type = "text" id = "Story_Points_text" placeholder="Story Points (1 - 10)"
+              style="background-color:white; color: black; width: 160px;">
+            </span>
           </div>
           <div class="task-description">
-            <input type = "date" class="task-description-text" id = "Start_Date_text" placeholder="Start Date-Time"
-            style="background-color:white;color:black; height: 100px; width:780px">
+            <input type = "text" class="task-description-text" id = "Task_Description_text" placeholder="Task Description"
+            style="background-color:white;color:black; height: 180px; width:780px">
           </div>
-          <!-- <span class="task-stage-text">Task Stage:</span>
+          <span class="task-stage-text">Task Stage:</span>
           <div class="task-stage">
             <select id = 'task_stage_choice' class="task-stage-selection">
               <option value = "None">None</option>
@@ -145,25 +155,25 @@
               <option value = "Testing">Testing</option>
               <option value = "Integration">Integration</option>
             </select>
-          </div> -->
-          <!-- <span class="task-type-text">Task Type:</span>
+          </div>
+          <span class="task-type-text">Task Type:</span>
           <div class="task-type">
             <select id = 'task_type_choice' class="task-type-selection">
               <option value = "None">None</option>
               <option value = "Story">Story</option>
               <option value = "Bug">Bug</option>
             </select>
-          </div> -->
+          </div>
           <div
-            class="dashboard-dark-pop-up-add-task-product-backlog-default-task-status"
+            class="dashboard-dark-pop-up-edit-task-product-backlog-default-task-status"
           >
             <div
-              class="dashboard-dark-pop-up-add-task-product-backlog-default-task-status1"
+              class="dashboard-dark-pop-up-edit-task-product-backlog-default-task-status1"
             >
               <span
-                class="dashboard-dark-pop-up-add-task-product-backlog-text08"
+                class="dashboard-dark-pop-up-edit-task-product-backlog-text08"
               >
-                <select id="Sprint_Progress_Text" style="width:250px; text-align:center;">
+                <select id="progress">
                   <!-- option tag starts -->
                       <option value="Not Started">Not Started</option>
                       <option value="In Progress">In Progress</option>
@@ -172,14 +182,13 @@
                   </select>
               </span>
             </div>
-            <span class="dashboard-dark-pop-up-add-task-product-backlog-text10">
-              <span>Sprint Status:</span>
+            <span class="dashboard-dark-pop-up-edit-task-product-backlog-text10">
+              <span>Default Task Status:</span>
             </span>
           </div>
-
           <!-- Add multiple tags -->
-          <!-- <span class="tags-text">Tags Selected:</span>
-          <div id="tag-list" class="add-tags" tabindex="100">
+          <span class="tags-text">Tags Selected:</span>
+          <div id="tag-list" class="edit-tags" tabindex="100">
             <span class="tag-anchor">Select Tags</span>
             <ul class="task-tags">
               <li><input type="checkbox" id="tag1" class="tag-checkbox" name="tag1" value="Frontend">Frontend</li>
@@ -189,20 +198,14 @@
               <li><input type="checkbox" id="tag5" class="tag-checkbox" name="tag5" value="UI/UX">UI/UX</li>
               <li><input type="checkbox" id="tag6" class="tag-checkbox" name="tag6" value="Testing">Testing</li>
             </ul>
-          </div> -->
-          <!-- <div class="dashboard-dark-pop-up-add-task-product-backlog-tag">
-            <span class="dashboard-dark-pop-up-add-task-product-backlog-text12">
-              <input type = "text" id = "Tag_text" placeholder="Tag"
-              style="background-color:white; color: black;">
-            </span>
-          </div> -->
-          <!-- <div class="dashboard-dark-pop-up-add-task-product-backlog-priority">
+          </div>
+          <div class="dashboard-dark-pop-up-edit-task-product-backlog-priority">
              <img
               alt="Rectangle76435"
               src="public/external/rectangle76435-exmp-200h.png"
-              class="dashboard-dark-pop-up-add-task-product-backlog-rectangle7"
+              class="dashboard-dark-pop-up-edit-task-product-backlog-rectangle7"
             /> 
-            <span class="dashboard-dark-pop-up-add-task-product-backlog-text14">
+            <span class="dashboard-dark-pop-up-edit-task-product-backlog-text14">
               <span>Priority:</span>
             </span>
             <select id = 'priority' style="position: absolute; top: 30px; left: 18px; height: 24px;">
@@ -210,15 +213,10 @@
               <option value = "Medium">Medium</option>
               <option value = "Important">Important</option>
               <option value = "Urgent">Urgent</option>
-            </select> -->
-            <!-- <img
-              alt="flagiconicons76435"
-              src="public/external/flagiconicons76435-w46d-200h.png"
-              class="dashboard-dark-pop-up-add-task-product-backlog-flagiconicons7"
-            /> -->
-          <!-- </div> -->
-          <div class="dashboard-dark-pop-up-add-task-product-backlog-create-task", id = "submitbtn">
-            <div class="dashboard-dark-pop-up-add-task-product-backlog-group1">
+            </select>
+          </div>
+          <div class="dashboard-dark-pop-up-edit-task-product-backlog-confirm-task", id = "submitbtn">
+            <div class="dashboard-dark-pop-up-edit-task-product-backlog-group1">
               <!-- <a href="dashboard-dark-product-backlog.html"> -->
               <!-- <a href="dashboard-dark-product-backlog.html" class="close"data-bs-dismiss="modal" aria-label="close"data-toggle="modal" data-target="#modalCase" onclick="closeWindow(event);"> -->
                 <!-- <span class="dashboard-dark-pop-up-add-task-product-backlog-text16"> -->
@@ -231,25 +229,32 @@
                   </button>
                   </span> --> 
               <a href="#" class="close" data-bs-dismiss="modal" aria-label="close" onclick="closeModal">
-              <span class="dashboard-dark-pop-up-add-task-product-backlog-text16"> 
-                <button id="btnAddTaskClose" type="submit" class = "close" data-bs-dismiss="modal" aria-label="close"></button>
-                  <span class="close">Create Sprint</span>
+              <span class="dashboard-dark-pop-up-edit-task-product-backlog-text16"> 
+                <button id="btnEditTaskConfirm" type="submit" class = "close" data-bs-dismiss="modal" aria-label="close"></button>
+                  <span class="close">Confirm Edit</span>
               </span>
               </a>
-              <!-- <span class="dashboard-dark-pop-up-add-task-product-backlog-text16"> 
-                <button id="btnAddTaskClose" type="submit" class = "close" data-bs-dismiss="modal" aria-label="close" onclick="closeModal()"></button>
-                  <span class="close">Create Task</span>
-              </span> -->
             </div>
           </div>
-          <!-- <div class="overlay" id="overlay">
+          <div class="delete-task", id = "deletebtn">
+            <div class="dashboard-dark-pop-up-edit-task-product-backlog-group2">
+              <a href="#" class="close" data-bs-dismiss="modal" aria-label="close" onclick="closeModal">
+              <span class="delete-text"> 
+                <button id="btnEditTaskDelete" type="submit" class = "close" data-bs-dismiss="modal" aria-label="close"></button>
+                  <span class="close">Delete task</span>
+              </span>
+              </a>
+            </div>
+          </div>
+
+          <div class="overlay" id="overlay">
             <div class="popup" id="popup">
               <h2>Pop-up Window</h2>
               <p>This is a pop-up window.</p>
               <button id="open-button" type="submit" class="btn" onclick="openPopUp()">Open</button>
               <button id="close-button" onclick="closePopUp()">Close</button>
             </div> 
-          </div> -->
+          </div>
           
           <!-- Submitting the Form
           Slight Error: Clicking in the area where cursor changes to hand does not add to Database,
@@ -322,7 +327,7 @@
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-analytics.js";
-  import { getDatabase, ref, set, push, child } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-database.js";
+  import { getDatabase, ref, set, push, child, get, remove } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-database.js";
   
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
@@ -345,61 +350,153 @@
   const analytics = getAnalytics(app);
   const database = getDatabase(app);
 
+  const params = new Proxy(new URLSearchParams(window.location.search), {
+    get: (searchParams, prop) => searchParams.get(prop),
+  });
+  let value = params.id;
+  //continue here
+  
+  // obtain data from id and pre-populate edit task
+  const editRef = ref(database, 'product-backlog-tasks/' + value);
+  
+  get(editRef)
+  .then((snapshot) => {
+    if (snapshot.exists()) {
+      const Assign_Member = snapshot.val().Assign_Member;
+      const Task_Name = snapshot.val().Task_Name;
+      const Priority = snapshot.val().Priority;
+      const Story_Points = snapshot.val().Story_Points;
+      const Task_Type = snapshot.val().Task_Type;
+      const Tag = snapshot.val().Tag;
+      const Task_Stage = snapshot.val().Task_Stage;
+
+      const Task_Description = snapshot.val().Task_Description;
+      const Progress = snapshot.val().Progress;
+
+      const Task_Name_input = document.getElementById('Task_Name_text');
+      Task_Name_input.value = Task_Name;
+
+      const Assign_Member_input = document.getElementById('Assign_Member_text');
+      Assign_Member_input.value = Assign_Member;
+
+      const Story_Points_input = document.getElementById('Story_Points_text');
+      Story_Points_input.value = Story_Points;
+
+      const Task_Description_input = document.getElementById('Task_Description_text');
+      Task_Description_input.value = Task_Description;
+
+      const Priority_input = document.getElementById('priority');
+
+      for (let i = 0; i < Priority_input.options.length; i++) {
+        if (Priority_input.options[i].value === Priority) {
+          Priority_input.options[i].selected = true;
+          break;
+        }
+      }
+      const Task_Type_input = document.getElementById('task_type_choice');
+      
+      for (let i = 0; i < Task_Type_input.options.length; i++) {
+        if (Task_Type_input.options[i].value === Task_Type) {
+          Task_Type_input.options[i].selected = true;
+          break;
+        }
+      }
+
+      const Task_Stage_input = document.getElementById('task_stage_choice');
+      
+      for (let i = 0; i < Task_Stage_input.options.length; i++) {
+        if (Task_Stage_input.options[i].value === Task_Stage) {
+          Task_Stage_input.options[i].selected = true;
+          break;
+        }
+      }
+
+      const Progress_input = document.getElementById('progress');
+
+      for (let i = 0; i < Progress_input.options.length; i++) {
+        if (Progress_input.options[i].value === Progress) {
+          Progress_input.options[i].selected = true;
+          break;
+        }
+      }
+
+      const tags = Tag.split(', ');
+
+      for (const tag of tags) {
+        for (let i = 1; i <= 6; i++) {
+          const checkbox = document.getElementById(`tag${i}`);
+          if (checkbox && checkbox.value === tag.trim()) {
+            checkbox.checked = true;
+            break;
+          }
+        }
+      }
+
+      console.log(`${Assign_Member}/${Task_Name}/${Priority}/${Story_Points}/${Task_Type}/${Tag}`);
+      } else {
+          console.log("Data not found");
+      }
+  }).catch((error) => {
+      console.error(error.message);
+  });
+  
   submitbtn.addEventListener('click',(e)=>{
     console.log('Button clicked');
 
-    var Sprint_Name = document.getElementById('Sprint_Name_text').value;
-    var Start_Date = document.getElementById('Start_Date_text').value; 
-    var End_Date = document.getElementById('End_Date_text').value;
-    var Progress = document.getElementById('Sprint_Progress_Text').value;
-    // var Tag1 = document.getElementById('tag1');
-    // var Tag2 = document.getElementById('tag2');
-    // var Tag3 = document.getElementById('tag3');
-    // var Tag4 = document.getElementById('tag4');
-    // var Tag5 = document.getElementById('tag5');
-    // var Tag6 = document.getElementById('tag6');
-    // var Task_Stage = document.getElementById('task_stage_choice').value;
-    // var Progress = document.getElementById('progress').value;
-    // var Priority = document.getElementById('priority').value;
-    // var Task_Type = document.getElementById('task_type_choice').value;
-    // var date = Date();
+    var Task_Name = document.getElementById('Task_Name_text').value;
+    var Assign_Member = document.getElementById('Assign_Member_text').value; 
+    var Story_Points = document.getElementById('Story_Points_text').value;
+    var Task_Description = document.getElementById('Task_Description_text').value
+    var Tag1 = document.getElementById('tag1');
+    var Tag2 = document.getElementById('tag2');
+    var Tag3 = document.getElementById('tag3');
+    var Tag4 = document.getElementById('tag4');
+    var Tag5 = document.getElementById('tag5');
+    var Tag6 = document.getElementById('tag6');
+    var Task_Stage = document.getElementById('task_stage_choice').value;
+    var Progress = document.getElementById('progress').value;
+    var Priority = document.getElementById('priority').value;
+    var Task_Type = document.getElementById('task_type_choice').value;
 
-    // var Tag = " ";
-    // if (Tag1.checked){
-    //   Tag = Tag + Tag1.value + ", ";
-    // }
-    // if (Tag2.checked){
-    //   Tag = Tag + Tag2.value + ", ";
-    // }
-    // if (Tag3.checked){
-    //   Tag = Tag + Tag3.value + ", ";
-    // }
-    // if (Tag4.checked){
-    //   Tag = Tag + Tag4.value + ", ";
-    // }
-    // if (Tag5.checked){
-    //   Tag = Tag + Tag5.value + ", ";
-    // }
-    // if (Tag6.checked){
-    //   Tag = Tag + Tag6.value + ", ";
-    // }
-    // Tag = Tag.slice(0, -2);
-    const userId = push(child(ref(database), 'sprint-view-sprints')).key;
+    var Tag = " ";
+    if (Tag1.checked){
+      Tag = Tag + Tag1.value + ", ";
+    }
+    if (Tag2.checked){
+      Tag = Tag + Tag2.value + ", ";
+    }
+    if (Tag3.checked){
+      Tag = Tag + Tag3.value + ", ";
+    }
+    if (Tag4.checked){
+      Tag = Tag + Tag4.value + ", ";
+    }
+    if (Tag5.checked){
+      Tag = Tag + Tag5.value + ", ";
+    }
+    if (Tag6.checked){
+      Tag = Tag + Tag6.value + ", ";
+    }
+    Tag = Tag.slice(0, -2);
 
-    set(ref(database, 'sprint-view-sprints/' + userId), {
-      Sprint_Name: Sprint_Name,
-      Start_Date: Start_Date,
-      End_Date: End_Date,
-      Progress: Progress
-    //   Progress: Progress,
-    //   Priority: Priority,
-    //   date: date,
-    //   Task_Description: Task_Description,
-    //   Task_Stage: Task_Stage,
-    //   Task_Type: Task_Type
+    set(editRef, {
+      Task_Name: Task_Name,
+      Assign_Member: Assign_Member,
+      Story_Points: Story_Points,
+      Tag: Tag,
+      Progress: Progress,
+      Priority: Priority,
+      Task_Description: Task_Description,
+      Task_Stage: Task_Stage,
+      Task_Type: Task_Type
     });
-
-    alert('Task Added to Sprint View');
+    alert('Task Have Been Editted');
     // closePopUp()
   });
+
+deletebtn.addEventListener('click',(e)=>{
+  console.log('Button clicked');
+  remove(editRef);
+  alert('Task Have Been Deleted');
+});
 </script>
