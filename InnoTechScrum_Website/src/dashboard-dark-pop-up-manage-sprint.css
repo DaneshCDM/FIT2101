@@ -144,11 +144,11 @@
   position: relative;
   max-height: 100%;
 }
-/* .board-item {
-  position: absolute;
+.board-item {
+  position:relative;
   width: calc(100% - 16px);
   margin: 8px;
-} */
+}
 .board-item.muuri-item-releasing {
   z-index: 9998;
 }
