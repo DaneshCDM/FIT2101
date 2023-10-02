@@ -670,10 +670,13 @@
   // }
 
   function populateBoard(data) {
+  const urlParams = new URLSearchParams(window.location.search);
+  const id = urlParams.get('id');
   const todoContainer = document.getElementById('todo-container');
 
   // Clear existing content
   todoContainer.innerHTML = '';
+
 
   // Iterate through the data and populate the board items
   for (const key in data) {
