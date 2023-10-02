@@ -8,8 +8,8 @@
   justify-content: center;
 }
 .dashboard-dark-pop-up-manage-sprint-dashboard-dark-popupformanagingsprinttasks {
-  width: 1342px;
-  height: 720px;
+  width: 900px;
+  height: 700px;
   display: flex;
   overflow: hidden;
   position: relative;
@@ -28,7 +28,7 @@
 }
 .dashboard-dark-pop-up-manage-sprint-text {
   top: 21px;
-  left: 550px;
+  left: 340px;
   color: rgba(255, 255, 255, 1);
   height: auto;
   position: absolute;
@@ -56,7 +56,7 @@
   position: absolute;
 }
 .dashboard-dark-pop-up-manage-sprint-create-sprint {
-  top: 660px;
+  top: 0px;
   left: 75px;
   width: 1190px;
   height: 35px;
@@ -69,21 +69,21 @@
 
 .drag-container1 {
   position: absolute;
-  width: 1200px;
-  left: 200px;
+  width: 1000px;
+  left: 80px;
   top: 150px;
   z-index: 1000;
 }
 .drag-container2 {
   position: absolute;
-  width: 1200px;
+  width: 1000px;
   top: 150px;
-  left: 880px;
+  left: 480px;
   z-index: 1000;
 }
 .board {
   position: absolute;
-  width: 1200px;
+  width: 1000px;
   height: 400px;
 }
 .board-column {
@@ -149,76 +149,6 @@
   width: calc(100% - 16px);
   margin: 8px;
 } */
-.board-item1 {
-  position: absolute;
-  top: 0px;
-  width: calc(100% - 16px);
-  margin: 8px;
-  color: rgb(46, 9, 3);
-}
-.board-item2 {
-  position: absolute;
-  top: 70px;
-  width: calc(100% - 16px);
-  margin: 8px;
-  color: rgb(46, 9, 3);
-}
-.board-item3 {
-  position: absolute;
-  top: 140px;
-  width: calc(100% - 16px);
-  margin: 8px;
-  color: rgb(46, 9, 3);
-}
-.board-item4 {
-  position: absolute;
-  top: 210px;
-  width: calc(100% - 16px);
-  margin: 8px;
-  color: rgb(46, 9, 3);
-}
-.board-item5 {
-  position: absolute;
-  top: 280px;
-  width: calc(100% - 16px);
-  margin: 8px;
-  color: rgb(46, 9, 3);
-}
-.board-item6 {
-  position: absolute;
-  top: 350px;
-  width: calc(100% - 16px);
-  margin: 8px;
-  color: rgb(46, 9, 3);
-}
-.board-item7 {
-  position: absolute;
-  top: 420px;
-  width: calc(100% - 16px);
-  margin: 8px;
-  color: rgb(46, 9, 3);
-}
-.board-item8 {
-  position: absolute;
-  top: 490px;
-  width: calc(100% - 16px);
-  margin: 8px;
-  color: rgb(46, 9, 3);
-}
-.board-item9 {
-  position: absolute;
-  top: 560px;
-  width: calc(100% - 16px);
-  margin: 8px;
-  color: rgb(46, 9, 3);
-}
-.board-item10 {
-  position: absolute;
-  top: 630px;
-  width: calc(100% - 16px);
-  margin: 8px;
-  color: rgb(46, 9, 3);
-}
 .board-item.muuri-item-releasing {
   z-index: 9998;
 }
@@ -231,6 +161,7 @@
 }
 .board-item-content {
   position: relative;
+  margin: 10px;
   padding: 20px;
   background: rgb(245, 141, 128);
   border-radius: 4px;
@@ -249,7 +180,7 @@
 }
 .manage-sprint-confirm{
   top: 630px;
-  left: 410px;
+  left: 120px;
   width: 668px;
   height: 35px;
   display: flex;
