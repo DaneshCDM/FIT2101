@@ -115,31 +115,39 @@
             <span>Manage Sprint</span>
           </span>
         </div> 
-        <div class="drag-container1">
-          <div class="board">
-            <div class="board-column product-backlog">
-              <div class="board-column-container">
-                <div class="board-column-header">Product Backlog</div>
-                <div class="board-column-content-wrapper">
-                  <div class="board-column-content" id="product-backlog-board">
+        <div class="lanes">
+          <div class="swim-lane1" id="backlog-lane">
+            <h3 class="headings">Product Backlog</h3>
+          </div>
+          <div class="swim-lane2" id="sprintlog-lane">
+            <h3 class="headings">Sprint log</h3>
+          </div>
+          <!-- <div class="drag-container1" id="backlog_lane" >
+            <div class="board">
+              <div class="board-column product-backlog">
+                <div class="board-column-container">
+                  <div class="board-column-header">Product Backlog</div>
+                  <div class="board-column-content-wrapper">
+                    <div class="board-column-content" id="product-backlog-board">
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="drag-container2">
-          <div class="board">
-            <div class="board-column sprint-log">
-              <div class="board-column-container">
-                <div class="board-column-header">Sprint Log</div>
-                <div class="board-column-content-wrapper">
-                  <div class="board-column-content">
+          <div class="drag-container2" id="sprintlog_lane">
+            <div class="board">
+              <div class="board-column sprint-log">
+                <div class="board-column-container">
+                  <div class="board-column-header">Sprint Log</div>
+                  <div class="board-column-content-wrapper">
+                    <div class="board-column-content">
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
         <div class="manage-sprint-confirm" id="confirmbtn">
           <button class="confirm-text">Confirm</button>
@@ -203,24 +211,95 @@
   //     }
   //   }
   // }
+// drag and drop javascript
+const draggables = document.querySelectorAll(".task");
+const droppables = document.querySelectorAll(".swim-lane1,.swim-lane2");
 
+draggables.forEach((task) => {
+  task.addEventListener("dragstart",() => {
+    task.classList.add("is-dragging");
+  });
+  task.addEventListener("dragend",() => {
+    task.classList.remove("is-dragging");
+  });
+});
+
+droppables.forEach((zone) => {
+  zone.addEventListener("dragover", (e) =>{
+    e.preventDefault();
+
+    const bottomTask = insertAboveTask(zone, e.clientY);
+    const curTask = document.querySelector(".is-dragging");
+    
+    if (!bottomTask){
+      zone.appendChild(curTask); 
+    } else {
+      zone.insertBefore(curTask, bottomTask);
+    }
+  });
+});
+
+const insertAboveTask = (zone, mouseY) => {
+  const els = zone.querySelectorAll(".task:not(.is-dragging)")
+
+  let closestTask = null;
+  let closestOffset = Number.NEGATIVE_INFINITY;
+
+  els.forEach((task) =>{
+    const {top} = task.getBoundingClientRect();
+
+    const offset = mouseY - top;
+
+    if (offset < 0 && offset > closestOffset){
+      closestOffset = offset;
+      closestTask = task;
+    }
+  });
+
+  return closestTask;
+};
+
+const backlogLane = document.getElementById("backlog-lane")
   function populateBoard(data) {
-  const pbContainer = document.getElementById('product-backlog-board');
+    for (const key in data) {
+      if (data.hasOwnProperty(key)){
+        const item = data[key];
+        const newTask = document.createElement("p");
+        newTask.classList.add("task");
+        newTask.setAttribute("draggable","true");
+        newTask.innerText=item.Task_Name;
 
-  // Clear existing content
-  pbContainer.innerHTML = '';
-
-  // Iterate through the data and populate the board items
-  for (const key in data) {
-    if (data.hasOwnProperty(key)) {
-      const item = data[key];
-      const boardItem = document.createElement('div');
-      boardItem.className = `board-item`;
-      boardItem.innerHTML = `<div class="board-item-content"><span>${item.Task_Name}</span></div>`;
-      pbContainer.appendChild(boardItem);
+        newTask.addEventListener("dragstart",() => {
+          newTask.classList.add("is-dragging");
+        });
+        newTask.addEventListener("dragend",() => {
+          newTask.classList.remove("is-dragging");
+        });
+        
+        backlogLane.appendChild(newTask);
+      }
     }
   }
-}
+
+  //function populateBoard(data) {
+  //const pbContainer = document.getElementById('product-backlog-board');
+
+  // Clear existing content
+  //pbContainer.innerHTML = '';
+
+  // Iterate through the data and populate the board items
+  //for (const key in data) {
+  //  if (data.hasOwnProperty(key)) {
+  //    const item = data[key];
+  //    const boardItem = document.createElement('div');
+  //    boardItem.className = `board-item`;
+  //    boardItem.innerHTML = `<div class="board-item-content" draggable="true"><span>${item.Task_Name}</span></div>`;
+  //    pbContainer.appendChild(boardItem);
+  // }
+  //}
+  //}
+
+
 
   // Attach an event listener to listen for changes in the data
   onValue(dbRef, function(snapshot) {
@@ -230,7 +309,7 @@
     populateBoard(data);
   });
 </script>
-    <script src="javaScript.js"></script>
+    <script src="javaScript.js" defer></script>
     <script>
       confirmbtn.addEventListener('click',(e)=>{
         alert("Confirm button")
