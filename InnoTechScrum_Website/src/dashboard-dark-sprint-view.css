@@ -1136,3 +1136,44 @@ select option {
   from {top: -500px; opacity: 0}
   to {top: 0; opacity: 1}
 }
+
+#modalBurn {
+  display: fixed;
+  position: absolute;
+  width: 100%; height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal-content-burn {
+  position: flex;
+  margin: auto;
+  padding: 20px;
+  top: 200px;
+  height: 515px;/*535 cross|515 no cross*/
+  width: 940px;/*1050 cross|1050 no cross*/
+  max-height: 100%;
+  background-color: transparent;
+  border: none; border-radius: 30px;
+  justify-content: center;
+  align-items: center;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+#modal-body-burn {
+  display: flex;
+  /* padding: 2px 16px; */
+  width: 100%; height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.iframeTaskBurn{
+  width: 1900px; height: 850px;
+  overflow: hidden;
+  border-radius: 30px;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0.8);
+}
