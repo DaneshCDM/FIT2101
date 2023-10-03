@@ -453,19 +453,24 @@
               class="dashboard-dark-sprint-board-project-backlog-widget2"
             />
           </div> -->
-          <div class="drag-container">
+          <div class="lanes">
+            <div class="swim-lane" id="todo-lane">
+              <h3 class="headings">To do</h3>
+            </div>
+            <div class="swim-lane" id="inprogress-lane">
+              <h3 class="headings">In-Progress</h3>
+            </div>
+            <div class="swim-lane" id="completed-lane">
+              <h3 class="headings">Completed</h3>
+            </div>
+          </div>
+          <!-- <div class="drag-container">
             <div class="board">
               <div class="board-column todo">
                 <div class="board-column-container">
                   <div class="board-column-header">Todo</div>
                   <div class="board-column-content-wrapper">
                     <div class="board-column-content" id="todo-container">
-                      <!-- <div class="board-item1"><div class="board-item-content"><span></span></div></div> -->
-                      <!-- <div class="board-item1"><div class="board-item-content"><span>Item #</span>1</div></div>
-                      <div class="board-item2"><div class="board-item-content"><span>Item #</span>2</div></div>
-                      <div class="board-item3"><div class="board-item-content"><span>Item #</span>3</div></div>
-                      <div class="board-item4"><div class="board-item-content"><span>Item #</span>4</div></div>
-                      <div class="board-item5"><div class="board-item-content"><span>Item #</span>5</div></div> -->
                     </div>
                   </div>
                 </div>
@@ -479,12 +484,6 @@
                   <div class="board-column-header">In-Progress</div>
                   <div class="board-column-content-wrapper">
                     <div class="board-column-content">
-                      <!-- <div class="board-item1"><div class="board-item-content"><span></span></div></div> -->
-                      <!-- <div class="board-item1"><div class="board-item-content"><span>Item #</span>6</div></div>
-                      <div class="board-item2"><div class="board-item-content"><span>Item #</span>7</div></div>
-                      <div class="board-item3"><div class="board-item-content"><span>Item #</span>8</div></div>
-                      <div class="board-item4"><div class="board-item-content"><span>Item #</span>9</div></div>
-                      <div class="board-item5"><div class="board-item-content"><span>Item #</span>10</div></div> -->
                     </div>
                   </div>
                 </div>
@@ -498,23 +497,12 @@
                   <div class="board-column-header">Done</div>
                   <div class="board-column-content-wrapper">
                     <div class="board-column-content">
-                      <!-- <div class="board-item1"><div class="board-item-content"><span></span></div></div> -->
-                      <!-- <div class="board-item1"><div class="board-item-content"><span>Item #</span>11</div></div>
-                      <div class="board-item2"><div class="board-item-content"><span>Item #</span>12</div></div>
-                      <div class="board-item3"><div class="board-item-content"><span>Item #</span>13</div></div>
-                      <div class="board-item4"><div class="board-item-content"><span>Item #</span>14</div></div>
-                      <div class="board-item5"><div class="board-item-content"><span>Item #</span>15</div></div>
-                      <div class="board-item6"><div class="board-item-content"><span>Item #</span>16</div></div>
-                      <div class="board-item7"><div class="board-item-content"><span>Item #</span>17</div></div>
-                      <div class="board-item8"><div class="board-item-content"><span>Item #</span>18</div></div>
-                      <div class="board-item9"><div class="board-item-content"><span>Item #</span>19</div></div>
-                      <div class="board-item10"><div class="board-item-content"><span>Item #</span>20</div></div> -->
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
           <!-- </div> -->
           <span class="dashboard-dark-sprint-board-text12">
             <span>Sprint Board</span>
@@ -640,6 +628,53 @@
   const database = getDatabase(app);
   const dbRef = ref(database, 'product-backlog-tasks/');
 
+  const draggables = document.querySelectorAll(".task");
+  const droppables = document.querySelectorAll(".swim-lane");
+
+  draggables.forEach((task) => {
+    task.addEventListener("dragstart",() => {
+      task.classList.add("is-dragging");
+    });
+    task.addEventListener("dragend",() => {
+      task.classList.remove("is-dragging");
+    });
+  });
+
+  droppables.forEach((zone) => {
+    zone.addEventListener("dragover", (e) =>{
+      e.preventDefault();
+
+      const bottomTask = insertAboveTask(zone, e.clientY);
+      const curTask = document.querySelector(".is-dragging");
+      
+      if (!bottomTask){
+        zone.appendChild(curTask); 
+      } else {
+        zone.insertBefore(curTask, bottomTask);
+      }
+    });
+  });
+
+  const insertAboveTask = (zone, mouseY) => {
+    const els = zone.querySelectorAll(".task:not(.is-dragging)")
+
+    let closestTask = null;
+    let closestOffset = Number.NEGATIVE_INFINITY;
+
+    els.forEach((task) =>{
+      const {top} = task.getBoundingClientRect();
+
+      const offset = mouseY - top;
+
+      if (offset < 0 && offset > closestOffset){
+        closestOffset = offset;
+        closestTask = task;
+      }
+    });
+
+    return closestTask;
+  };
+
   // // Attach an event listener to listen for changes in the data
   // dataRef.on('value', function(snapshot) {
   //   // Get the data from the snapshot
@@ -668,27 +703,45 @@
   //     }
   //   }
   // }
-
+  const todoLane = document.getElementById("todo-lane")
   function populateBoard(data) {
-  const urlParams = new URLSearchParams(window.location.search);
-  const id = urlParams.get('id');
-  const todoContainer = document.getElementById('todo-container');
+    for (const key in data) {
+      if (data.hasOwnProperty(key)){
+        const item = data[key];
+        const newTask = document.createElement("p");
+        newTask.classList.add("task");
+        newTask.setAttribute("draggable","true");
+        newTask.innerText=item.Task_Name;
+
+        newTask.addEventListener("dragstart",() => {
+          newTask.classList.add("is-dragging");
+        });
+        newTask.addEventListener("dragend",() => {
+          newTask.classList.remove("is-dragging");
+        });
+        
+        todoLane.appendChild(newTask);
+      }
+    }
+  }
+  //function populateBoard(data) {
+  //const todoContainer = document.getElementById('todo-container');
 
   // Clear existing content
-  todoContainer.innerHTML = '';
+  //todoContainer.innerHTML = '';
 
 
   // Iterate through the data and populate the board items
-  for (const key in data) {
-    if (data.hasOwnProperty(key)) {
-      const item = data[key];
-      const boardItem = document.createElement('div');
-      boardItem.className = `board-item`;
-      boardItem.innerHTML = `<div class="board-item-content"><span>${item.Task_Name}</span></div>`;
-      todoContainer.appendChild(boardItem);
-    }
-  }
-}
+  //for (const key in data) {
+  //  if (data.hasOwnProperty(key)) {
+  //    const item = data[key];
+  //    const boardItem = document.createElement('div');
+  //    boardItem.className = `board-item`;
+  //    boardItem.innerHTML = `<div class="board-item-content"><span>${item.Task_Name}</span></div>`;
+  //    todoContainer.appendChild(boardItem);
+  //  }
+  //}
+  //}
 
   // Attach an event listener to listen for changes in the data
   onValue(dbRef, function(snapshot) {

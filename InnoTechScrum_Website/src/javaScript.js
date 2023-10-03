@@ -84,8 +84,55 @@ boardGrid = new Muuri('.board', {
   dragHandle: '.board-column-header'
 });
 
+// START TEST DRAG AND DROP (Usable)
+// const draggables = document.querySelectorAll(".task");
+// const droppables = document.querySelectorAll(".swim-lane1,.swim-lane2");
 
-//Test
+// draggables.forEach((task) => {
+//   task.addEventListener("dragstart",() => {
+//     task.classList.add("is-dragging");
+//   });
+//   task.addEventListener("dragend",() => {
+//     task.classList.remove("is-dragging");
+//   });
+// });
+
+// droppables.forEach((zone) => {
+//   zone.addEventListener("dragover", (e) =>{
+//     e.preventDefault();
+
+//     const bottomTask = insertAboveTask(zone, e.clientY);
+//     const curTask = document.querySelector(".is-dragging");
+    
+//     if (!bottomTask){
+//       zone.appendChild(curTask); 
+//     } else {
+//       zone.insertBefore(curTask, bottomTask);
+//     }
+//   });
+// });
+
+// const insertAboveTask = (zone, mouseY) => {
+//   const els = zone.querySelectorAll(".task:not(.is-dragging)")
+
+//   let closestTask = null;
+//   let closestOffset = Number.NEGATIVE_INFINITY;
+
+//   els.forEach((task) =>{
+//     const {top} = task.getBoundingClientRect();
+
+//     const offset = mouseY - top;
+
+//     if (offset < 0 && offset > closestOffset){
+//       closestOffset = offset;
+//       closestTask = task;
+//     }
+//   });
+
+//   return closestTask;
+// };
+// END TEST FOR DRAG AND DROP
+
 //test
 // // const draggabletask2 = document.querySelector(".draggable-task2")
 
