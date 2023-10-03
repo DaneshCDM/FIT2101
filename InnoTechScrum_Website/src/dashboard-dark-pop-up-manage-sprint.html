@@ -155,6 +155,7 @@
       </div>
     </div>
     <script src=https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script type="module">
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
@@ -308,6 +309,27 @@ const backlogLane = document.getElementById("backlog-lane")
     // Call the function to populate the board items
     populateBoard(data);
   });
+  
+</script>
+<script>
+  let items = document.getElementsByClassName("board-item-content");
+  let leftbox = document.getElementById("product-backlog-board")
+  let rightbox = document.getElementById("sprint-log-board")
+
+  for(item of items){
+    item.addEventListener("dragstart", function(e){
+      let selected = e.target
+
+      rightbox.addEventListener("dragover",function(e){
+        e.preventDefault();
+      });
+
+      rightbox.addEventListener("drop", function(e){
+        rightbox.appendChild(selected);
+        selected = null;
+      })
+    })
+  }
 </script>
     <script src="javaScript.js" defer></script>
     <script>
