@@ -162,7 +162,7 @@
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
   // import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-analytics.js";
-  import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-database.js";
+  import { getDatabase, ref, onValue, child, update } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-database.js";
   
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
@@ -218,6 +218,15 @@
 const draggables = document.querySelectorAll(".task");
 const droppables = document.querySelectorAll(".swim-lane1,.swim-lane2");
 
+//get sprint id
+const params = new Proxy(new URLSearchParams(window.location.search), {
+  get: (searchParams, prop) => searchParams.get(prop),
+});
+
+let value1 = params.id.trim();
+alert(value1);
+
+//drag and drop 
 draggables.forEach((task) => {
   task.addEventListener("dragstart",() => {
     task.classList.add("is-dragging");
@@ -271,7 +280,9 @@ const backlogLane = document.getElementById("backlog-lane")
         const newTask = document.createElement("p");
         newTask.classList.add("task");
         newTask.setAttribute("draggable","true");
+        newTask.setAttribute("value", "")
         newTask.innerText=item.Task_Name;
+        
 
         newTask.addEventListener("dragstart",() => {
           newTask.classList.add("is-dragging");
@@ -334,10 +345,12 @@ const backlogLane = document.getElementById("backlog-lane")
     })
   }
 </script>
-    <script src="javaScript.js" defer></script>
     <script>
       confirmbtn.addEventListener('click',(e)=>{
-        alert("Confirm button")
+        alert("Confirm button");
+        //TODO: Update the tasks in the sprint log column so that the new "sprint" 
+        //field contains the sprint id and store it in the database 
+        
       });
     </script>
   </body>

@@ -631,6 +631,17 @@
   const database = getDatabase(app);
   const dbRef = ref(database, 'product-backlog-tasks/');
 
+  const params = new Proxy(new URLSearchParams(window.location.search), {
+    get: (searchParams, prop) => searchParams.get(prop),
+  });
+
+  let value = params.id.trim();
+
+  btnModal1.addEventListener("click", function(e){
+      document.getElementById('taskIFrame').src = "dashboard-dark-pop-up-manage-sprint.html?id="+value
+  });
+
+
   const draggables = document.querySelectorAll(".task");
   const droppables = document.querySelectorAll(".swim-lane");
 
