@@ -296,11 +296,7 @@ const confirmbtn = document.getElementById('confirmbtn');
 
     // Collect task names from sprintlog-lane
     sprintlogTasks.forEach((task) => {
-      sprintlogTaskNames.push(task.innerText);
-    });
-
-    // Update Progress to "To do" for tasks in sprintlog-lane in Firebase
-    sprintlogTaskNames.forEach((taskName) => {
+      const taskname = (task.innerText);
       const taskRef = ref(`product-backlog-tasks/${taskName}`);
       taskRef.update({ Progress: 'To do' });
     });
@@ -311,11 +307,7 @@ const confirmbtn = document.getElementById('confirmbtn');
 
     // Collect task names from backlog-lane
     backlogTasks.forEach((task) => {
-      backlogTaskNames.push(task.innerText);
-    });
-
-    // Update Progress to "Not Started" for tasks in backlog-lane in Firebase
-    backlogTaskNames.forEach((taskName) => {
+      const taskname = (task.innerText);
       const taskRef = ref(`product-backlog-tasks/${taskName}`);
       taskRef.update({ Progress: 'Not Started' });
     });

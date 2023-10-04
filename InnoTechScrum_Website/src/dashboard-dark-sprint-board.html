@@ -590,7 +590,8 @@
           </div> -->
           <div class="dashboard-dark-sprint-board-sprint">
             <span class="dashboard-dark-sprint-board-text44">
-              <span>Sprint 1</span>
+              <button id="Saved">Saved</button>
+              
             </span>
           </div>
         </div>
@@ -706,6 +707,7 @@
   const todoLane = document.getElementById("todo-lane")
   const inprogressLane = document.getElementById("inprogress-lane")
   const completedLane = document.getElementById("completed-lane")
+  const confirmbtn = document.getElementById('Saved');
   function populateBoard(data) {
     for (const key in data) {
       if (data.hasOwnProperty(key)){
@@ -734,24 +736,33 @@
       }
     }
   }
-  //function populateBoard(data) {
-  //const todoContainer = document.getElementById('todo-container');
+  
+  confirmbtn.addEventListener('click', () => {
+    const todoTasks = todoLane.querySelectorAll('.task');
 
-  // Clear existing content
-  //todoContainer.innerHTML = '';
+    todoTasks.forEach((task) => {
+      const taskname = (task.innerText);
+      const taskRef = ref(`product-backlog-tasks/${taskName}`);
+      taskRef.update({ Progress: 'To do' });
+    });
 
+    const inprogressTasks = todoLane.querySelectorAll('.task');
 
-  // Iterate through the data and populate the board items
-  //for (const key in data) {
-  //  if (data.hasOwnProperty(key)) {
-  //    const item = data[key];
-  //    const boardItem = document.createElement('div');
-  //    boardItem.className = `board-item`;
-  //    boardItem.innerHTML = `<div class="board-item-content"><span>${item.Task_Name}</span></div>`;
-  //    todoContainer.appendChild(boardItem);
-  //  }
-  //}
-  //}
+    inprogressTasks.forEach((task) => {
+      const taskname = (task.innerText);
+      const taskRef = ref(`product-backlog-tasks/${taskName}`);
+      taskRef.update({ Progress: 'To do' });
+    });
+
+    const completedTasks = todoLane.querySelectorAll('.task');
+
+    completedTasks.forEach((task) => {
+      const taskname = (task.innerText);
+      const taskRef = ref(`product-backlog-tasks/${taskName}`);
+      taskRef.update({ Progress: 'To do' });
+    });
+
+  });
 
   // Attach an event listener to listen for changes in the data
   onValue(dbRef, function(snapshot) {
