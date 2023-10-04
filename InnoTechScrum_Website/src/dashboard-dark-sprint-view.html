@@ -335,25 +335,26 @@
   });
 
   // Refresh the Data
-  refreshData.addEventListener('click', (e) => {
+  // Removed Since Table Automatically Updates Now
+  // refreshData.addEventListener('click', (e) => {
 
-    $('#dataTable td').remove();
-    const dbRef = ref(database, 'sprint-view-sprints/');
+  //   $('#dataTable td').remove();
+  //   const dbRef = ref(database, 'sprint-view-sprints/');
 
-    onValue(dbRef, (snapshot) => {
-      snapshot.forEach((childSnapshot) => {
-        const childKey = childSnapshot.key;
-        const childData = childSnapshot.val();
+  //   onValue(dbRef, (snapshot) => {
+  //     snapshot.forEach((childSnapshot) => {
+  //       const childKey = childSnapshot.key;
+  //       const childData = childSnapshot.val();
 
-        var row = "<tr><td>" + childData.Sprint_Name + "</td><td>" + 
-          childData.Start_Date + "</td><td>" +
-          childData.End_Date + "</td><td>" +
-          childData.Progress + "</td><td>" +
-          "-" + "</td>";
+  //       var row = "<tr><td>" + childData.Sprint_Name + "</td><td>" + 
+  //         childData.Start_Date + "</td><td>" +
+  //         childData.End_Date + "</td><td>" +
+  //         childData.Progress + "</td><td>" +
+  //         "-" + "</td>";
 
-        $(row).appendTo('#dataTable');
-      });
-    });
+  //       $(row).appendTo('#dataTable');
+  //     });
+  //   });
 
-  });
+  // });
 </script>
