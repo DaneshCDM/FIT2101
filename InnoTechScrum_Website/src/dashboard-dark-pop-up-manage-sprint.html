@@ -279,32 +279,10 @@ const backlogLane = document.getElementById("backlog-lane")
         });
         
         backlogLane.appendChild(newTask);
-        }
-        
-
-        
+        }      
       }
     }
   }
-
-  //function populateBoard(data) {
-  //const pbContainer = document.getElementById('product-backlog-board');
-
-  // Clear existing content
-  //pbContainer.innerHTML = '';
-
-  // Iterate through the data and populate the board items
-  //for (const key in data) {
-  //  if (data.hasOwnProperty(key)) {
-  //    const item = data[key];
-  //    const boardItem = document.createElement('div');
-  //    boardItem.className = `board-item`;
-  //    boardItem.innerHTML = `<div class="board-item-content" draggable="true"><span>${item.Task_Name}</span></div>`;
-  //    pbContainer.appendChild(boardItem);
-  // }
-  //}
-  //}
-
 
 
   // Attach an event listener to listen for changes in the data
@@ -314,8 +292,40 @@ const backlogLane = document.getElementById("backlog-lane")
     // Call the function to populate the board items
     populateBoard(data);
   });
+
+      const confirmbtn = document.getElementById('confirmbtn');
+      const sprintlogLane = document.getElementById('sprintlog-lane');
+
+      // Add an event listener to the "Confirm" button
+      confirmbtn.addEventListener('click', () => {
+        // Get all tasks within the sprintlog-lane
+        const sprintlogTasks = sprintlogLane.querySelectorAll('.task');
+
+        // Iterate through the tasks in sprintlog-lane
+        sprintlogTasks.forEach((task) => {
+          // Check if the task has the "Not Started" progress
+          if (task.dataset.progress === 'Not Started') {
+            // Update the task's progress to "To Do" in the database
+            // You should have a way to identify tasks uniquely, e.g., using a task ID
+            const taskId = task.dataset.taskId; // Adjust this to your data structure
+            const taskRef = child(dbRef, taskId);
+
+            // Update the task's progress in the database
+            update(taskRef, { Progress: 'To Do' })
+              .then(() => {
+                // Update the task's progress attribute in the DOM
+                task.dataset.progress = 'To Do';
+              })
+              .catch((error) => {
+                console.error('Error updating task progress:', error);
+              });
+          }
+        });
+      });
   
 </script>
+
+
 
     <script src="javaScript.js" defer></script>
     <script>
