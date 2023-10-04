@@ -738,31 +738,31 @@
   }
   
   confirmbtn.addEventListener('click', () => {
-    const todoTasks = todoLane.querySelectorAll('.task');
+  const todoTasks = todoLane.querySelectorAll('.task');
+  const inprogressTasks = inprogressLane.querySelectorAll('.task');
+  const completedTasks = completedLane.querySelectorAll('.task');
 
-    todoTasks.forEach((task) => {
-      const taskname = (task.innerText);
-      const taskRef = ref(`product-backlog-tasks/${taskName}`);
-      taskRef.update({ Progress: 'To do' });
-    });
-
-    const inprogressTasks = todoLane.querySelectorAll('.task');
-
-    inprogressTasks.forEach((task) => {
-      const taskname = (task.innerText);
-      const taskRef = ref(`product-backlog-tasks/${taskName}`);
-      taskRef.update({ Progress: 'To do' });
-    });
-
-    const completedTasks = todoLane.querySelectorAll('.task');
-
-    completedTasks.forEach((task) => {
-      const taskname = (task.innerText);
-      const taskRef = ref(`product-backlog-tasks/${taskName}`);
-      taskRef.update({ Progress: 'To do' });
-    });
-
+  // Update tasks in the "To do" lane
+  todoTasks.forEach((task) => {
+    const taskName = task.innerText; // Get the task name
+    const taskRef = ref(`product-backlog-tasks/${taskName}`);
+    taskRef.update({ Progress: 'To do' });
   });
+
+  // Update tasks in the "In Progress" lane
+  inprogressTasks.forEach((task) => {
+    const taskName = task.innerText; // Get the task name
+    const taskRef = ref(`product-backlog-tasks/${taskName}`);
+    taskRef.update({ Progress: 'In Progress' });
+  });
+
+  // Update tasks in the "Completed" lane
+  completedTasks.forEach((task) => {
+    const taskName = task.innerText; // Get the task name
+    const taskRef = ref(`product-backlog-tasks/${taskName}`);
+    taskRef.update({ Progress: 'Completed' });
+  });
+});
 
   // Attach an event listener to listen for changes in the data
   onValue(dbRef, function(snapshot) {
