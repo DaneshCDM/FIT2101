@@ -326,12 +326,21 @@
         <td>${value.Start_Date}</td>
         <td>${value.End_Date}</td>
         <td>${value.Progress}</td>
-        <td><button type='button' class = 'editbtn' data-toggle='modal' data-target='#modalCase2' value=" + ${key} +
+        <td><button type='button' class = 'editbtn' data-toggle='modal' data-target='#modalCase' value=" + ${key} +
           "><img src='https://www.freeiconspng.com/uploads/edit-new-icon-22.png' width='40' alt='Edit'/></button></td>
       `;
       buttonid ++;
     }
     dataContainer.innerHTML = htmlData;
+  });
+
+  document.addEventListener("click", function(e){
+    const target = e.target.closest(".editbtn"); 
+  
+    if(target){
+      var targetid = target.value;
+      document.getElementById('taskIFrame').src = "dashboard-dark-pop-up-edit-sprint.html?id="+targetid
+    }
   });
 
   // Refresh the Data
