@@ -119,7 +119,7 @@
             class="dashboard-dark-pop-up-add-task-product-backlog-rectangle23"
           />
           <span class="dashboard-dark-pop-up-add-task-product-backlog-text">
-            <span>Add Sprint</span>
+            <span>Edit Sprint</span>
           </span>
           <div class="dashboard-dark-pop-up-add-task-product-backlog-task-name">
             <span class="dashboard-dark-pop-up-add-task-product-backlog-text02">
@@ -165,11 +165,22 @@
               <a href="#" class="close" data-bs-dismiss="modal" aria-label="close" onclick="closeModal">
               <span class="dashboard-dark-pop-up-add-task-product-backlog-text16"> 
                 <button id="btnAddTaskClose" type="submit" class = "close" data-bs-dismiss="modal" aria-label="close"></button>
-                  <span class="close">Create Sprint</span>
+                  <span class="close">Confirm Edits</span>
               </span>
               </a>
             </div>
           </div>
+          <div class="delete-task", id = "deletebtn">
+            <div class="dashboard-dark-pop-up-edit-task-product-backlog-group2">
+              <a href="#" class="close" data-bs-dismiss="modal" aria-label="close" onclick="closeModal">
+              <span class="delete-text"> 
+                <button id="btnEditTaskDelete" type="submit" class = "close" data-bs-dismiss="modal" aria-label="close"></button>
+                  <span class="close">Delete Sprint</span>
+              </span>
+              </a>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -278,7 +289,7 @@
       End_Date: End_Date,
       Progress: Progress
     });
-    alert('Sprint Have Been Edited');
+    alert('Sprint Has Been Edited');
     // closePopUp()
   });
 
