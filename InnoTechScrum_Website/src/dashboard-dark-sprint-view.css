@@ -1177,3 +1177,13 @@ select option {
   align-items: center;
   transform: scale(0.8);
 }
+
+body.dark-theme-background {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(13, 13, 13, 1) 100%);
+}
+
+body.dark-theme-background {
+  background-image: url(https://www.businesstoday.com.my/wp-content/uploads/2022/09/Msia-Day-ProductNation.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+}

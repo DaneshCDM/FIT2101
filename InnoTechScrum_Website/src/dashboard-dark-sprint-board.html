@@ -353,21 +353,11 @@
               <span class="dashboard-dark-sprint-board-text">
                 <span>Theme:</span>
               </span>
-              <img
-                alt="Ellipse14213"
-                src="public/external/ellipse14213-cjqn-200h.png"
-                class="dashboard-dark-sprint-board-ellipse1"
-              />
-              <img
-                alt="DarkTheme4213"
-                src="public/external/darktheme4213-dl8.svg"
-                class="dashboard-dark-sprint-board-dark-theme"
-              />
-              <img
-                alt="LightTheme4213"
-                src="public/external/lighttheme4213-qexp.svg"
-                class="dashboard-dark-sprint-board-light-theme"
-              />
+              <input id="darktheme" type="image" src="public/external/darktheme2557-x5ks.svg"
+              class="dashboard-dark-sprint-board-dark-theme"> 
+
+              <input id="newtheme" type="image" src="public/external/lighttheme2558-ktxp.svg"
+              class="dashboard-dark-sprint-board-light-theme"> 
             </div>
             <div class="dashboard-dark-sprint-board-dashboard-home-page">
               <span class="dashboard-dark-sprint-board-text02">
@@ -763,5 +753,27 @@
     console.log('Firebase Data:', data);
     // Call the function to populate the board items
     populateBoard(data);
+  });
+</script>
+
+<script>
+  var darkThemeButton = document.getElementById("darktheme");
+  var newThemeButton = document.getElementById("newtheme");
+  var body = document.body;
+
+  newThemeButton.addEventListener("click", function() {
+    // Add a CSS class to change the background for dark theme
+    body.classList.add("dark-theme-background");
+    
+    // Remove the class for the other theme (if it was previously applied)
+    body.classList.remove("new-theme-background");
+  });
+
+  darkThemeButton.addEventListener("click", function(){
+    // Add a CSS class to change the background for new theme
+    body.classList.add("new-theme-background");
+    
+    // Remove the class for the other theme (if it was previously applied)
+    body.classList.remove("dark-theme-background");
   });
 </script>
