@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="english">
   <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <title>exported project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
@@ -399,6 +402,7 @@
           </div>
           <div class="dashboard-dark-sprint-board-body"></div>
           <div class="dashboard-dark-sprint-board-add-task">
+            <button id="btnModal1" type="button" class = "btn" data-toggle="modal" data-target="#modalCase">
             <img
               alt="LinearEssentionalUIAddCircle4244"
               src="public/external/linearessentionaluiaddcircle4244-csrl.svg"
@@ -407,6 +411,20 @@
             <span class="dashboard-dark-sprint-board-text08">
               <span>Manage Task</span>
             </span>
+          </button>
+          </div>
+          <div id="modalCase" class="modal fade" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-lg" role="document" style="width:90%; height: 90%;">
+              <div id="modal-content" class="modal-content">
+                <div class="modal-header">
+                </div>
+                <div id="modal-body" class="modal-body">
+                  <iframe id="taskIFrame"scrolling="no"class="iframeTask" src="dashboard-dark-pop-up-manage-sprint.html"></iframe>
+                </div>
+                <div class="modal-footer">
+                </div>
+              </div>
+            </div>
           </div>
           <div class="dashboard-dark-sprint-board-add-task1">
             <img
@@ -435,66 +453,56 @@
               class="dashboard-dark-sprint-board-project-backlog-widget2"
             />
           </div> -->
-          <div class="drag-container">
+          <div class="lanes">
+            <div class="swim-lane" id="todo-lane">
+              <h3 class="headings">To do</h3>
+            </div>
+            <div class="swim-lane" id="inprogress-lane">
+              <h3 class="headings">In-Progress</h3>
+            </div>
+            <div class="swim-lane" id="completed-lane">
+              <h3 class="headings">Completed</h3>
+            </div>
+          </div>
+          <!-- <div class="drag-container">
             <div class="board">
               <div class="board-column todo">
                 <div class="board-column-container">
                   <div class="board-column-header">Todo</div>
                   <div class="board-column-content-wrapper">
                     <div class="board-column-content" id="todo-container">
-                      <!-- <div class="board-item1"><div class="board-item-content"><span></span></div></div> -->
-                      <!-- <div class="board-item1"><div class="board-item-content"><span>Item #</span>1</div></div>
-                      <div class="board-item2"><div class="board-item-content"><span>Item #</span>2</div></div>
-                      <div class="board-item3"><div class="board-item-content"><span>Item #</span>3</div></div>
-                      <div class="board-item4"><div class="board-item-content"><span>Item #</span>4</div></div>
-                      <div class="board-item5"><div class="board-item-content"><span>Item #</span>5</div></div> -->
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          <!-- <div class="drag-container"> -->
-            <div class="board">
-              <div class="board-column working">
-                <div class="board-column-container">
-                  <div class="board-column-header">In-Progress</div>
-                  <div class="board-column-content-wrapper">
-                    <div class="board-column-content" id="working-container">
-                      <!-- <div class="board-item1"><div class="board-item-content"><span></span></div></div> -->
-                      <!-- <div class="board-item1"><div class="board-item-content"><span>Item #</span>6</div></div>
-                      <div class="board-item2"><div class="board-item-content"><span>Item #</span>7</div></div>
-                      <div class="board-item3"><div class="board-item-content"><span>Item #</span>8</div></div>
-                      <div class="board-item4"><div class="board-item-content"><span>Item #</span>9</div></div>
-                      <div class="board-item5"><div class="board-item-content"><span>Item #</span>10</div></div> -->
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          <!-- <div class="drag-container"> -->
-            <div class="board">
-              <div class="board-column done">
-                <div class="board-column-container">
-                  <div class="board-column-header">Done</div>
-                  <div class="board-column-content-wrapper">
-                    <div class="board-column-content" id="done-container">
-                      <!-- <div class="board-item1"><div class="board-item-content"><span></span></div></div> -->
-                      <!-- <div class="board-item1"><div class="board-item-content"><span>Item #</span>11</div></div>
-                      <div class="board-item2"><div class="board-item-content"><span>Item #</span>12</div></div>
-                      <div class="board-item3"><div class="board-item-content"><span>Item #</span>13</div></div>
-                      <div class="board-item4"><div class="board-item-content"><span>Item #</span>14</div></div>
-                      <div class="board-item5"><div class="board-item-content"><span>Item #</span>15</div></div>
-                      <div class="board-item6"><div class="board-item-content"><span>Item #</span>16</div></div>
-                      <div class="board-item7"><div class="board-item-content"><span>Item #</span>17</div></div>
-                      <div class="board-item8"><div class="board-item-content"><span>Item #</span>18</div></div>
-                      <div class="board-item9"><div class="board-item-content"><span>Item #</span>19</div></div>
-                      <div class="board-item10"><div class="board-item-content"><span>Item #</span>20</div></div> -->
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <div class="drag-container1">
+            <div class="board">
+              <div class="board-column working">
+                <div class="board-column-container">
+                  <div class="board-column-header">In-Progress</div>
+                  <div class="board-column-content-wrapper">
+                    <div class="board-column-content">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="drag-container2">
+            <div class="board">
+              <div class="board-column done">
+                <div class="board-column-container">
+                  <div class="board-column-header">Done</div>
+                  <div class="board-column-content-wrapper">
+                    <div class="board-column-content">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
           <!-- </div> -->
           <span class="dashboard-dark-sprint-board-text12">
             <span>Sprint Board</span>
@@ -620,35 +628,8 @@
   const database = getDatabase(app);
   const dbRef = ref(database, 'product-backlog-tasks/');
 
-//   function populateBoard(data) {
-//   const todoContainer = document.getElementById('todo-container');
-
-//   // Clear existing content
-//   todoContainer.innerHTML = '';
-
-//   // Iterate through the data and populate the board items
-//   for (const key in data) {
-//     if (data.hasOwnProperty(key)) {
-//       const item = data[key];
-//       const boardItem = document.createElement('div');
-//       boardItem.className = `board-item`;
-//       boardItem.innerHTML = `<div class="board-item-content"><span>${item.Task_Name}</span></div>`;
-//       todoContainer.appendChild(boardItem);
-//     }
-//   }
-// }
-
-//   // Attach an event listener to listen for changes in the data
-//   onValue(dbRef, function(snapshot) {
-//     const data = snapshot.val();
-//     console.log('Firebase Data:', data);
-//     // Call the function to populate the board items
-//     populateBoard(data);
-//   });
-
-
-  const draggables = document.querySelectorAll(".board-item");
-  const droppables = document.querySelectorAll(".board-column-content");
+  const draggables = document.querySelectorAll(".task");
+  const droppables = document.querySelectorAll(".swim-lane");
 
   draggables.forEach((task) => {
     task.addEventListener("dragstart",() => {
@@ -675,7 +656,7 @@
   });
 
   const insertAboveTask = (zone, mouseY) => {
-    const els = zone.querySelectorAll(".board-item:not(.is-dragging)")
+    const els = zone.querySelectorAll(".task:not(.is-dragging)")
 
     let closestTask = null;
     let closestOffset = Number.NEGATIVE_INFINITY;
@@ -694,30 +675,73 @@
     return closestTask;
   };
 
+  // // Attach an event listener to listen for changes in the data
+  // dataRef.on('value', function(snapshot) {
+  //   // Get the data from the snapshot
+  //   var data = snapshot.val();
+
+  //   // Update your HTML elements with the data
+  //   // Example: 
+  //   document.querySelector('.board-item1 span').textContent = data.item1;
+  //   document.querySelector('.board-item2 span').textContent = data.item2;
+  //   // Repeat this for other elements as needed.
+  // });
+
+  // // Function to populate the board items
+  // function populateBoard(data) {
+  //   // Iterate through the data and populate the board items
+  //   for (const key in data) {
+  //     if (data.hasOwnProperty(key)) {
+  //       const item = data[key];
+  //       const boardItem = document.querySelector(`.board-item1`);
+  //       if (boardItem) {
+  //         // Update the board item's content
+  //         const boardItemContent = boardItem.querySelector('.board-item-content span');
+  //         boardItemContent.textContent = item.Task_Name;
+  //         // You can similarly update other properties of the board item here
+  //       }
+  //     }
+  //   }
+  // }
+  const todoLane = document.getElementById("todo-lane")
   function populateBoard(data) {
-  const todoContainer = document.getElementById('todo-container');
-
-  // Clear existing content
-  todoContainer.innerHTML = '';
-
-    // Iterate through the data and populate the board items
     for (const key in data) {
-      if (data.hasOwnProperty(key)) {
+      if (data.hasOwnProperty(key)){
         const item = data[key];
-        const boardItem = document.createElement('p');
-        boardItem.className = `board-item`;
-        boardItem.innerHTML = `<p class="board-item-content" draggable = true> ${item.Task_Name}</p>`;
-        // boardItem.innerText=item.Task_Name;
-        boardItem.addEventListener("dragstart",() => {
-          boardItem.classList.add("is-dragging");
+        const newTask = document.createElement("p");
+        newTask.classList.add("task");
+        newTask.setAttribute("draggable","true");
+        newTask.innerText=item.Task_Name;
+
+        newTask.addEventListener("dragstart",() => {
+          newTask.classList.add("is-dragging");
         });
-        boardItem.addEventListener("dragend",() => {
-          boardItem.classList.remove("is-dragging");
+        newTask.addEventListener("dragend",() => {
+          newTask.classList.remove("is-dragging");
         });
-        todoContainer.appendChild(boardItem);
+        
+        todoLane.appendChild(newTask);
       }
     }
   }
+  //function populateBoard(data) {
+  //const todoContainer = document.getElementById('todo-container');
+
+  // Clear existing content
+  //todoContainer.innerHTML = '';
+
+
+  // Iterate through the data and populate the board items
+  //for (const key in data) {
+  //  if (data.hasOwnProperty(key)) {
+  //    const item = data[key];
+  //    const boardItem = document.createElement('div');
+  //    boardItem.className = `board-item`;
+  //    boardItem.innerHTML = `<div class="board-item-content"><span>${item.Task_Name}</span></div>`;
+  //    todoContainer.appendChild(boardItem);
+  //  }
+  //}
+  //}
 
   // Attach an event listener to listen for changes in the data
   onValue(dbRef, function(snapshot) {
