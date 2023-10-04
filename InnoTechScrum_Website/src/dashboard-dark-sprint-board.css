@@ -993,7 +993,7 @@
 /* drag */
 .lanes{
   position: absolute;
-  top: 280px;
+  top: 300px;
   left: 80px;
   display:flex;
   align-items: flex-start;
@@ -1004,10 +1004,45 @@
 }
 .headings{
 font-weight: bold;
+top:0px;
 font-size: 24px;
 color: white;
+background: rgb(116, 20, 7);
+padding: 10px;
+border-radius: 4px;
+width: 280px;
+display: block;
+position: absolute;
+}
+.headings1{
+font-weight: bold;
+top:0px;
+left: 412px;
+font-size: 24px;
+color: white;
+background: rgb(116, 20, 7);
+padding: 10px;
+border-radius: 4px;
+width: 280px;
+display: block;
+position: absolute;
+}
+.headings2{
+font-weight: bold;
+left: 792px;
+top:0px;
+font-size: 24px;
+color: white;
+background: rgb(116, 20, 7);
+padding: 10px;
+border-radius: 4px;
+width: 280px;
+display: block;
+position: absolute;
 }
 .swim-lane{
+  position:relative;
+  top: 20px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -1017,10 +1052,11 @@ color: white;
   padding: 12px;
   border-radius: 4px;
   width: 280px;
-  min-height: 120px;
-  max-height: 500px;
+  min-height: 100px;
+  max-height: 480px;
   overflow: scroll;
   flex-shrink: 0;
+  
 }
 
 .task{

@@ -454,14 +454,17 @@
             />
           </div> -->
           <div class="lanes">
+            <h3 class="headings">To do</h3>
             <div class="swim-lane" id="todo-lane">
-              <h3 class="headings">To do</h3>
+              <!-- <h3 class="headings">To do</h3> -->
             </div>
+            <h3 class="headings1">In-Progress</h3>
             <div class="swim-lane" id="inprogress-lane">
-              <h3 class="headings">In-Progress</h3>
+              <!-- <h3 class="headings">In-Progress</h3> -->
             </div>
+            <h3 class="headings2">Completed</h3>
             <div class="swim-lane" id="completed-lane">
-              <h3 class="headings">Completed</h3>
+              <!-- <h3 class="headings">Completed</h3> -->
             </div>
           </div>
           <!-- <div class="drag-container">
@@ -705,6 +708,7 @@
   // }
   const todoLane = document.getElementById("todo-lane")
   function populateBoard(data) {
+    todoLane.innerHTML='';
     for (const key in data) {
       if (data.hasOwnProperty(key)){
         const item = data[key];
@@ -712,14 +716,13 @@
         newTask.classList.add("task");
         newTask.setAttribute("draggable","true");
         newTask.innerText=item.Task_Name;
-
+        
         newTask.addEventListener("dragstart",() => {
           newTask.classList.add("is-dragging");
         });
         newTask.addEventListener("dragend",() => {
           newTask.classList.remove("is-dragging");
         });
-        
         todoLane.appendChild(newTask);
       }
     }

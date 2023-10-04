@@ -220,11 +220,36 @@
   overflow: scroll;
 }
 .headings{
-font-weight: bold;
-font-size: 24px;
-color: white;
+  font-weight: bold;
+  top:15px;
+  left: 32px;
+  font-size: 24px;
+  color: white;
+  background: rgb(116, 20, 7);
+  padding: 10px;
+  border-radius: 4px;
+  width: 225px;
+  display: block;
+  position: absolute;
 }
+
+.headings1{
+  font-weight: bold;
+  top:15px;
+  left: 317px;
+  font-size: 24px;
+  color: white;
+  background: #bb2f01;
+  padding: 10px;
+  border-radius: 4px;
+  width: 225px;
+  display: block;
+  position: absolute;
+}
+
 .swim-lane1{
+  position:relative;
+  top: 30px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -235,12 +260,15 @@ color: white;
   border-radius: 4px;
   width: 225px;
   min-height: 120px;
-  max-height: 500px;
+  max-height: 400px;
   overflow: scroll;
   flex-shrink: 0;
 }
 
+
 .swim-lane2{
+  position:relative;
+  top: 30px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -251,7 +279,7 @@ color: white;
   border-radius: 4px;
   width: 225px;
   min-height: 120px;
-  max-height: 500px;
+  max-height: 400px;
   overflow: scroll;
   flex-shrink: 0;
 }
