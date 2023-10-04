@@ -561,13 +561,14 @@ function filterData(searchText, sortBy) {
     filterData(searchText, sortBy);
   });
 
+  // Hidden - Table Now Updates Automatically
   // Initial data load (you can keep this if needed)
-  refreshData.addEventListener('click', (e) => {
-    const searchText = $("#search_text").val(); // Get the current search text
-    const sortBy = $("#sort_by").val(); // Get the selected sorting option
-    filterData(searchText, sortBy); // Filter and sort data based on search text and sorting option
-    alert('Data Refreshed');
-  });
+  // refreshData.addEventListener('click', (e) => {
+  //   const searchText = $("#search_text").val(); // Get the current search text
+  //   const sortBy = $("#sort_by").val(); // Get the selected sorting option
+  //   filterData(searchText, sortBy); // Filter and sort data based on search text and sorting option
+  //   alert('Data Refreshed');
+  // });
 
   document.addEventListener("click", function(e){
     const target = e.target.closest(".editbtn"); 
