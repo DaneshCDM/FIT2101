@@ -266,11 +266,12 @@ const backlogLane = document.getElementById("backlog-lane")
       if (data.hasOwnProperty(key)){
         const item = data[key];
         const newTask = document.createElement("p");
-        newTask.classList.add("task");
-        newTask.setAttribute("draggable","true");
-        newTask.innerText=item.Task_Name;
+        if(item.Progress === "Not Started"){
+          newTask.classList.add("task");
+          newTask.setAttribute("draggable","true");
+          newTask.innerText=item.Task_Name;
 
-        newTask.addEventListener("dragstart",() => {
+          newTask.addEventListener("dragstart",() => {
           newTask.classList.add("is-dragging");
         });
         newTask.addEventListener("dragend",() => {
@@ -278,6 +279,10 @@ const backlogLane = document.getElementById("backlog-lane")
         });
         
         backlogLane.appendChild(newTask);
+        }
+        
+
+        
       }
     }
   }
@@ -311,26 +316,7 @@ const backlogLane = document.getElementById("backlog-lane")
   });
   
 </script>
-<script>
-  let items = document.getElementsByClassName("board-item-content");
-  let leftbox = document.getElementById("product-backlog-board")
-  let rightbox = document.getElementById("sprint-log-board")
 
-  for(item of items){
-    item.addEventListener("dragstart", function(e){
-      let selected = e.target
-
-      rightbox.addEventListener("dragover",function(e){
-        e.preventDefault();
-      });
-
-      rightbox.addEventListener("drop", function(e){
-        rightbox.appendChild(selected);
-        selected = null;
-      })
-    })
-  }
-</script>
     <script src="javaScript.js" defer></script>
     <script>
       confirmbtn.addEventListener('click',(e)=>{
