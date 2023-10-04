@@ -220,7 +220,7 @@
               <a href="#" class="close" data-bs-dismiss="modal" aria-label="close" onclick="closeModal">
               <span class="dashboard-dark-pop-up-edit-task-product-backlog-text16"> 
                 <button id="btnEditTaskConfirm" type="submit" class = "close" data-bs-dismiss="modal" aria-label="close"></button>
-                  <span class="close">Confirm Edit</span>
+                  <span class="close">Confirm Edits</span>
               </span>
               </a>
             </div>
@@ -230,7 +230,7 @@
               <a href="#" class="close" data-bs-dismiss="modal" aria-label="close" onclick="closeModal">
               <span class="delete-text"> 
                 <button id="btnEditTaskDelete" type="submit" class = "close" data-bs-dismiss="modal" aria-label="close"></button>
-                  <span class="close">Delete task</span>
+                  <span class="close">Delete Task</span>
               </span>
               </a>
             </div>
@@ -435,13 +435,13 @@
       Task_Stage: Task_Stage,
       Task_Type: Task_Type
     });
-    alert('Task Have Been Editted');
+    alert('Task Has Been Edited');
     // closePopUp()
   });
 
 deletebtn.addEventListener('click',(e)=>{
   console.log('Button clicked');
   remove(editRef);
-  alert('Task Have Been Deleted');
+  alert('Task Has Been Deleted');
 });
 </script>

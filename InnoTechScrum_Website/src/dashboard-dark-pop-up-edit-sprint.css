@@ -397,9 +397,10 @@
   /* Create task start */
   .dashboard-dark-pop-up-add-task-product-backlog-create-task {
     top: 630px;
-    left: 115px;
-    width: 668px;
+    left: 470px;
+    width: 300px;
     height: 35px;
+    border-radius: 7px;
     display: flex;
     position: absolute;
     align-items: flex-start;
@@ -408,8 +409,8 @@
   }
   .dashboard-dark-pop-up-add-task-product-backlog-group1 {
     top: 5px;
-    left: 146.63397216796875px;
-    width: 358.43902587890625px;
+    left: 70px;
+    width: 150px;
     height: 24px;
     display: flex;
     position: absolute;
@@ -418,7 +419,7 @@
   }
   .dashboard-dark-pop-up-add-task-product-backlog-text16 {
     color: rgba(255, 255, 255, 1);
-    width: 358px;
+    width: 150px;
     height: auto;
     position: absolute;
     font-size: 16px;
@@ -431,6 +432,45 @@
     text-decoration: none;
   }
   /* Create task end */
+
+  /* Delete Sprint start */
+.delete-task {
+  top: 630px;
+  left: 115px;
+  width: 300px;
+  height: 35px;
+  border-radius: 7px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-image: linear-gradient(180deg, rgb(118, 118, 118) 0%, rgb(79, 79, 79) 100%);
+}
+.dashboard-dark-pop-up-edit-task-product-backlog-group2 {
+  top: 5px;
+  left: 70px;
+  width: 150px;
+  height: 24px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.delete-text {
+  color: rgba(255, 255, 255, 1);
+  width: 150px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+/* Delete Sprint end */
   
   /* .dashboard-dark-pop-up-add-task-product-backlog-drop-down-arrow {
     top: 321px;
