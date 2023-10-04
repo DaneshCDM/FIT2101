@@ -261,12 +261,14 @@ const insertAboveTask = (zone, mouseY) => {
 };
 
 const backlogLane = document.getElementById("backlog-lane")
+const sprintlogLane = document.getElementById('sprintlog-lane');
+const confirmbtn = document.getElementById('confirmbtn');
   function populateBoard(data) {
     for (const key in data) {
       if (data.hasOwnProperty(key)){
         const item = data[key];
         const newTask = document.createElement("p");
-        if(item.Progress === "Not Started"){
+        
           newTask.classList.add("task");
           newTask.setAttribute("draggable","true");
           newTask.innerText=item.Task_Name;
@@ -277,13 +279,47 @@ const backlogLane = document.getElementById("backlog-lane")
         newTask.addEventListener("dragend",() => {
           newTask.classList.remove("is-dragging");
         });
-        
-        backlogLane.appendChild(newTask);
-        }      
+        if(item.Progress === "Not Started"){
+          backlogLane.appendChild(newTask);
+        }
+        if(item.Progress === "To do"){
+          sprintlogLane.appendChild(newTask)
+        } 
       }
     }
   }
 
+  confirmbtn.addEventListener('click', () => {
+    // Get all tasks in sprintlog-lane
+    const sprintlogTasks = sprintlogLane.querySelectorAll('.task');
+    const sprintlogTaskNames = [];
+
+    // Collect task names from sprintlog-lane
+    sprintlogTasks.forEach((task) => {
+      sprintlogTaskNames.push(task.innerText);
+    });
+
+    // Update Progress to "To do" for tasks in sprintlog-lane in Firebase
+    sprintlogTaskNames.forEach((taskName) => {
+      const taskRef = ref(`product-backlog-tasks/${taskName}`);
+      taskRef.update({ Progress: 'To do' });
+    });
+
+    // Get all tasks in backlog-lane
+    const backlogTasks = backlogLane.querySelectorAll('.task');
+    const backlogTaskNames = [];
+
+    // Collect task names from backlog-lane
+    backlogTasks.forEach((task) => {
+      backlogTaskNames.push(task.innerText);
+    });
+
+    // Update Progress to "Not Started" for tasks in backlog-lane in Firebase
+    backlogTaskNames.forEach((taskName) => {
+      const taskRef = ref(`product-backlog-tasks/${taskName}`);
+      taskRef.update({ Progress: 'Not Started' });
+    });
+  });
 
   // Attach an event listener to listen for changes in the data
   onValue(dbRef, function(snapshot) {
@@ -293,35 +329,8 @@ const backlogLane = document.getElementById("backlog-lane")
     populateBoard(data);
   });
 
-      const confirmbtn = document.getElementById('confirmbtn');
-      const sprintlogLane = document.getElementById('sprintlog-lane');
+  
 
-      // Add an event listener to the "Confirm" button
-      confirmbtn.addEventListener('click', () => {
-        // Get all tasks within the sprintlog-lane
-        const sprintlogTasks = sprintlogLane.querySelectorAll('.task');
-
-        // Iterate through the tasks in sprintlog-lane
-        sprintlogTasks.forEach((task) => {
-          // Check if the task has the "Not Started" progress
-          if (task.dataset.progress === 'Not Started') {
-            // Update the task's progress to "To Do" in the database
-            // You should have a way to identify tasks uniquely, e.g., using a task ID
-            const taskId = task.dataset.taskId; // Adjust this to your data structure
-            const taskRef = child(dbRef, taskId);
-
-            // Update the task's progress in the database
-            update(taskRef, { Progress: 'To Do' })
-              .then(() => {
-                // Update the task's progress attribute in the DOM
-                task.dataset.progress = 'To Do';
-              })
-              .catch((error) => {
-                console.error('Error updating task progress:', error);
-              });
-          }
-        });
-      });
   
 </script>
 

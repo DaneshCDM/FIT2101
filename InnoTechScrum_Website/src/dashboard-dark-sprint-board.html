@@ -704,23 +704,33 @@
   //   }
   // }
   const todoLane = document.getElementById("todo-lane")
+  const inprogressLane = document.getElementById("inprogress-lane")
+  const completedLane = document.getElementById("completed-lane")
   function populateBoard(data) {
     for (const key in data) {
       if (data.hasOwnProperty(key)){
         const item = data[key];
         const newTask = document.createElement("p");
-        newTask.classList.add("task");
-        newTask.setAttribute("draggable","true");
-        newTask.innerText=item.Task_Name;
-
-        newTask.addEventListener("dragstart",() => {
-          newTask.classList.add("is-dragging");
-        });
-        newTask.addEventListener("dragend",() => {
-          newTask.classList.remove("is-dragging");
-        });
         
-        todoLane.appendChild(newTask);
+          newTask.classList.add("task");
+          newTask.setAttribute("draggable","true");
+          newTask.innerText=item.Task_Name;
+
+          newTask.addEventListener("dragstart",() => {
+            newTask.classList.add("is-dragging");
+          });
+          newTask.addEventListener("dragend",() => {
+            newTask.classList.remove("is-dragging");
+          });
+        if(item.Progress === "To do"){
+          todoLane.appendChild(newTask);
+        }
+        if(item.Progress === "In Progress"){
+          inprogressLane.appendChild(newTask);
+        }
+        if(item.Progress === "Completed"){
+          completedLane.appendChild(newTask);
+        }
       }
     }
   }
