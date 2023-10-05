@@ -272,6 +272,7 @@ const insertAboveTask = (zone, mouseY) => {
 };
 
 const backlogLane = document.getElementById("backlog-lane")
+const sprintLane = document.getElementById("sprintlog-lane")
   function populateBoard(data) {
     backlogLane.innerHTML='';
     for (const key in data) {
@@ -290,8 +291,12 @@ const backlogLane = document.getElementById("backlog-lane")
         newTask.addEventListener("dragend",() => {
           newTask.classList.remove("is-dragging");
         });
-        
-        backlogLane.appendChild(newTask);
+        if(item.Progress === "Not Started"){
+          backlogLane.appendChild(newTask);
+        }
+        if(item.Progress === "To do"){
+          sprintLane.appendChild(newTask);
+        }
       }
     }
   }

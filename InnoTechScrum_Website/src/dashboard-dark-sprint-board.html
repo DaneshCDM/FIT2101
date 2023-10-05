@@ -712,6 +712,8 @@
   //   }
   // }
   const todoLane = document.getElementById("todo-lane")
+  const inprogressLane = document.getElementById("inprogress-lane")
+  const completedLane = document.getElementById("completed-lane")
   function populateBoard(data) {
     todoLane.innerHTML='';
     for (const key in data) {
@@ -728,7 +730,15 @@
         newTask.addEventListener("dragend",() => {
           newTask.classList.remove("is-dragging");
         });
-        todoLane.appendChild(newTask);
+        if(item.Progress === "To do"){
+          todoLane.appendChild(newTask);
+        }
+        if(item.Progress === "In Progress"){
+          inprogressLane.appendChild(newTask);
+        }
+        if(item.Progress === "Completed"){
+          completedLane.appendChild(newTask);
+        }
       }
     }
   }
