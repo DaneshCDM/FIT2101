@@ -1153,13 +1153,13 @@ select option {
 
 /* CSS code for priority classes */
 .urgent-priority {
-  color: red; /* Set the color for high priority */
+  color: red; /* Set the color for urgent priority */
 }
 .important-priority {
-  color: yellow; /*Set the color for important priority */
+  color: purple; /*Set the color for important priority */
 }
 .medium-priority {
-  color: orange; /* Set the color for medium priority */
+  color: yellow; /* Set the color for medium priority */
 }
 .low-priority {
   color: green; /* Set the color for low priority */
