@@ -1,0 +1,109 @@
+.showprofile-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+.showprofile-showprofile {
+  width: 589px;
+  height: 468px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 30px;
+  background-image: linear-gradient(180deg, rgba(175, 0, 0, 1) 0%, rgba(33, 0, 0, 1) 100%);
+}
+.showprofile-text {
+  top: 26px;
+  left: 39px;
+  color: rgba(255, 255, 255, 1);
+  width: 110px;
+  height: auto;
+  position: absolute;
+  font-size: 25px;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.showprofile-toppng2 {
+  top: 27px;
+  left: 149px;
+  width: 26px;
+  height: 27px;
+  position: absolute;
+}
+.showprofile-ellipse2 {
+  top: 101px;
+  left: 39px;
+  width: 208px;
+  height: 191px;
+  position: absolute;
+}
+.showprofile-text02 {
+  top: 170px;
+  left: 312px;
+  color: rgba(255, 175, 175, 1);
+  height: auto;
+  position: absolute;
+  font-size: 36px;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.showprofile-text04 {
+  top: 314px;
+  left: 56px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 25px;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.showprofile-text06 {
+  top: 359px;
+  left: 56px;
+  color: rgba(255, 176, 176, 1);
+  height: auto;
+  position: absolute;
+  font-size: 25px;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.showprofile-text08 {
+  top: 404px;
+  left: 56px;
+  color: rgba(255, 176, 176, 1);
+  height: auto;
+  position: absolute;
+  font-size: 25px;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}

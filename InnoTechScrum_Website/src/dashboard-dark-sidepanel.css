@@ -1,0 +1,198 @@
+.dashboard-dark-sidepanel-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+.dashboard-dark-sidepanel-dashboard-dark-sidepanel {
+  width: 100%;
+  height: 850px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(255, 255, 255, 1);
+}
+.dashboard-dark-sidepanel-sidepanel {
+  top: 0px;
+  left: 0px;
+  width: 237px;
+  height: 850px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(62, 26, 2, 1);
+}
+.dashboard-dark-sidepanel-rectangle11 {
+  top: 0px;
+  left: 0px;
+  width: 237px;
+  height: 59px;
+  position: absolute;
+}
+.dashboard-dark-sidepanel-vector1 {
+  top: 59px;
+  left: 0px;
+  width: 237px;
+  height: 1px;
+  position: absolute;
+}
+.dashboard-dark-sidepanel-vector3 {
+  top: 0px;
+  left: 236px;
+  width: 1px;
+  height: 850px;
+  position: absolute;
+}
+.dashboard-dark-sidepanel-vector2 {
+  top: 0px;
+  left: 197px;
+  width: 0px;
+  height: 59px;
+  position: absolute;
+}
+.dashboard-dark-sidepanel-menu {
+  top: 15px;
+  left: 202px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+}
+.dashboard-dark-sidepanel-logo {
+  top: 9px;
+  left: 50px;
+  width: 140px;
+  height: 42px;
+  position: absolute;
+}
+.dashboard-dark-sidepanel-settings {
+  top: 799px;
+  left: 18px;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+}
+.dashboard-dark-sidepanel-text {
+  top: 298px;
+  left: 39px;
+  color: rgba(251, 106, 71, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.dashboard-dark-sidepanel-text02 {
+  top: 243px;
+  left: 39px;
+  color: rgba(251, 106, 71, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.dashboard-dark-sidepanel-text04 {
+  top: 408px;
+  left: 39px;
+  color: rgba(251, 106, 71, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.dashboard-dark-sidepanel-text06 {
+  top: 353px;
+  left: 39px;
+  color: rgba(251, 106, 71, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.dashboard-dark-sidepanel-text08 {
+  top: 189px;
+  left: 39px;
+  color: rgba(251, 106, 71, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.dashboard-dark-sidepanel-text10 {
+  top: 134px;
+  left: 39px;
+  color: rgba(251, 106, 71, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.dashboard-dark-sidepanel-dashboard {
+  top: 86px;
+  left: 39px;
+  width: 186px;
+  height: 30px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.dashboard-dark-sidepanel-linear-building-infrastructure-home {
+  top: 1px;
+  left: 161px;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+}
+.dashboard-dark-sidepanel-text12 {
+  color: rgba(251, 106, 71, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
