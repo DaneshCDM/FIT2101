@@ -224,7 +224,6 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
 });
 
 let value1 = params.id.trim();
-alert(value1);
 
 //drag and drop 
 draggables.forEach((task) => {
@@ -272,6 +271,7 @@ const insertAboveTask = (zone, mouseY) => {
 };
 
 const backlogLane = document.getElementById("backlog-lane")
+const sprintLane = document.getElementById("sprintlog-lane")
   function populateBoard(data) {
     backlogLane.innerHTML='';
     for (const key in data) {
@@ -290,8 +290,12 @@ const backlogLane = document.getElementById("backlog-lane")
         newTask.addEventListener("dragend",() => {
           newTask.classList.remove("is-dragging");
         });
-        
-        backlogLane.appendChild(newTask);
+        if(item.Progress === "Not Started"){
+          backlogLane.appendChild(newTask);
+        }
+        if(item.Progress === "To do"){
+          sprintLane.appendChild(newTask);
+        }
       }
     }
   }
