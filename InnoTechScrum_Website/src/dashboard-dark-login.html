@@ -536,7 +536,7 @@ login_btn.addEventListener("click",function(){
       if (authorized){
         alert("Welcome " + value.Username + "!")
         if (value.Role === "admin"){
-          window.location.href = "dashboard-dark-mainpage-admin.html"
+          window.location.href = `dashboard-dark-mainpage-admin.html?key=${key}`
         }
       }
     }
