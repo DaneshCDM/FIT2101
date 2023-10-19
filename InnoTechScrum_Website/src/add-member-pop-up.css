@@ -1,0 +1,239 @@
+.add-member-pop-up-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+.add-member-pop-up-addmemberpopup-theme2 {
+  width: 100%;
+  height: 459px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.add-member-pop-up-box {
+  top: 0px;
+  left: 0px;
+  width: 400px;
+  height: 459px;
+  position: absolute;
+  border-radius: 43px;
+}
+.add-member-pop-up-sign-up {
+  top: 16px;
+  left: 34px;
+  width: 338px;
+  height: 50px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.add-member-pop-up-text {
+  color: rgba(238, 61, 18, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.add-member-pop-up-text02 {
+  top: 30px;
+  color: rgba(206, 143, 127, 1);
+  height: auto;
+  position: absolute;
+  font-size: 13px;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.add-member-pop-up-separator {
+  top: 76px;
+  left: 0px;
+  width: 400px;
+  height: 1px;
+  position: absolute;
+}
+.add-member-pop-up-first-name {
+  top: 107px;
+  left: 34px;
+  width: 331px;
+  height: 32px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(255, 255, 255, 1);
+}
+.add-member-pop-up-text04 {
+  top: 6px;
+  color: rgba(0, 0, 0, 1);
+  width: 90px;
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.add-member-pop-up-email {
+  top: 170px;
+  left: 34px;
+  width: 331px;
+  height: 32px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(255, 255, 255, 1);
+}
+.add-member-pop-up-text06 {
+  top: 6px;
+  left: 10px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.add-member-pop-up-password {
+  top: 233px;
+  left: 34px;
+  width: 331px;
+  height: 32px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(255, 255, 255, 1);
+}
+.add-member-pop-up-text08 {
+  top: 6px;
+  left: 10px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.add-member-pop-up-confirm-password {
+  top: 296px;
+  left: 34px;
+  width: 331px;
+  height: 32px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(255, 255, 255, 1);
+}
+.add-member-pop-up-text10 {
+  top: 5px;
+  left: 10px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 14px;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.add-member-pop-up-tc {
+  top: 357px;
+  left: 34px;
+  width: 278px;
+  height: 18px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.add-member-pop-up-t-cbox {
+  top: 2px;
+  left: 0px;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  border-radius: 3px;
+}
+.add-member-pop-up-text12 {
+  left: 23px;
+  color: rgba(206, 143, 127, 1);
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.add-member-pop-up-signup {
+  top: 394px;
+  left: 34px;
+  width: 82px;
+  height: 35px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(238, 61, 18, 1);
+}
+.add-member-pop-up-group1 {
+  top: 6px;
+  left: 10px;
+  width: 62px;
+  height: 23px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.add-member-pop-up-text14 {
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 15px;
+  font-style: Medium;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
