@@ -124,68 +124,32 @@
         <span class="dashboard-dark-pop-up-add-task-product-backlog-text">
           <span>Burn Down Chart</span>
         </span>
-        <div class="dashboard-dark-pop-up-add-task-product-backlog-task-name">
-          <span class="dashboard-dark-pop-up-add-task-product-backlog-text02">
-            <input type = "text" id = "Sprint_No_text" placeholder="Sprint: No."
-            readonly style="background-color: white; color: black; width: 260px">
+        <div class="burndown-sprint-name">
+          <span>
+            <input type = "text" id = "Sprint_Name_text" placeholder="Sprint Name: "
+            readonly style="background-color: transparent; color: black; width: 260px">
+          </span>
+        </div>
+        <div class="burndown-start_date">
+          <span>
+            <input type = "text" id = "Start_Date_text"
+            readonly style="background-color: transparent; color: black; width: 260px">
+          </span>
+        </div>
+        <div class="burndown-end_date">
+          <span>
+            <input type = "text" id = "End_Date_text"
+            readonly style="background-color: transparent; color: black; width: 260px">
           </span>
         </div>
     <div id="container"></div>
   </body>
-  <script>
-    var burndownGraph = new ej.charts.Chart({
-        margin:{ top: 20, bottom: 10, left: 10, right: 30 },
-        primaryXAxis: {
-            valueType: 'DateTime',
-            title: 'Date',
-            labelFormat: 'dd-MMM',//'dd-MMM-yyyy' option for year
-        },
 
-        primaryYAxis: {
-            title: 'User Stories'
-        },
-
-        series: [
-            {
-                type: 'Line',
-                dataSource: [
-                    { Date:new Date(2023,10,1),UserStories:20},
-                    { Date:new Date(2023,10,2),UserStories:14},
-                    { Date:new Date(2023,10,5),UserStories:10},
-                    { Date:new Date(2023,10,8),UserStories:7},
-                    { Date:new Date(2023,10,9),UserStories:0},
-                ],
-                xName: 'Date',
-                yName: 'UserStories',
-                marker:{visible:true,shape:"Circle",width:8},
-                name: 'Actual Burn',
-            },
-            {
-                type: 'Line',
-                dataSource: [
-                    { Date:new Date(2023,10,1),UserStories:20},
-                    { Date:new Date(2023,10,3),UserStories:15},
-                    { Date:new Date(2023,10,5),UserStories:10},
-                    { Date:new Date(2023,10,7),UserStories:5},
-                    { Date:new Date(2023,10,9),UserStories:0},
-                ],
-                xName: 'Date',
-                yName: 'UserStories',
-                marker:{visible:false,shape:"Circle",width:0},//removes display of data for Expected Burn on mouse hover
-                name: 'Expected Burn',
-                dashArray:'3,3'
-            }
-        ],
-        legendSettings:{visible:true},
-        tooltip:{enable:true}
-    });
-    burndownGraph.appendTo('#container');
-  </script>
 <script type="module">
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-analytics.js";
-  import { getDatabase, ref, set, push, child, get, remove } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-database.js";
+  import { getDatabase, ref, set, push, child, get, remove, onValue } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-database.js";
   
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
@@ -211,30 +175,157 @@
   const params = new Proxy(new URLSearchParams(window.location.search), {
     get: (searchParams, prop) => searchParams.get(prop),
   });
-  let value = params.id.trim();
+  //let value = params.id.trim();
   //continue here
-
-  // obtain data from id and pre-populate edit task
-  const editRef = ref(database, 'sprint-view-sprints/' + value);
+  function formatDate(dateString) {
+    const date = new Date(dateString);
+    const month = date.toLocaleString('en-US', { month: 'short' });
+    const day = date.getDate();
+    return `${month} ${day}`;
+  }
   
-  get(editRef)
-  .then((snapshot) => {
-    if (snapshot.exists()) {
-      const End_Date = snapshot.val().End_Date;
-      const Start_Date = snapshot.val().Start_Date;
-      const Sprint_Name = snapshot.val().Sprint_Name;
-      const Progress = snapshot.val().Progress;
+async function fetchedDatalist() {
+  return new Promise((resolve, reject) => {
+    var fetchedData = ref(database, 'sprint-view-sprints/');
+    var latestCompletedSprint = null;
+    var latestEndDate = null;
+    var datelist = [];
+    let count = 0;
+    let Sprint_Name;
+    let Start_Date;
+    let End_Date;
+    onValue(fetchedData, (snapshot) => {
+      var data = snapshot.val();
 
-      const Sprint_Name_input = document.getElementById('Sprint_No_text');
-      Sprint_Name_input.value = Sprint_Name;
+      for (var key in data) {
+        var value = data[key];
 
-      console.log(`${End_Date}/${Progress}/${Sprint_Name}/${Start_Date}`);
-      } else {
-          console.log("Data not found");
+        if (value.Progress === 'Completed') {
+          var endDate = new Date(value.End_Date);
+
+          if (latestEndDate === null || endDate > latestEndDate) {
+            // This sprint is the latest completed sprint so far
+            latestEndDate = endDate;
+            latestCompletedSprint = key;
+          }
+        }
       }
-  }).catch((error) => {
-      console.error(error.message);
+
+      if (latestCompletedSprint) {
+        // obtain data from id and pre-populate graph input
+        const sprintRef = ref(database, 'sprint-view-sprints/' + latestCompletedSprint);
+        console.log(latestCompletedSprint);
+        get(sprintRef)
+          .then((snapshot) => {
+            if (snapshot.exists()) {
+              End_Date = snapshot.val().End_Date;
+              Start_Date = snapshot.val().Start_Date;
+              Sprint_Name = snapshot.val().Sprint_Name;
+
+              // Log the retrieved data
+              console.log(`${End_Date}/${Sprint_Name}/${Start_Date}`);
+
+              // Update input values
+              const Sprint_Name_input = document.getElementById('Sprint_Name_text');
+              Sprint_Name_input.value = Sprint_Name;
+
+              const Start_Date_input = document.getElementById('Start_Date_text');
+              Start_Date_input.value = "Start Date: " + Start_Date;
+
+              const End_Date_input = document.getElementById('End_Date_text');
+              End_Date_input.value = "End Date: " + End_Date;
+            } else {
+              console.log("Data not found");
+            }
+          })
+          .catch((error) => {
+            console.error(error.message);
+          });
+
+        const productBacklogRef = ref(database, 'product-backlog-tasks/');
+
+        get(productBacklogRef)
+          .then((snapshot) => {
+            if (snapshot.exists()) {
+              const productBacklogData = snapshot.val();
+              const matchingTasks = [];
+
+              for (const taskId in productBacklogData) {
+                const task = productBacklogData[taskId];
+                if (task.Sprint === Sprint_Name) {
+                  matchingTasks.push(task);
+                  const taskDate = new Date(task.date);
+                  datelist.push(taskDate);
+                }
+              }
+
+              if (matchingTasks.length > 0) {
+                matchingTasks.forEach((matchingTask) => {
+                  console.log("Matching Task:", matchingTask);
+                });
+                count = matchingTasks.length; // Update count after all tasks are processed
+                console.log(count);
+
+                // Create the chart with the retrieved data
+                const formattedDatelist = datelist.map(dateString => formatDate(dateString));
+                console.log(formattedDatelist);
+
+                var burndownGraph = new ej.charts.Chart({
+                  margin: { top: 20, bottom: 10, left: 10, right: 30 },
+                  primaryXAxis: {
+                    valueType: 'DateTime',
+                    title: 'Date',
+                    labelFormat: 'dd-MMM', //'dd-MMM-yyyy' option for year
+                  },
+                  primaryYAxis: {
+                    title: 'User Stories',
+                  },
+                  series: [
+                    {
+                      type: 'Line',
+                      dataSource: datelist.map((date, index) => ({
+                        Date: date,
+                        UserStories: count - index,
+                      })),
+                      xName: 'Date',
+                      yName: 'UserStories',
+                      marker: { visible: true, shape: "Circle", width: 8 },
+                      name: 'Actual Burn',
+                    },
+                    {
+                      type: 'Line',
+                      dataSource: [
+                        { Date: new Date(Start_Date), UserStories: count },
+                        { Date: new Date(End_Date), UserStories: 0 }
+                      ],
+                      xName: 'Date',
+                      yName: 'UserStories',
+                      marker: { visible: false, shape: "Circle", width: 0 }, // removes display of data for Expected Burn on mouse hover
+                      name: 'Expected Burn',
+                      dashArray: '3,3'
+                    }
+                  ],
+                  legendSettings: { visible: true },
+                  tooltip: { enable: true }
+                });
+                burndownGraph.appendTo('#container');
+              } else {
+                console.log("No tasks with the same 'Sprint' as the latestCompletedSprint found.");
+              }
+            } else {
+              console.log("Product Backlog Data not found");
+            }
+          })
+          .catch((error) => {
+            console.error(error.message);
+          });
+      } else {
+        console.log("No completed sprints found.");
+      }
+    });
   });
+}
+fetchedDatalist();
 </script>
 
   
