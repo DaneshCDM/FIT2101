@@ -49,10 +49,32 @@
   /* Container formatting end */
   
   /* Task name start */
-  .dashboard-dark-pop-up-add-task-product-backlog-task-name {
+  .burndown-sprint-name {
     top: 115px;
     left: 75px;
     width: 265px;
+    height: 30px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+    background-color: rgba(255, 255, 255, 1);
+  }
+  .burndown-start_date {
+    top: 115px;
+    left: 450px;
+    width: 185px;
+    height: 30px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+    background-color: rgba(255, 255, 255, 1);
+  }
+  .burndown-end_date {
+    top: 115px;
+    left: 650px;
+    width: 185px;
     height: 30px;
     display: flex;
     position: absolute;
