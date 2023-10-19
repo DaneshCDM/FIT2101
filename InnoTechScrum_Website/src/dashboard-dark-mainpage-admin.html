@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="english">
   <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <title>exported project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
@@ -107,17 +110,30 @@
         <div
           class="dashboard-dark-mainpagefor-admin-dashboard-dark-mainpagefor-admin"
         >
+          <div class = "dropdown">
+          <button class="dropbtn">
+            <img
+              alt="Menu2081"
+              src="public/external/menu2081-r9le.svg"
+              class="dashboard-dark-mainpagefor-admin-menu"
+            />
+          </button>
+          <div class="dropdown-content">
+          <a href = "dashboard-dark-mainpage-admin.html">Dashboard</a>
+          <a href = "dashboard-dark-product-backlog.html">Product Backlog</a>
+          <a href = "dashboard-dark-sprint-view.html">Sprint View</a>
+          <a href = "dashboard-dark-sprint-board.html">Sprint Board</a>
+          <a href = "changeprofile.html">Profile</a>
+          <a href = "admincontrolpanel.html">Teams</a>
+          </div>
+         </div> 
           <div class="dashboard-dark-mainpagefor-admin-top-navigation">
             <img
               alt="Logo2081"
               src="public/external/logo2081-alpg-200h.png"
               class="dashboard-dark-mainpagefor-admin-logo"
             />
-            <img
-              alt="Menu2081"
-              src="public/external/menu2081-r9le.svg"
-              class="dashboard-dark-mainpagefor-admin-menu"
-            />
+          
             <div class="dashboard-dark-mainpagefor-admin-theme">
               <span class="dashboard-dark-mainpagefor-admin-text">
                 <span>Theme:</span>
@@ -157,16 +173,15 @@
             </div>
           </div>
           <div class="dashboard-dark-mainpagefor-admin-body"></div>
-          <div class="dashboard-dark-mainpagefor-admin-teams-widget">
-            <a
-              href="admincontrolpanel.html"
-              class="dashboard-dark-mainpagefor-admin-navlink"
-            >
-              <img
-                alt="TeamsWidget3021"
-                src="public/external/teamswidget3021-5x6i-200h.png"
-                class="dashboard-dark-mainpagefor-admin-teams-widget1"
-              />
+          <div class="dashboard-dark-mainpagefor-admin-teams-widget" id="teams_widget" style="visibility: hidden;">
+            <a 
+            href="admincontrolpanel.html"
+            class="dashboard-dark-mainpagefor-admin-navlink2">
+            <img
+              alt="TeamsWidget3021"
+              src="public/external/teamswidget3021-5x6i-200h.png"
+              class="dashboard-dark-mainpagefor-admin-teams-widget1"
+            />
             </a>
             <span class="dashboard-dark-mainpagefor-admin-text08">
               <span>Teams</span>
@@ -177,7 +192,7 @@
               class="dashboard-dark-mainpagefor-admin-vector"
             />
           </div>
-          <div class="dashboard-dark-mainpagefor-admin-average">
+          <!-- <div class="dashboard-dark-mainpagefor-admin-average">
             <img
               alt="CalendarWidget3021"
               src="public/external/calendarwidget3021-vwus-200h.png"
@@ -191,8 +206,8 @@
               src="public/external/linearbusinessstatisticchart25003-jvkr.svg"
               class="dashboard-dark-mainpagefor-admin-linear-business-statistic-chart2"
             />
-          </div>
-          <div class="dashboard-dark-mainpagefor-admin-settings-widget">
+          </div> -->
+          <!-- <div class="dashboard-dark-mainpagefor-admin-settings-widget">
             <img
               alt="SettingsWidget3021"
               src="public/external/settingswidget3021-f5bf-200h.png"
@@ -206,7 +221,7 @@
             <span class="dashboard-dark-mainpagefor-admin-text12">
               <span>Settings</span>
             </span>
-          </div>
+          </div> -->
           <div class="dashboard-dark-mainpagefor-admin-my-profile">
             <img
               alt="MyProfile3021"
@@ -224,6 +239,7 @@
           </div>
           <div class="dashboard-dark-mainpagefor-admin-sprint-view-widget">
             <a
+              id = "sprint-view-link"
               href="dashboard-dark-sprint-view.html"
               class="dashboard-dark-mainpagefor-admin-navlink"
             >
@@ -244,6 +260,7 @@
           </div>
           <div class="dashboard-dark-mainpagefor-admin-project-backlog-widget">
             <a
+
               href="dashboard-dark-product-backlog.html"
               class="dashboard-dark-mainpagefor-admin-navlink1"
             >
@@ -304,6 +321,42 @@
         body.classList.remove("dark-theme-background");
       });
     </script>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-analytics.js";
+      import { getDatabase, ref, set, child, get} from "https://www.gstatic.com/firebasejs/10.3.1/firebase-database.js";
+      
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
     
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyCghK_Zy_3Enmz0RJ9pvAxZfWxUYQp-InQ",
+        authDomain: "innotechscrum.firebaseapp.com",
+        databaseURL: "https://innotechscrum-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "innotechscrum",
+        storageBucket: "innotechscrum.appspot.com",
+        messagingSenderId: "365889461120",
+        appId: "1:365889461120:web:42e3ff55449d78b148bf65",
+        measurementId: "G-435J39SW2R"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+      const database = getDatabase(app);
+      
+      const roleRef = ref(database, 'ActiveRole');
+      get(roleRef).then((snapshot) => {
+        if (snapshot.exists()) {
+          const role = snapshot.val().Role;
+          if (role === 'admin'){
+            document.getElementById("teams_widget").style.visibility = "visible";
+          }
+        }
+      });
+    </script>
   </body>
 </html>

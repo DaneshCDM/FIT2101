@@ -323,6 +323,20 @@
   const analytics = getAnalytics(app);
   const database = getDatabase(app);
 
+  //const queryString = window.location.search;
+  //const urlParams = new URLSearchParams(queryString);
+  //const userid = urlParams.get('key').trim();
+  //const uref = ref(database, 'users/' + userid);
+  //get(uref).then((snapshot) => {
+  //  if (snapshot.exists()) {
+  //    const role = snapshot.val().Role;
+  //    if (role === 'admin'){
+  //      // append id to side panel
+  //      alert("WIP");
+  //    }
+  //  }
+  //});
+
   // Retrieving data to table in realtime
   var fetchedData = ref(database, 'product-backlog-tasks/');
   var dataContainer = document.querySelector('tbody')
@@ -592,3 +606,4 @@ function filterData(searchText, sortBy) {
     body.classList.remove("dark-theme-background");
   });
 </script>
+
