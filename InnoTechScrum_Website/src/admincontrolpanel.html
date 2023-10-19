@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="english">
   <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <title>exported project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
@@ -447,30 +450,28 @@
               class="admincontrolpanel-menu"
             />
             <div class="admincontrolpanel-theme">
-              <span class="admincontrolpanel-text"><span>Theme:</span></span>
-              <img
-                src="public/external/ellipse14985-vh4-200h.png"
-                alt="Ellipse14985"
-                class="admincontrolpanel-ellipse1"
-              />
-              <img
-                src="public/external/darktheme4985-3z8i.svg"
-                alt="DarkTheme4985"
-                class="admincontrolpanel-dark-theme"
-              />
-              <img
-                src="public/external/lighttheme4985-pdgv.svg"
-                alt="LightTheme4985"
-                class="admincontrolpanel-light-theme"
-              />
+              <span class="admincontrolpanel-text">
+                <span>Theme:</span>
+              </span>
+              <input id="darktheme" type="image" src="public/external/darktheme2557-x5ks.svg"
+              class="admincontrolpanel-dark-theme"> 
+
+              <input id="newtheme" type="image" src="public/external/lighttheme2558-ktxp.svg"
+              class="admincontrolpanel-light-theme"> 
             </div>
             <div class="admincontrolpanel-dashboard-home-page">
               <span class="admincontrolpanel-text02">
+                <a
+                href="dashboard-dark-mainpage-admin.html"
+                class="admincontrolpanel-text02">
                 <span>Dashboard</span>
+              </a>
               </span>
             </div>
             <div class="admincontrolpanel-project-backlogpage">
-              <span class="admincontrolpanel-text04"><span>Project</span></span>
+              <span class="admincontrolpanel-text04">
+                <span>Project</span>
+              </span>
             </div>
             <div class="admincontrolpanel-user-profile">
               <span class="admincontrolpanel-text06">
@@ -493,208 +494,217 @@
           <div class="admincontrolpanel-searhbarfliter">
             <div class="admincontrolpanel-search-bar">
               <span class="admincontrolpanel-text10">
-                <span>Search here...</span>
+                <form>
+                  <input type = "text" id = "search_text" placeholder="Search here">
+                  <button type="submit" id="search" style="background-color: rgb(233, 16, 16); color: rgb(255, 255, 255); height:20px;width:50px">Search</button>
+                </form>
               </span>
               <img
-                src="public/external/searchbar4985-yq1.svg"
-                alt="Searchbar4985"
+                alt="Searchbar2559"
+                src="public/external/searchbar2559-2xh.svg"
                 class="admincontrolpanel-searchbar1"
               />
             </div>
           </div>
-          <img
-            src="public/external/rectangle784985-perp-200h.png"
-            alt="Rectangle784985"
-            class="admincontrolpanel-rectangle78"
-          />
-          <img
-            src="public/external/rectangle794985-jecb-200h.png"
-            alt="Rectangle794985"
-            class="admincontrolpanel-rectangle79"
-          />
-          <img
-            src="public/external/rectangle804985-v2qa-200h.png"
-            alt="Rectangle804985"
-            class="admincontrolpanel-rectangle80"
-          />
-          <img
-            src="public/external/rectangle814985-b62-200h.png"
-            alt="Rectangle814985"
-            class="admincontrolpanel-rectangle81"
-          />
-          <img
-            src="public/external/rectangle824985-5dvp-200h.png"
-            alt="Rectangle824985"
-            class="admincontrolpanel-rectangle82"
-          />
-          <img
-            src="public/external/rectangle834985-nyoh-200h.png"
-            alt="Rectangle834985"
-            class="admincontrolpanel-rectangle83"
-          />
-          <img
-            src="public/external/rectangle844985-nel-200h.png"
-            alt="Rectangle844985"
-            class="admincontrolpanel-rectangle84"
-          />
-          <span class="admincontrolpanel-text12"><span>Name</span></span>
-          <span class="admincontrolpanel-text14"><span>Email</span></span>
-          <span class="admincontrolpanel-text16"><span>Date Joined</span></span>
           <div class="admincontrolpanel-sortby">
-            <img
-              src="public/external/dropdownarrow4985-o90r.svg"
-              alt="DropDownArrow4985"
-              class="admincontrolpanel-drop-down-arrow"
-            />
-            <span class="admincontrolpanel-text18"><span>Sort by</span></span>
+            <span class="admincontrolpanel-text43">
+                <select id="sort_by">
+                  <!-- option tag starts -->
+                  <option value = "Default">Default</option>
+                  <option value = "A - Z">A to Z</option>
+                  <option value = "Z - A">Z to A</option>
+                  <!-- option tag ends -->
+                  </select>
+              </span>
           </div>
-          <div class="admincontrolpanel-next-previouspage">
-            <img
-              src="public/external/lineararrowsaltarrowright4985-yuff.svg"
-              alt="LinearArrowsAltArrowRight4985"
-              class="admincontrolpanel-linear-arrows-alt-arrow-right"
-            />
-            <img
-              src="public/external/lineararrowsaltarrowleft4986-hz9.svg"
-              alt="LinearArrowsAltArrowLeft4986"
-              class="admincontrolpanel-linear-arrows-alt-arrow-left"
-            />
+          <div class="add-member">
+            <button id="btnModal" type="button" class = "btn" data-toggle="modal" data-target="#modalCase">
+              <span class="admincontrolpanel-text60">
+                <span>Add New Members</span>
+              </span>
+            </button>
           </div>
-          <span class="admincontrolpanel-text20">
-            <span>Page 1 of X | Showing members 1 to 6</span>
-          </span>
-          <span class="admincontrolpanel-text22"><span>A-Z</span></span>
-          <div class="admincontrolpanel-group2">
-            <img
-              src="public/external/ellipse94986-gv5l-200h.png"
-              alt="Ellipse94986"
-              class="admincontrolpanel-ellipse9"
-            />
-            <span class="admincontrolpanel-text24">
-              <span>Steve Jobs</span>
-            </span>
-            <span class="admincontrolpanel-text26">
-              <span>stevejobs@gmail.com</span>
-            </span>
+          <div class="overlay" id="overlay">
+            <div class="popup" id="popup">
+              <h2>Pop-up Window</h2>
+              <p>This is a pop-up window.</p>
+              <button id="open-button" type="submit" class="btn" onclick="openPopUp()">Open</button>
+              <button id="close-button" onclick="closePopUp()">Close</button>
+            </div> 
           </div>
-          <div class="admincontrolpanel-group7">
-            <img
-              src="public/external/ellipse44986-mckl-200h.png"
-              alt="Ellipse44986"
-              class="admincontrolpanel-ellipse4"
-            />
-            <span class="admincontrolpanel-text28">
-              <span>Pope Francis</span>
-            </span>
-            <span class="admincontrolpanel-text30">
-              <span>popefrancis@yahoo.com</span>
-            </span>
+          <!-- Modal for add new members button -->
+          <div id="modalCase" class="modal fade" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-lg" role="document" style="width:90%; height: 90%;">
+              <div id="modal-content" class="modal-content">
+                <div class="modal-header">
+                </div>
+                <div id="modal-body" class="modal-body">
+                  <iframe id="taskIFrame"scrolling="no"class="iframeTask" src="add-member-pop-up.html"></iframe>
+                </div>
+                <div class="modal-footer">
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="admincontrolpanel-group6">
-            <img
-              src="public/external/ellipse44986-oiei-200h.png"
-              alt="Ellipse44986"
-              class="admincontrolpanel-ellipse41"
-            />
-            <span class="admincontrolpanel-text32">
-              <span>Michael Angelo</span>
-            </span>
-            <span class="admincontrolpanel-text34">
-              <span>michaelangelo@hotmail.com</span>
-            </span>
-          </div>
-          <div class="admincontrolpanel-group5">
-            <img
-              src="public/external/ellipse44986-0eol-200h.png"
-              alt="Ellipse44986"
-              class="admincontrolpanel-ellipse42"
-            />
-            <span class="admincontrolpanel-text36">
-              <span>Lesley Wong</span>
-            </span>
-            <span class="admincontrolpanel-text38">
-              <span>lesleywong@gmail.com</span>
-            </span>
-          </div>
-          <div class="admincontrolpanel-group4">
-            <img
-              src="public/external/ellipse44986-59r-200h.png"
-              alt="Ellipse44986"
-              class="admincontrolpanel-ellipse43"
-            />
-            <span class="admincontrolpanel-text40">
-              <span>Charlie Hugh</span>
-            </span>
-            <span class="admincontrolpanel-text42">
-              <span>charliehugh@gmail.com</span>
-            </span>
-          </div>
-          <div class="admincontrolpanel-group3">
-            <img
-              src="public/external/ellipse44986-oeh-200h.png"
-              alt="Ellipse44986"
-              class="admincontrolpanel-ellipse44"
-            />
-            <span class="admincontrolpanel-text44">
-              <span>Bill Gates</span>
-            </span>
-            <span class="admincontrolpanel-text46">
-              <span>billgates@gmail.com</span>
-            </span>
-          </div>
-          <img
-            src="public/external/vector134986-i1ac.svg"
-            alt="Vector134986"
-            class="admincontrolpanel-vector13"
-          />
-          <img
-            src="public/external/vector124986-gl6.svg"
-            alt="Vector124986"
-            class="admincontrolpanel-vector12"
-          />
-          <span class="admincontrolpanel-text48"><span>26/08/2023</span></span>
-          <span class="admincontrolpanel-text50"><span>29/08/2023</span></span>
-          <span class="admincontrolpanel-text52"><span>29/08/2023</span></span>
-          <span class="admincontrolpanel-text54"><span>26/08/2023</span></span>
-          <span class="admincontrolpanel-text56"><span>11/08/2023</span></span>
-          <span class="admincontrolpanel-text58"><span>29/07/2023</span></span>
-          <img
-            src="public/external/linearessentionaluitrashbinminimalistic5534-88u8.svg"
-            alt="LinearEssentionalUITrashBinMinimalistic5534"
-            class="admincontrolpanel-linear-essentional-ui-trash-bin-minimalistic"
-          />
-          <img
-            src="public/external/linearessentionaluitrashbinminimalistic5534-08x.svg"
-            alt="LinearEssentionalUITrashBinMinimalistic5534"
-            class="admincontrolpanel-linear-essentional-ui-trash-bin-minimalistic1"
-          />
-          <img
-            src="public/external/linearessentionaluitrashbinminimalistic5534-jl4.svg"
-            alt="LinearEssentionalUITrashBinMinimalistic5534"
-            class="admincontrolpanel-linear-essentional-ui-trash-bin-minimalistic2"
-          />
-          <img
-            src="public/external/linearessentionaluitrashbinminimalistic5534-0qd.svg"
-            alt="LinearEssentionalUITrashBinMinimalistic5534"
-            class="admincontrolpanel-linear-essentional-ui-trash-bin-minimalistic3"
-          />
-          <img
-            src="public/external/linearessentionaluitrashbinminimalistic5534-z84u.svg"
-            alt="LinearEssentionalUITrashBinMinimalistic5534"
-            class="admincontrolpanel-linear-essentional-ui-trash-bin-minimalistic4"
-          />
-          <img
-            src="public/external/linearessentionaluitrashbinminimalistic5534-g9p4.svg"
-            alt="LinearEssentionalUITrashBinMinimalistic5534"
-            class="admincontrolpanel-linear-essentional-ui-trash-bin-minimalistic5"
-          />
-          <div class="admincontrolpanel-add-new-members">
-            <span class="admincontrolpanel-text60">
-              <span>Add new members</span>
-            </span>
-          </div>
+          <div>
+            <!-- Live Table from Firebase -->
+              <table id = "dataTable", style ="height: 320px; overflow-y: scroll;">
+                <thead> 
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Date Joined</th>
+                  <th>Remove</th>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+              <!-- Live Table From Firebase -->
+            </div>
         </div>
       </div>
     </div>
+    <script src="javaScript.js"></script>
   </body>
 </html>
+
+<script src=https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js></script>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-analytics.js";
+  import { getDatabase, ref, remove, set, push, child, onValue } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-database.js";
+  
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCghK_Zy_3Enmz0RJ9pvAxZfWxUYQp-InQ",
+    authDomain: "innotechscrum.firebaseapp.com",
+    databaseURL: "https://innotechscrum-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "innotechscrum",
+    storageBucket: "innotechscrum.appspot.com",
+    messagingSenderId: "365889461120",
+    appId: "1:365889461120:web:42e3ff55449d78b148bf65",
+    measurementId: "G-435J39SW2R"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const database = getDatabase(app);
+
+  // Retrieving data to table in realtime
+  var fetchedData = ref(database, 'users/');
+  var dataContainer = document.querySelector('tbody')
+  onValue(fetchedData, (snapshot) => {
+    var data = snapshot.val()
+    var buttonid = 0;
+
+    // Set data in table
+    var htmlData = ''
+    for(var key in data){
+      var value = data[key];
+      if (value.Role === "User"){
+        var priorityClass = ''; // Initialize the priority class variable
+        console.log(key);
+
+        htmlData += `
+        <tr>
+          <td>${value.Username}</td>
+          <td>${value.Email}</td>
+          <td>${value.Join_Date}</td>
+          <td><button type='button' class = 'editbtn' value="${key}"><img src='https://www.freeiconspng.com/uploads/trash-can-icon-3.png' width='40' alt='Edit'/></button></td>
+        `;
+        buttonid ++;
+      }
+    }
+    dataContainer.innerHTML = htmlData;
+  });
+
+  function filterData(searchText, sortBy) {
+    $("#dataTable td").remove();
+
+    const dbRef = ref(database, 'users/');
+
+    onValue(dbRef, (snapshot) => {
+      const data = snapshot.val();
+      const filteredData = Object.values(data)
+        .filter(childData => {
+          // Check if the Task_Name contains the search text or if the Email contains the search text
+          return (
+            childData.Username.toLowerCase().includes(searchText.toLowerCase()) &&
+            (childData.Role === "User")
+          );
+        })
+        .sort((a, b) => {
+          if (sortBy === 'A - Z') {
+            return a.Username.localeCompare(b.Username);
+          } else if (sortBy === 'Z - A') {
+            return b.Username.localeCompare(a.Username);
+          } else {
+            return 0; // No sorting
+          }
+        });
+
+      // Iterate through the filtered data and append it to the table
+      var buttonid = 0;
+      filteredData.forEach((childData) => {
+        var row = "<tr><td>" + childData.Username + "</td><td>" +
+          childData.Email + "</td><td>" +
+          childData.Join_Date +
+          "</td><td><button type='button' class = 'editbtn' value=" + childData.key +
+          "><img src='https://www.freeiconspng.com/uploads/trash-can-icon-3.png' width='40' alt='Edit'/></button></td>";
+        buttonid++;
+        $(row).appendTo('#dataTable');
+      });
+    });
+  }
+  // Event listener for the search button
+  $("#search").click(function (e) {
+    e.preventDefault(); // Prevent form submission
+    const searchText = $("#search_text").val();
+    const sortBy = $("#sort_by").val();
+    filterData(searchText, sortBy);
+  });
+
+  $("#sort_by").change(function (e) {
+    e.preventDefault(); // Prevent form submission
+    const searchText = $("#search_text").val(); // Get the current search text\
+    const sortBy = $("#sort_by").val();
+    filterData(searchText, sortBy);
+  });
+
+  document.addEventListener("click", function(e){
+    const target = e.target.closest(".editbtn"); 
+  
+    if(target){
+      console.log('Button clicked');
+      var targetid = target.value;
+      remove(ref(database, 'users/' + targetid));
+    }
+  });
+</script>
+
+<script>
+  var darkThemeButton = document.getElementById("darktheme");
+  var newThemeButton = document.getElementById("newtheme");
+  var body = document.body;
+
+  newThemeButton.addEventListener("click", function() {
+    // Add a CSS class to change the background for dark theme
+    body.classList.add("dark-theme-background");
+    
+    // Remove the class for the other theme (if it was previously applied)
+    body.classList.remove("new-theme-background");
+  });
+
+  darkThemeButton.addEventListener("click", function(){
+    // Add a CSS class to change the background for new theme
+    body.classList.add("new-theme-background");
+    
+    // Remove the class for the other theme (if it was previously applied)
+    body.classList.remove("dark-theme-background");
+  });
+</script>

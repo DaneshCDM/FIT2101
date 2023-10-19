@@ -1,13 +1,15 @@
 .add-member-pop-up-container {
+  top: 240px;
   width: 100%;
+  height: 100%;
   display: flex;
-  overflow: auto;
-  min-height: 100vh;
+  position: relative;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
 }
 .add-member-pop-up-addmemberpopup-theme2 {
-  width: 100%;
+  width: 400px;
   height: 459px;
   display: flex;
   overflow: hidden;
@@ -64,7 +66,7 @@
   top: 76px;
   left: 0px;
   width: 400px;
-  height: 1px;
+  height: 3px;
   position: absolute;
 }
 .add-member-pop-up-first-name {
@@ -206,7 +208,7 @@
 .add-member-pop-up-signup {
   top: 394px;
   left: 34px;
-  width: 82px;
+  width: 120px;
   height: 35px;
   display: flex;
   position: absolute;
@@ -217,7 +219,7 @@
 .add-member-pop-up-group1 {
   top: 6px;
   left: 10px;
-  width: 62px;
+  width: 100px;
   height: 23px;
   display: flex;
   position: absolute;
@@ -226,14 +228,178 @@
 }
 .add-member-pop-up-text14 {
   color: rgba(255, 255, 255, 1);
-  height: auto;
+  left: -12px;
+  width: 150px;
+  /* height: auto; */
   position: absolute;
   font-size: 15px;
   font-style: Medium;
-  text-align: center;
+  text-align: left;
   font-family: Poppins;
   font-weight: 500;
   line-height: normal;
   font-stretch: normal;
   text-decoration: none;
 }
+
+/* Username Start */
+.admincontrolpanel-username {
+  top: 107px;
+  left: 34px;
+  width: 331px;
+  height: 32px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(255, 255, 255, 1);
+}
+.admincontrolpanel-text04 {
+  top: 3px;
+  color: rgba(0, 0, 0, 1);
+  width: 200px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+/* Username End */
+
+/* Email Start */
+.admincontrolpanel-email {
+  top: 170px;
+  left: 34px;
+  width: 331px;
+  height: 32px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgb(255, 255, 255);
+}
+.admincontrolpanel-text05 {
+  top: 3px;
+  color: rgba(0, 0, 0, 1);
+  width: 200px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+/* Email End */
+
+/* Password Start */
+.admincontrolpanel-password {
+  top: 233px;
+  left: 34px;
+  width: 331px;
+  height: 32px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(255, 255, 255, 1);
+}
+.admincontrolpanel-text06 {
+  top: 3px;
+  color: rgba(0, 0, 0, 1);
+  width: 200px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+/* Password End */
+
+/* Confirm Password Start */
+.admincontrolpanel-confirm-password {
+  top: 296px;
+  left: 34px;
+  width: 331px;
+  height: 32px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(255, 255, 255, 1);
+}
+.admincontrolpanel-text07{
+  top: 3px;
+  color: rgba(0, 0, 0, 1);
+  width: 200px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+/* Confrim Password End */
+
+/* Checkbox Start */
+.checkbox-container {
+  /* display: flex;
+  align-items: center; */
+  width: 100%px;
+  position: absolute;
+  top: 359px;
+  left: 33px;
+}
+/* Style the checkbox */
+.checkbox-container input[type="checkbox"] {
+  margin-right: 10px; /* Add some spacing between the checkbox and label */
+}
+/* Style the label text */
+.checkbox-container label {
+  position: relative;
+  top: -3px;
+  font-size: 13px;
+  color: #ffffff; /* Text color */
+}
+/* Customize the appearance of the checkbox */
+.checkbox-container input[type="checkbox"] {
+  -webkit-appearance: none; /* Remove default styles */
+  -moz-appearance: none;
+  appearance: none;
+  width: 15px; /* Set the width and height for the checkbox */
+  height: 15px;
+  border: 2px solid #ffffff; /* Border color of the checkbox */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer;
+}
+/* Style the checked state of the checkbox */
+.checkbox-container input[type="checkbox"]:checked {
+  background-color: #ff5100; /* Background color when checked */
+  border: 2px solid #ffffff; /* Border color when checked */
+}
+/* Checkbox End */
+
+select option {
+  margin: 40px;
+  background: rgba(0, 0, 0, 0.3);
+  color: #000000;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
