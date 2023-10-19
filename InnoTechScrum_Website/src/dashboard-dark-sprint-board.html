@@ -630,6 +630,18 @@
   });
 
   let value = params.id.trim();
+  let userid = params.key.trim();
+  
+  const uref = ref(database, 'users/' + userid);
+  get(uref).then((snapshot) => {
+    if (snapshot.exists()) {
+      const role = snapshot.val().Role;
+      if (role === 'admin'){
+        // append id to side panel
+        alert("WIP");
+      }
+    }
+  });
 
   btnModal1.addEventListener("click", function(e){
       document.getElementById('taskIFrame').src = "dashboard-dark-pop-up-manage-sprint.html?id="+value
@@ -790,4 +802,10 @@
     // Remove the class for the other theme (if it was previously applied)
     body.classList.remove("dark-theme-background");
   });
+</script>
+
+<script>
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const role = urlParams.get('role');
 </script>
