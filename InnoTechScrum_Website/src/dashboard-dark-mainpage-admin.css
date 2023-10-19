@@ -190,7 +190,7 @@
   background-image: linear-gradient(180deg, rgba(13, 13, 13, 1) 0%, rgba(61, 25, 1, 1) 100%);
 } */
 .dashboard-dark-mainpagefor-admin-teams-widget {
-  top: 550px;
+  top: 400px;
   left: 479px;
   width: 320px;
   height: 120px;
@@ -230,7 +230,7 @@
   height: 75px;
   position: absolute;
 }
-.dashboard-dark-mainpagefor-admin-average {
+/* .dashboard-dark-mainpagefor-admin-average {
   top: 250px;
   left: 475px;
   width: 320px;
@@ -239,8 +239,8 @@
   position: absolute;
   align-items: flex-start;
   flex-shrink: 0;
-}
-.dashboard-dark-mainpagefor-admin-calendar-widget {
+} */
+/* .dashboard-dark-mainpagefor-admin-calendar-widget {
   top: 0px;
   left: 0px;
   width: 320px;
@@ -270,8 +270,8 @@
   width: 113px;
   height: 94px;
   position: absolute;
-}
-.dashboard-dark-mainpagefor-admin-settings-widget {
+} */
+/* .dashboard-dark-mainpagefor-admin-settings-widget {
   top: 550px;
   left: 119px;
   width: 320px;
@@ -280,8 +280,8 @@
   position: absolute;
   align-items: flex-start;
   flex-shrink: 0;
-}
-.dashboard-dark-mainpagefor-admin-settings-widget1 {
+} */
+/* .dashboard-dark-mainpagefor-admin-settings-widget1 {
   top: 0px;
   left: 0px;
   width: 320px;
@@ -311,9 +311,9 @@
   line-height: normal;
   font-stretch: normal;
   text-decoration: none;
-}
+} */
 .dashboard-dark-mainpagefor-admin-my-profile {
-  top: 400px;
+  top: 250px;
   left: 475px;
   width: 320px;
   height: 120px;

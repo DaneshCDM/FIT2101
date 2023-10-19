@@ -157,12 +157,16 @@
             </div>
           </div>
           <div class="dashboard-dark-mainpagefor-admin-body"></div>
-          <div class="dashboard-dark-mainpagefor-admin-teams-widget">
+          <div class="dashboard-dark-mainpagefor-admin-teams-widget" id="teams_widget" style="visibility: hidden;">
+            <a 
+            href="admincontrolpanel.html"
+            class="dashboard-dark-mainpagefor-admin-navlink2">
             <img
               alt="TeamsWidget3021"
               src="public/external/teamswidget3021-5x6i-200h.png"
               class="dashboard-dark-mainpagefor-admin-teams-widget1"
             />
+            </a>
             <span class="dashboard-dark-mainpagefor-admin-text08">
               <span>Teams</span>
             </span>
@@ -172,7 +176,7 @@
               class="dashboard-dark-mainpagefor-admin-vector"
             />
           </div>
-          <div class="dashboard-dark-mainpagefor-admin-average">
+          <!-- <div class="dashboard-dark-mainpagefor-admin-average">
             <img
               alt="CalendarWidget3021"
               src="public/external/calendarwidget3021-vwus-200h.png"
@@ -186,8 +190,8 @@
               src="public/external/linearbusinessstatisticchart25003-jvkr.svg"
               class="dashboard-dark-mainpagefor-admin-linear-business-statistic-chart2"
             />
-          </div>
-          <div class="dashboard-dark-mainpagefor-admin-settings-widget">
+          </div> -->
+          <!-- <div class="dashboard-dark-mainpagefor-admin-settings-widget">
             <img
               alt="SettingsWidget3021"
               src="public/external/settingswidget3021-f5bf-200h.png"
@@ -201,7 +205,7 @@
             <span class="dashboard-dark-mainpagefor-admin-text12">
               <span>Settings</span>
             </span>
-          </div>
+          </div> -->
           <div class="dashboard-dark-mainpagefor-admin-my-profile">
             <img
               alt="MyProfile3021"
@@ -299,6 +303,45 @@
         body.classList.remove("dark-theme-background");
       });
     </script>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-analytics.js";
+      import { getDatabase, ref, set, child, get} from "https://www.gstatic.com/firebasejs/10.3.1/firebase-database.js";
+      
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
     
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyCghK_Zy_3Enmz0RJ9pvAxZfWxUYQp-InQ",
+        authDomain: "innotechscrum.firebaseapp.com",
+        databaseURL: "https://innotechscrum-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "innotechscrum",
+        storageBucket: "innotechscrum.appspot.com",
+        messagingSenderId: "365889461120",
+        appId: "1:365889461120:web:42e3ff55449d78b148bf65",
+        measurementId: "G-435J39SW2R"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+      const database = getDatabase(app);
+      
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const userid = urlParams.get('key').trim();
+      const uref = ref(database, 'users/' + userid);
+      get(uref).then((snapshot) => {
+        if (snapshot.exists()) {
+          const role = snapshot.val().Role;
+          if (role === 'admin'){
+            document.getElementById("teams_widget").style.visibility = 'visible';
+          }
+        }
+      });
+    </script>
   </body>
 </html>
