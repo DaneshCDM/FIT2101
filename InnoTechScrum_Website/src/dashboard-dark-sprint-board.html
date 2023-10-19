@@ -630,18 +630,18 @@
   });
 
   let value = params.id.trim();
-  let userid = params.key.trim();
+  //let userid = params.key.trim();
   
-  const uref = ref(database, 'users/' + userid);
-  get(uref).then((snapshot) => {
-    if (snapshot.exists()) {
-      const role = snapshot.val().Role;
-      if (role === 'admin'){
-        // append id to side panel
-        alert("WIP");
-      }
-    }
-  });
+  //const uref = ref(database, 'users/' + userid);
+  //get(uref).then((snapshot) => {
+  //  if (snapshot.exists()) {
+  //    const role = snapshot.val().Role;
+  //    if (role === 'admin'){
+  //      // append id to side panel
+  //      alert("WIP");
+  //    }
+  //  }
+  //});
 
   btnModal1.addEventListener("click", function(e){
       document.getElementById('taskIFrame').src = "dashboard-dark-pop-up-manage-sprint.html?id="+value
