@@ -717,14 +717,18 @@
               Email: Email,
               Password: Password,
               Phone_Number: Phone_Number,
-              Username: Username
+              Username: Username,
+              Role: "admin"
+
             });
             alert('Profile has been changed')
             set(datausers,{
               Email: Email,
               Password: Password,
               Phone_Number: Phone_Number,
-              Username: Username
+              Username: Username,
+              Role: "admin"
+
             });
           }
           if(sel2!=undefined){
@@ -732,14 +736,16 @@
               Email: Email,
               Password: Password,
               Phone_Number: Phone_Number,
-              Username: Username
+              Username: Username,
+              Role: "User"
             });
             alert('Profile has been changed')
             set(datausers,{
               Email: Email,
               Password: Password,
               Phone_Number: Phone_Number,
-              Username: Username
+              Username: Username,
+              Role: "User"
             });
           }
           // set(newRef,{
