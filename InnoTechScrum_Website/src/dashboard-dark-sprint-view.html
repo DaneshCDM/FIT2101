@@ -310,10 +310,7 @@
 
   // Retrieving data to table in realtime
   var fetchedData = ref(database, 'sprint-view-sprints/');
-  let dbReg;
-  let fetch2;
   var dataContainer = document.querySelector('tbody')
-  let storesprint;
   onValue(fetchedData, (snapshot) => {
     var data = snapshot.val()
     var buttonid = 0;
@@ -334,26 +331,8 @@
           "><img src='https://www.freeiconspng.com/uploads/edit-new-icon-22.png' width='40' alt='Edit'/></button></td>
       `;
       buttonid ++;
-      storesprint=key;
     }
     dataContainer.innerHTML = htmlData;
-    fetch2= ref(database, 'sprint-view-sprints/' + storesprint);
-    dbReg= ref(database, 'register1/' + storesprint);
-
-    get(fetch2).then((snapshot) =>{
-      if (snapshot.exists()) {
-        var Sprint_Name_input = storesprint.Sprint_Name;;
-        console.log(Sprint_Name_input);
-        set(dbReg, {
-        temp: temp
-        });
-      }
-      else{
-        console.log("Error");
-      }
-
-      
-    });
 
   });
 
