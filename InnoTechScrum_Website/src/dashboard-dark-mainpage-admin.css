@@ -543,4 +543,8 @@ body.dark-theme-background {
   background-size:cover;
   background-repeat: no-repeat;
 }
-
+#editprofile{
+  top: 100px;
+  width: 250px;
+  height: 250px;
+}

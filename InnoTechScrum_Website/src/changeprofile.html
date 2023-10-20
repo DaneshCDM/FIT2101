@@ -502,25 +502,37 @@
             alt="Rectangle704984"
             class="changeprofile-rectangle70"
           />
-          <span class="changeprofile-text08"><span>Username *</span></span>
+          <span class="changeprofile-text08">
+            <span>Username *</span>
+            <input type = "text" id = "username_text" style="background-color: transparent; color: black; width: 260px">
+          </span>
           <img
             src="public/external/rectangle724984-h1yl-200h.png"
             alt="Rectangle724984"
             class="changeprofile-rectangle72"
           />
-          <span class="changeprofile-text10"><span>Password *</span></span>
+          <span class="changeprofile-text10">
+            <span>Password *</span>
+            <input type = "text" id = "password_text" style="background-color: transparent; color: black; width: 260px">
+          </span>
           <img
             src="public/external/rectangle754984-rcqq-200h.png"
             alt="Rectangle754984"
             class="changeprofile-rectangle75"
           />
-          <span class="changeprofile-text12"><span>Phone number</span></span>
+          <span class="changeprofile-text12">
+            <span>Phone number</span>
+            <input type = "text" id = "phone_number_text" style="background-color: transparent; color: black; width: 260px">
+          </span>
           <img
             src="public/external/rectangle714984-84mh-200h.png"
             alt="Rectangle714984"
             class="changeprofile-rectangle71"
           />
-          <span class="changeprofile-text14"><span>Email *</span></span>
+          <span class="changeprofile-text14">
+            <span>Email *</span>
+            <input type = "text" id = "email_text" style="background-color: transparent; color: black; width: 260px">
+          </span>
           <img
             src="public/external/toppng14984-yai-200w.png"
             alt="toppng14984"
@@ -542,9 +554,24 @@
             alt="Rectangle774984"
             class="changeprofile-rectangle77"
           />
-          <span class="changeprofile-text18"><span>Cancel Changes</span></span>
-          <span class="changeprofile-text20"><span>Confirm Changes</span></span>
-          <span class="changeprofile-text22"><span>Add Image</span></span>
+          <span class="changeprofile-text18", id="cancelbtn">
+            <a href="#" class="close">
+              <span>Cancel Changes</span>
+              <button id="btncanprofile" type="submit" class = "close"></button>
+            </a>
+          </span>
+          <span class="changeprofile-text20", id="submitbtn">
+            <a href="#" class="close">
+              <span>Confirm Changes</span>
+              <button id="btnconprofile" type="submit" class = "close"></button>
+            </a>
+          </span>
+          <span class="changeprofile-text22">
+            <a href="#" class="close">
+              <span>Add Image</span>
+              <button id="btnaddimg" type="submit" class = "close"></button>
+            </a>
+          </span>
           <img
             src="public/external/ellipse34984-lfcc-300h.png"
             alt="Ellipse34984"
@@ -560,7 +587,7 @@
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-analytics.js";
-  import { getDatabase, ref, set, push, child, onValue } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-database.js";
+  import { getDatabase, ref, get, set, push, child, onValue } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-database.js";
   
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
@@ -596,4 +623,120 @@
   //    }
   //  }
   //});
+  var currentSession=null;
+  let Email;
+  let Password;
+  let Role;
+  let Username;
+  let store;
+  let Phone_Number;
+  var datausers = ref(database, 'ActiveRole/');
+  var userRef = ref(database, 'Users/');
+  let newprof;
+  get(datausers).then((snapshot) =>{
+    if (snapshot.exists()) {
+      Email = snapshot.val().Email;
+      Password = snapshot.val().Password;
+      Username = snapshot.val().Username;
+      Role = snapshot.val().Role;
+      Phone_Number= snapshot.val().Phone_Number
+      store=Username;
+      currentSession=true;
+      const Email_input = document.getElementById('email_text');
+      Email_input.value = Email;
+
+      const Phone_Number_input = document.getElementById('phone_number_text');
+      Phone_Number_input.value = Phone_Number;
+
+      const Password_input = document.getElementById('password_text');
+      Password_input.value = Password;
+
+      const Username_input = document.getElementById('username_text');
+      Username_input.value = Username;
+      console.log(`${Email}/${Password}/${Role}/${Username}/${store}`);
+      newprof ={ Email: Email_input, Phone_Number: Phone_Number_input,Password: Password_input, Username: Username_input,};
+      var adminlist=[];
+      var userlist=[];
+      var condadmin=false;
+      var conduser=false;
+      //store = eval(store);
+      
+      onValue(userRef, (snapshot) => {
+        var data=snapshot.val();
+        for(var key in data){
+          var value=data[key];
+          if(value.Role=='admin'){
+            adminlist.push(value);//push entire ID
+          }
+          if(value.Role!='admin'){
+            userlist.push(value);
+          }
+        }
+
+        for(var index in adminlist){
+          var value=adminlist[index];
+          if(value.Username==store){
+            condadmin=Username;
+          }
+          console.log(store);
+        }
+        for(var index in userlist){
+          var value=userlist[index];
+          if(value.Username==store){
+            conduser=Username;
+          }
+        }
+        console.log(userlist);
+        console.log(adminlist);
+        console.log(`${condadmin}/${conduser}`)
+        // var newRef = ref(database, 'Users/' + condadmin)
+        // submitbtn.addEventListener('click',(e)=>{
+        //   console.log('Button clicked');
+
+        //   set(newRef,{
+        //       Email: Email_input,
+        //       Password: Password_input,
+        //       Phone_Number: Phone_Number_input,
+        //       Username: Username_input
+        //     });
+        //   // set(newRef, newprof).then(() =>{
+        //   //   console.log("Changed")
+        //   // })
+        // });
+      });
+      
+      // set(newRef, newprof).then(() =>{
+      //   console.log("Changed")
+      // })
+
+
+    }
+  })
+  // let Email;
+  // let Password;
+  // let Role;
+  // let username;
+  // set(userRef).then((snapshot) => {
+  //     if (snapshot.exists()) {
+  //       Email = snapshot.val().Email;
+  //       Password = snapshot.val().Password;
+  //       Username = snapshot.val().Username;
+  //       Phone_Number = snapshot.val().Phone_Number;
+  //       console.log(`${Email}/${Password}/${Role}/${Username}`);
+
+  //       const Email_input = document.getElementById('email_text');
+  //       Email_input.value = Email;
+
+  //       const Phone_Number_input = document.getElementById('phone_number_text');
+  //       Phone_Number_input.value = Phone_Number;
+
+  //       const Password_input = document.getElementById('password_text');
+  //       Password_input.value = Password;
+
+  //       const Username_input = document.getElementById('username_text');
+  //       Username_input.value = Username;
+  //     } else {
+  //       console.log("Data not found");
+  //     }
+  //   })
 </script>
