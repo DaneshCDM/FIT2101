@@ -487,7 +487,7 @@
               <a href="#" class="close" data-bs-dismiss="modal" aria-label="close" onclick="closeModal">
               <span class="add-member-pop-up-text14"> 
                 <button id="btnAddTaskClose" type="submit" class = "close" data-bs-dismiss="modal" aria-label="close"></button>
-                  <span class="close">Create Task</span>
+                  <span class="close">Add Member</span>
               </span>
               </a>
             </div>
@@ -544,21 +544,33 @@
   submitbtn.addEventListener('click',(e)=>{
     console.log('Button clicked');
 
-    var Username = document.getElementById('Username_text').value;
-    var Email = document.getElementById('Email_text').value; 
-    var Password = document.getElementById('Password_text').value;
-    var Confirm_Password = document.getElementById('Confirm_Password_text').value;
+    var Password = document.getElementById("Password_text").value;
+    var Confirm_Password = document.getElementById("Confirm_Password_text").value;
 
-    const userId = push(child(ref(database), 'users')).key;
+    if (Password !== Confirm_Password) {
+        alert("Passwords do not match. Please re-enter.");
+        document.getElementById("Password_text").value = "";
+        document.getElementById("Confirm_Password_text").value = "";
+    }
+    else {
+      var Username = document.getElementById('Username_text').value;
+      var Email = document.getElementById('Email_text').value; 
+      var Password = document.getElementById('Password_text').value;
+      var Confirm_Password = document.getElementById('Confirm_Password_text').value;
 
-    set(ref(database, 'users/' + userId), {
-      Email: Email,
-      Password: Password,
-      Role: "User",
-      Username: Username,
-      Join_Date: Date()
-    });
+      const userId = push(child(ref(database), 'Users')).key;
 
-    alert('Member added to the Project.');
+      set(ref(database, 'Users/' + userId), {
+        Email: Email,
+        Password: Password,
+        Phone_Number:"0000000000",
+        Role: "User",
+        Username: Username,
+        Join_Date: Date()
+      });
+
+      alert('Member added to the Project.');
+    }
+
   });
 </script>

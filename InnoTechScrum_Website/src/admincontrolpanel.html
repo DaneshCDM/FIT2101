@@ -607,7 +607,7 @@
   const database = getDatabase(app);
 
   // Retrieving data to table in realtime
-  var fetchedData = ref(database, 'users/');
+  var fetchedData = ref(database, 'Users/');
   var dataContainer = document.querySelector('tbody')
   onValue(fetchedData, (snapshot) => {
     var data = snapshot.val()
@@ -637,7 +637,7 @@
   function filterData(searchText, sortBy) {
     $("#dataTable td").remove();
 
-    const dbRef = ref(database, 'users/');
+    const dbRef = ref(database, 'Users/');
 
     onValue(dbRef, (snapshot) => {
       const data = snapshot.val();
@@ -693,7 +693,7 @@
     if(target){
       console.log('Button clicked');
       var targetid = target.value;
-      remove(ref(database, 'users/' + targetid));
+      remove(ref(database, 'Users/' + targetid));
     }
   });
 </script>
