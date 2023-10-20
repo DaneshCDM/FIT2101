@@ -549,9 +549,9 @@
     var Password = document.getElementById('Password_text').value;
     var Confirm_Password = document.getElementById('Confirm_Password_text').value;
 
-    const userId = push(child(ref(database), 'users')).key;
+    const userId = push(child(ref(database), 'Users')).key;
 
-    set(ref(database, 'users/' + userId), {
+    set(ref(database, 'Users/' + userId), {
       Email: Email,
       Password: Password,
       Role: "User",
