@@ -633,6 +633,7 @@
   var datausers = ref(database, 'ActiveRole/');
   var userRef = ref(database, 'Users/');
   let newprof;
+  let sel;
   get(datausers).then((snapshot) =>{
     if (snapshot.exists()) {
       Email = snapshot.val().Email;
@@ -657,8 +658,12 @@
       newprof ={ Email: Email_input, Phone_Number: Phone_Number_input,Password: Password_input, Username: Username_input,};
       var adminlist=[];
       var userlist=[];
+      var adminlistkey=[];
+      var userlistkey=[];
       var condadmin=false;
       var conduser=false;
+      var condadminkey=false;
+      var conduserkey=false;
       //store = eval(store);
       
       onValue(userRef, (snapshot) => {
@@ -667,42 +672,48 @@
           var value=data[key];
           if(value.Role=='admin'){
             adminlist.push(value);//push entire ID
+            adminlistkey.push(key);
           }
           if(value.Role!='admin'){
             userlist.push(value);
+            userlistkey.push(key);
           }
         }
+        console.log(adminlistkey);
+        console.log(userlistkey);
 
         for(var index in adminlist){
           var value=adminlist[index];
           if(value.Username==store){
-            condadmin=Username;
+            condadmin=index;
           }
           console.log(store);
         }
         for(var index in userlist){
           var value=userlist[index];
           if(value.Username==store){
-            conduser=Username;
+            conduser=index;
           }
         }
+        sel = adminlistkey[condadmin];
+        console.log(sel);
         console.log(userlist);
         console.log(adminlist);
         console.log(`${condadmin}/${conduser}`)
-        // var newRef = ref(database, 'Users/' + condadmin)
-        // submitbtn.addEventListener('click',(e)=>{
-        //   console.log('Button clicked');
+        var newRef = ref(database, 'Users/' + sel)
+        submitbtn.addEventListener('click',(e)=>{
+          console.log('Button clicked');
 
-        //   set(newRef,{
-        //       Email: Email_input,
-        //       Password: Password_input,
-        //       Phone_Number: Phone_Number_input,
-        //       Username: Username_input
-        //     });
-        //   // set(newRef, newprof).then(() =>{
-        //   //   console.log("Changed")
-        //   // })
-        // });
+          // set(newRef,{
+          //     Email: Email_input,
+          //     Password: Password_input,
+          //     Phone_Number: Phone_Number_input,
+          //     Username: Username_input
+          //   });
+          // set(newRef, newprof).then(() =>{
+          //   console.log("Changed")
+          // })
+        });
       });
       
       // set(newRef, newprof).then(() =>{
