@@ -700,23 +700,36 @@
         sel = adminlistkey[condadmin];
         sel2 = userlistkey[conduser];
         console.log(sel);
+        console.log(sel2);
         console.log(userlist);
         console.log(adminlist);
         console.log(`${condadmin}/${conduser}`)
         var newRef = ref(database, 'Users/' + sel)
+        var newRef2 = ref(database, 'Users/' + sel2)
         submitbtn.addEventListener('click',(e)=>{
           console.log('Button clicked');
           var Email = document.getElementById('email_text').value;
           var Password = document.getElementById('password_text').value;
           var Phone_Number = document.getElementById('phone_number_text').value;
           var Username = document.getElementById('username_text').value;
-          set(newRef,{
-            Email: Email,
-            Password: Password,
-            Phone_Number: Phone_Number,
-            Username: Username
-          });
-          alert('Profile has been changed')
+          if(sel!=undefined){
+            set(newRef,{
+              Email: Email,
+              Password: Password,
+              Phone_Number: Phone_Number,
+              Username: Username
+            });
+            alert('Profile has been changed')
+          }
+          if(sel2!=undefined){
+            set(newRef2,{
+              Email: Email,
+              Password: Password,
+              Phone_Number: Phone_Number,
+              Username: Username
+            });
+            alert('Profile has been changed')
+          }
           // set(newRef,{
           //     Email: Email_input,
           //     Password: Password_input,
