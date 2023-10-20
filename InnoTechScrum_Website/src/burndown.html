@@ -196,10 +196,10 @@
           for (var key in data) {
             var value = data[key];
 
-            if (value.Progress === 'Completed') {
+            if (value.Progress == 'Completed') {
               var endDate = new Date(value.End_Date);
 
-              if (latestEndDate === null || endDate > latestEndDate) {
+              if (latestEndDate == null || endDate > latestEndDate) {
                 latestEndDate = endDate;
                 latestCompletedSprint = key;
               }
@@ -239,7 +239,7 @@
 
                   for (const taskId in productBacklogData) {
                     const task = productBacklogData[taskId];
-                    if (task.Sprint === Sprint_Name) {
+                    if (task.Sprint == Sprint_Name) {
                       matchingTasks.push(task);
                       const taskDate = new Date(task.date);
                       datelist.push(taskDate);

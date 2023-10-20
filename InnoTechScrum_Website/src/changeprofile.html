@@ -625,71 +625,96 @@
   let Email;
   let Password;
   let Role;
-  let username;
+  let Username;
   let store;
+  let Phone_Number;
   var datausers = ref(database, 'ActiveRole/')
+  var userRef = ref(database, 'users/')
   get(datausers).then((snapshot) =>{
     if (snapshot.exists()) {
       Email = snapshot.val().Email;
       Password = snapshot.val().Password;
       Username = snapshot.val().Username;
-      Phone_Number = snapshot.val().Phone_Number;
-      console.log(`${Email}/${Password}/${Role}/${Username}`);
+      Role = snapshot.val().Role;
+      Phone_Number= snapshot.val().Phone_Number
       store=Username;
+      currentSession=true;
+      const Email_input = document.getElementById('email_text');
+      Email_input.value = Email;
+
+      const Phone_Number_input = document.getElementById('phone_number_text');
+      Phone_Number_input.value = Phone_Number;
+
+      const Password_input = document.getElementById('password_text');
+      Password_input.value = Password;
+
+      const Username_input = document.getElementById('username_text');
+      Username_input.value = Username;
+      console.log(`${Email}/${Password}/${Role}/${Username}/${store}`);
+      //const newprof ={ Email: Email_input, Phone_Number: Phone_Number_input,Password: Password_input, Username: Username_input,};
+      var adminlist=[];
+      var userlist=[];
+      var condadmin=false;
+      var conduser=false;
+      onValue(userRef, (snapshot) => {
+        var data=snapshot.val();
+        for(var key in data){
+          var value=data[key];
+          if(value.Username=='admin'){
+            adminlist.push(value);//push entire ID
+          }
+          if(value.Username!='admin'){
+            userlist.push(value);
+          }
+        }
+
+        for(var index in adminlist){
+          var value=adminlist[index];
+          if(value.Username==store){
+            condadmin=true;
+          }
+          console.log(store);
+        }
+        for(var index in userlist){
+          var value=userlist[index];
+          if(value.Username==store){
+            conduser=true;
+          }
+        }
+        console.log(userlist);
+        console.log(adminlist);
+        console.log(`${condadmin}/${conduser}`)
+      });
+      // set(userRef, newprof).then(() =>{
+      //   console.log("Changed")
+      // })
     }
   })
-  var adminlist=[];
-  var userlist=[];
-  var condadmin=null;
-  var conduser=null;
-  onValue(datausers, (snapshot) => {
-    var data=snapshot.val();
-    for(var key in data){
-      var value=data[key];
-      if(value.Username=='admin'){
-        adminlist.push(value);//push entire ID
-      }
-      if(value.username=='User'){
-        userlist.push(value);
-      }
-    }
-    for(var index in adminlist){
-      var value=data[index];
-      if(value.adminlist==store){
-        conadmin=true;
-      }
-      else{
-        conuser=true;
-      }
-    }
-
-  });
   // let Email;
   // let Password;
   // let Role;
   // let username;
-  var userRef = ref(database, 'Users/')
-  get(userRef).then((snapshot) => {
-      if (snapshot.exists()) {
-        Email = snapshot.val().Email;
-        Password = snapshot.val().Password;
-        Username = snapshot.val().Username;
-        Phone_Number = snapshot.val().Phone_Number;
-        console.log(`${Email}/${Password}/${Role}/${Username}`);
+  // set(userRef).then((snapshot) => {
+  //     if (snapshot.exists()) {
+  //       Email = snapshot.val().Email;
+  //       Password = snapshot.val().Password;
+  //       Username = snapshot.val().Username;
+  //       Phone_Number = snapshot.val().Phone_Number;
+  //       console.log(`${Email}/${Password}/${Role}/${Username}`);
 
-        const Email_input = document.getElementById('email_text');
-        Email_input.value = Email;
+  //       const Email_input = document.getElementById('email_text');
+  //       Email_input.value = Email;
 
-        const Phone_Number_input = document.getElementById('phone_number_text');
-        Phone_Number_input.value = Phone_Number;
+  //       const Phone_Number_input = document.getElementById('phone_number_text');
+  //       Phone_Number_input.value = Phone_Number;
 
-        const Password_input = document.getElementById('password_text');
-        Password_input.value = Password;
+  //       const Password_input = document.getElementById('password_text');
+  //       Password_input.value = Password;
 
-        const Username_input = document.getElementById('username_text');
-        Username_input.value = Username;
-      } else {
-        console.log("Data not found");
-      }
-    })
+  //       const Username_input = document.getElementById('username_text');
+  //       Username_input.value = Username;
+  //     } else {
+  //       console.log("Data not found");
+  //     }
+  //   })
 </script>
