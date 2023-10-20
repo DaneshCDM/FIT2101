@@ -285,7 +285,7 @@
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-analytics.js";
-  import { getDatabase, ref, set, push, child, onValue } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-database.js";
+  import { getDatabase, ref, set, get, push, child, onValue } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-database.js";
   
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
@@ -310,8 +310,10 @@
 
   // Retrieving data to table in realtime
   var fetchedData = ref(database, 'sprint-view-sprints/');
-  var dbReg = ref(database, 'register1/');
+  let dbReg;
+  let fetch2;
   var dataContainer = document.querySelector('tbody')
+  let storesprint;
   onValue(fetchedData, (snapshot) => {
     var data = snapshot.val()
     var buttonid = 0;
@@ -332,14 +334,25 @@
           "><img src='https://www.freeiconspng.com/uploads/edit-new-icon-22.png' width='40' alt='Edit'/></button></td>
       `;
       buttonid ++;
+      storesprint=key;
     }
     dataContainer.innerHTML = htmlData;
-    get(fetchedData).then((snapshot) =>{
+    fetch2= ref(database, 'sprint-view-sprints/' + storesprint);
+    dbReg= ref(database, 'register1/' + storesprint);
+
+    get(fetch2).then((snapshot) =>{
       if (snapshot.exists()) {
-        var temp_sprint_name = fetchedData.Sprint_Name;
+        var Sprint_Name_input = storesprint.Sprint_Name;;
+        console.log(Sprint_Name_input);
+        set(dbReg, {
+        temp: temp
+        });
       }
-      set(dbReg, {temp:temp_sprint_name});
-  
+      else{
+        console.log("Error");
+      }
+
+      
     });
 
   });
