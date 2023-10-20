@@ -126,20 +126,17 @@
         </span>
         <div class="burndown-sprint-name">
           <span>
-            <input type = "text" id = "Sprint_Name_text" placeholder="Sprint Name: "
-            readonly style="background-color: transparent; color: black; width: 260px">
+            <input type = "text" id = "Sprint_Name_text" placeholder="Sprint Name: " readonly style="background-color: transparent; color: black; width: 260px">
           </span>
         </div>
         <div class="burndown-start_date">
           <span>
-            <input type = "text" id = "Start_Date_text"
-            readonly style="background-color: transparent; color: black; width: 260px">
+            <input type = "text" id = "Start_Date_text" readonly style="background-color: transparent; color: black; width: 260px">
           </span>
         </div>
         <div class="burndown-end_date">
           <span>
-            <input type = "text" id = "End_Date_text"
-            readonly style="background-color: transparent; color: black; width: 260px">
+            <input type = "text" id = "End_Date_text" readonly style="background-color: transparent; color: black; width: 260px">
           </span>
         </div>
     <div id="container"></div>
@@ -175,7 +172,6 @@
     const params = new Proxy(new URLSearchParams(window.location.search), {
       get: (searchParams, prop) => searchParams.get(prop),
     });
-    //let value = params.id.trim();
     //continue here
     function formatDate(dateString) {
       const date = new Date(dateString);
@@ -200,11 +196,10 @@
           for (var key in data) {
             var value = data[key];
 
-            if (value.Progress === 'Completed') {
+            if (value.Progress == 'Completed') {
               var endDate = new Date(value.End_Date);
 
-              if (latestEndDate === null || endDate > latestEndDate) {
-                // This sprint is the latest completed sprint so far
+              if (latestEndDate == null || endDate > latestEndDate) {
                 latestEndDate = endDate;
                 latestCompletedSprint = key;
               }
@@ -215,17 +210,13 @@
             // obtain data from id and pre-populate graph input
             const sprintRef = ref(database, 'sprint-view-sprints/' + latestCompletedSprint);
             console.log(latestCompletedSprint);
-            get(sprintRef)
-              .then((snapshot) => {
+            get(sprintRef).then((snapshot) => {
                 if (snapshot.exists()) {
                   End_Date = snapshot.val().End_Date;
                   Start_Date = snapshot.val().Start_Date;
                   Sprint_Name = snapshot.val().Sprint_Name;
-
-                  // Log the retrieved data
                   console.log(`${End_Date}/${Sprint_Name}/${Start_Date}`);
 
-                  // Update input values
                   const Sprint_Name_input = document.getElementById('Sprint_Name_text');
                   Sprint_Name_input.value = Sprint_Name;
 
@@ -238,21 +229,17 @@
                   console.log("Data not found");
                 }
               })
-              .catch((error) => {
-                console.error(error.message);
-              });
 
             const productBacklogRef = ref(database, 'product-backlog-tasks/');
 
-            get(productBacklogRef)
-              .then((snapshot) => {
+            get(productBacklogRef).then((snapshot) => {
                 if (snapshot.exists()) {
                   const productBacklogData = snapshot.val();
                   const matchingTasks = [];
 
                   for (const taskId in productBacklogData) {
                     const task = productBacklogData[taskId];
-                    if (task.Sprint === Sprint_Name) {
+                    if (task.Sprint == Sprint_Name) {
                       matchingTasks.push(task);
                       const taskDate = new Date(task.date);
                       datelist.push(taskDate);
@@ -263,10 +250,9 @@
                     matchingTasks.forEach((matchingTask) => {
                       console.log("Matching Task:", matchingTask);
                     });
-                    count = matchingTasks.length; // Update count after all tasks are processed
+                    count = matchingTasks.length;
                     console.log(count);
 
-                    // Create the chart with the retrieved data
                     const formattedDatelist = datelist.map(dateString => formatDate(dateString));
                     console.log(formattedDatelist);
 
@@ -316,9 +302,6 @@
                   console.log("Product Backlog Data not found");
                 }
               })
-              .catch((error) => {
-                console.error(error.message);
-              });
           } else {
             console.log("No completed sprints found.");
           }
