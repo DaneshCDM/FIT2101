@@ -526,6 +526,7 @@ login_btn.addEventListener("click",function(){
   var user = document.getElementById('login_id').value;
   var pass = document.getElementById('login_pass').value;
   var authorized = false;
+  var authenticated = false;
   onValue(fetchedData, (snapshot) => {
     var data = snapshot.val(); 
     for (var key in data){
@@ -535,13 +536,23 @@ login_btn.addEventListener("click",function(){
       }
       if (authorized){
         alert("Welcome " + value.Username + "!")
-        if (value.Role === "admin"){
-          window.location.href = `dashboard-dark-mainpage-admin.html?key=${key}`
-        }
+        const roleRef = ref(database, 'ActiveRole');
+        set(roleRef, {
+          Username: value.Username,
+          Password: value.Password,
+          Role: value.Role,
+          Email: value.Email,
+          Phone_Number: value.Phone_Number
+        });
+        authorized = false;
+        authenticated = true;
+        window.location.href = 'dashboard-dark-mainpage-admin.html'
       }
     }
-    if (!authorized){
-      alert("Wrong username or password!")
+    if (!authenticated){
+      if (!authorized){
+        alert("Wrong username or password!")
+      }
     }
   });
 });

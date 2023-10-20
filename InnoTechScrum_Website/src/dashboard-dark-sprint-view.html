@@ -112,16 +112,27 @@
 
       <div class="dashboard-dark-sprint-view-container">
         <div class="dashboard-dark-sprint-view-dashboard-dark-sprint-view">
+          <div class = "dropdown">
+            <button class="dropbtn">
+              <img
+                alt="Menu2081"
+                src="public/external/menu2081-r9le.svg"
+                class="dashboard-dark-sprint-view-menu"
+              />
+            </button>
+            <div class="dropdown-content">
+            <a href = "dashboard-dark-mainpage-admin.html">Dashboard</a>
+            <a href = "dashboard-dark-product-backlog.html">Product Backlog</a>
+            <a href = "dashboard-dark-sprint-view.html">Sprint View</a>
+            <a href = "dashboard-dark-sprint-board.html">Sprint Board</a>
+            <a href = "changeprofile.html">Profile</a>
+            </div>
+           </div> 
           <div class="dashboard-dark-sprint-view-top-nevigation">
             <img
               alt="Logo3731"
               src="public/external/logo3731-1wdn-200h.png"
               class="dashboard-dark-sprint-view-logo"
-            />
-            <img
-              alt="Menu3731"
-              src="public/external/menu3731-u48n.svg"
-              class="dashboard-dark-sprint-view-menu"
             />
             <div class="dashboard-dark-sprint-view-theme">
               <span class="dashboard-dark-sprint-view-text">
@@ -296,20 +307,6 @@
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
   const database = getDatabase(app);
-
-  //const queryString = window.location.search;
-  //const urlParams = new URLSearchParams(queryString);
-  //const userid = urlParams.get('key').trim();
-  //const uref = ref(database, 'users/' + userid);
-  //get(uref).then((snapshot) => {
-  //  if (snapshot.exists()) {
-  //    const role = snapshot.val().Role;
-  //    if (role === 'admin'){
-  //      // append id to side panel
-  //      alert("WIP");
-  //    }
-  //  }
-  //});
 
   // Retrieving data to table in realtime
   var fetchedData = ref(database, 'sprint-view-sprints/');

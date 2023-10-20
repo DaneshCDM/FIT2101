@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="english">
   <head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     <title>Add-member-pop-up - exported project</title>
     <meta property="og:title" content="Add-member-pop-up - exported project" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -430,7 +433,6 @@
     />
   </head>
   <body>
-    <link rel="stylesheet" href="./style.css" />
     <div>
       <link href="./add-member-pop-up.css" rel="stylesheet" />
 
@@ -452,37 +454,123 @@
             alt="Separator5925"
             class="add-member-pop-up-separator"
           />
-          <div class="add-member-pop-up-first-name">
-            <span class="add-member-pop-up-text04"><span>Username</span></span>
-          </div>
-          <div class="add-member-pop-up-email">
-            <span class="add-member-pop-up-text06"><span>Email</span></span>
-          </div>
-          <div class="add-member-pop-up-password">
-            <span class="add-member-pop-up-text08"><span>Password</span></span>
-          </div>
-          <div class="add-member-pop-up-confirm-password">
-            <span class="add-member-pop-up-text10">
-              <span>Confirm Password</span>
+          <div class="admincontrolpanel-username">
+            <span class="admincontrolpanel-text04">
+              <input type = "text" id = "Username_text" placeholder="Username"
+              style="background-color:white; color: black;">
             </span>
           </div>
-          <div class="add-member-pop-up-tc">
-            <img
-              src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/db51cbe2-032a-4bf7-bb2e-15eacfa493b6/e745d05a-7a8d-4d37-accd-7ae1b5bea969?org_if_sml=1216&amp;force_format=original"
-              alt="TCbox5926"
-              class="add-member-pop-up-t-cbox"
-            />
-            <span class="add-member-pop-up-text12">
-              <span>Send confirmation email to person added</span>
+          <div class="admincontrolpanel-email">
+            <span class="admincontrolpanel-text05">
+              <input type = "text" id = "Email_text" placeholder="Email"
+              style="background-color:white; color: black;">
             </span>
           </div>
-          <div class="add-member-pop-up-signup">
-            <div class="add-member-pop-up-group1">
-              <span class="add-member-pop-up-text14"><span>Confirm</span></span>
+          <div class="admincontrolpanel-password">
+            <span class="admincontrolpanel-text06">
+              <input type = "text" id = "Password_text" placeholder="Password"
+              style="background-color:white; color: black;">
+            </span>
+          </div>
+          <div class="admincontrolpanel-confirm-password">
+            <span class="admincontrolpanel-text07">
+              <input type = "text" id = "Confirm_Password_text" placeholder="Confirm Password"
+              style="background-color:white; color: black;">
+            </span>
+          </div>
+          <div class="checkbox-container">
+            <input type="checkbox" id="confirmation-checkbox">
+            <label for="confirmation-checkbox">Send confirmation email to person added</label>
+          </div>
+          <div class="add-member-pop-up-signup", id = "submitbtn">
+            <div class="add-member-pop-up-group1"> 
+              <a href="#" class="close" data-bs-dismiss="modal" aria-label="close" onclick="closeModal">
+              <span class="add-member-pop-up-text14"> 
+                <button id="btnAddTaskClose" type="submit" class = "close" data-bs-dismiss="modal" aria-label="close"></button>
+                  <span class="close">Add Member</span>
+              </span>
+              </a>
             </div>
+          </div>
+          <div class="overlay" id="overlay">
+            <div class="popup" id="popup">
+              <h2>Pop-up Window</h2>
+              <p>This is a pop-up window.</p>
+              <button id="open-button" type="submit" class="btn" onclick="openPopUp()">Open</button>
+              <button id="close-button" onclick="closePopUp()">Close</button>
+            </div> 
           </div>
         </div>
       </div>
     </div>
+    <script type="text/javascript">
+ 
+      function closeWindow(e)
+      {
+          this.parent.$("#Window").data("tWindow").close();
+      }
+    </script>
+    <script src="javaScript.js"></script>
   </body>
 </html>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-analytics.js";
+  import { getDatabase, ref, set, push, child } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-database.js";
+  
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCghK_Zy_3Enmz0RJ9pvAxZfWxUYQp-InQ",
+    authDomain: "innotechscrum.firebaseapp.com",
+    databaseURL: "https://innotechscrum-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "innotechscrum",
+    storageBucket: "innotechscrum.appspot.com",
+    messagingSenderId: "365889461120",
+    appId: "1:365889461120:web:42e3ff55449d78b148bf65",
+    measurementId: "G-435J39SW2R"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const database = getDatabase(app);
+
+  submitbtn.addEventListener('click',(e)=>{
+    console.log('Button clicked');
+
+    var Password = document.getElementById("Password_text").value;
+    var Confirm_Password = document.getElementById("Confirm_Password_text").value;
+
+    if (Password !== Confirm_Password) {
+        alert("Passwords do not match. Please re-enter.");
+        document.getElementById("Password_text").value = "";
+        document.getElementById("Confirm_Password_text").value = "";
+    }
+    else {
+      var Username = document.getElementById('Username_text').value;
+      var Email = document.getElementById('Email_text').value; 
+      var Password = document.getElementById('Password_text').value;
+      var Confirm_Password = document.getElementById('Confirm_Password_text').value;
+
+      const userId = push(child(ref(database), 'Users')).key;
+
+      set(ref(database, 'Users/' + userId), {
+        Email: Email,
+        Password: Password,
+        Phone_Number:"0000000000",
+        Role: "User",
+        Username: Username,
+        Join_Date: Date()
+      });
+
+      alert('Member added to the Project.');
+    }
+
+  });
+</script>

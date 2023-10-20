@@ -111,19 +111,29 @@
       <link href="./dashboard-dark-product-backlog.css" rel="stylesheet" />
       
       <div class="dashboard-dark-product-backlog-container">
+        <div class = "dropdown">
+          <button class="dropbtn">
+            <img
+              alt="Menu2081"
+              src="public/external/menu2081-r9le.svg"
+              class="dashboard-dark-product-backlog-menu"
+            />
+          </button>
+          <div class="dropdown-content">
+          <a href = "dashboard-dark-mainpage-admin.html">Dashboard</a>
+          <a href = "dashboard-dark-product-backlog.html">Product Backlog</a>
+          <a href = "dashboard-dark-sprint-view.html">Sprint View</a>
+          <a href = "dashboard-dark-sprint-board.html">Sprint Board</a>
+          <a href = "changeprofile.html">Profile</a>
+          </div>
+        </div> 
         <div
-          class="dashboard-dark-product-backlog-dashboard-dark-product-backlog" id="product-backlog"
-        >
+          class="dashboard-dark-product-backlog-dashboard-dark-product-backlog" id="product-backlog">
           <div class="dashboard-dark-product-backlog-top-nevigation">
             <img
               alt="Logo2557"
               src="public/external/logo2557-5rxp-200h.png"
               class="dashboard-dark-product-backlog-logo"
-            />
-            <img
-              alt="Menu2557"
-              src="public/external/menu2557-msnd.svg"
-              class="dashboard-dark-product-backlog-menu"
             />
             <div class="dashboard-dark-product-backlog-theme">
               <span class="dashboard-dark-product-backlog-text">
@@ -322,20 +332,6 @@
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
   const database = getDatabase(app);
-
-  //const queryString = window.location.search;
-  //const urlParams = new URLSearchParams(queryString);
-  //const userid = urlParams.get('key').trim();
-  //const uref = ref(database, 'users/' + userid);
-  //get(uref).then((snapshot) => {
-  //  if (snapshot.exists()) {
-  //    const role = snapshot.val().Role;
-  //    if (role === 'admin'){
-  //      // append id to side panel
-  //      alert("WIP");
-  //    }
-  //  }
-  //});
 
   // Retrieving data to table in realtime
   var fetchedData = ref(database, 'product-backlog-tasks/');
