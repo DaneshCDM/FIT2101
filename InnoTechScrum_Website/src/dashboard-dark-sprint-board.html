@@ -338,27 +338,16 @@
 
       <div class="dashboard-dark-sprint-board-container">
         <div class="dashboard-dark-sprint-board-dashboard-dark-sprint-board">
-          <div class = "dropdown">
-            <button class="dropbtn">
-              <img
-                alt="Menu2081"
-                src="public/external/menu2081-r9le.svg"
-                class="dashboard-dark-sprint-board-menu"
-              />
-            </button>
-            <div class="dropdown-content">
-            <a href = "dashboard-dark-mainpage-admin.html">Dashboard</a>
-            <a href = "dashboard-dark-product-backlog.html">Product Backlog</a>
-            <a href = "dashboard-dark-sprint-view.html">Sprint View</a>
-            <a href = "dashboard-dark-sprint-board.html">Sprint Board</a>
-            <a href = "changeprofile.html">Profile</a>
-            </div>
-           </div> 
           <div class="dashboard-dark-sprint-board-top-nevigation">
             <img
               alt="Logo4213"
               src="public/external/logo4213-qxo-200h.png"
               class="dashboard-dark-sprint-board-logo"
+            />
+            <img
+              alt="Menu4213"
+              src="public/external/menu4213-uv8o.svg"
+              class="dashboard-dark-sprint-board-menu"
             />
             <div class="dashboard-dark-sprint-board-theme">
               <span class="dashboard-dark-sprint-board-text">
@@ -598,7 +587,7 @@
           </div> -->
           <div class="dashboard-dark-sprint-board-sprint">
             <span class="dashboard-dark-sprint-board-text44">
-              <span>Sprint 1</span>
+              <span><input type = "text" id = "Sprint_Name_text" placeholder="Sprint Name: " readonly style="background-color: transparent; color: black; width: 260px"></span>
             </span>
           </div>
         </div>
@@ -635,12 +624,25 @@
   // const analytics = getAnalytics(app);
   const database = getDatabase(app);
   const dbRef = ref(database, 'product-backlog-tasks/');
-
+  const dbRef1 = ref(database, 'sprint-view-sprints/');
+  
   const params = new Proxy(new URLSearchParams(window.location.search), {
     get: (searchParams, prop) => searchParams.get(prop),
   });
 
   let value = params.id.trim();
+  //let userid = params.key.trim();
+  
+  //const uref = ref(database, 'users/' + userid);
+  //get(uref).then((snapshot) => {
+  //  if (snapshot.exists()) {
+  //    const role = snapshot.val().Role;
+  //    if (role === 'admin'){
+  //      // append id to side panel
+  //      alert("WIP");
+  //    }
+  //  }
+  //});
 
   btnModal1.addEventListener("click", function(e){
       document.getElementById('taskIFrame').src = "dashboard-dark-pop-up-manage-sprint.html?id="+value

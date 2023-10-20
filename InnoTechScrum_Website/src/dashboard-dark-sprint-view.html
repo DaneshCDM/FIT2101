@@ -310,6 +310,7 @@
 
   // Retrieving data to table in realtime
   var fetchedData = ref(database, 'sprint-view-sprints/');
+  var dbReg = ref(database, 'register1/');
   var dataContainer = document.querySelector('tbody')
   onValue(fetchedData, (snapshot) => {
     var data = snapshot.val()
@@ -333,6 +334,14 @@
       buttonid ++;
     }
     dataContainer.innerHTML = htmlData;
+    get(fetchedData).then((snapshot) =>{
+      if (snapshot.exists()) {
+        var temp_sprint_name = fetchedData.Sprint_Name;
+      }
+      set(dbReg, {temp:temp_sprint_name});
+  
+    });
+
   });
 
   document.addEventListener("click", function(e){
