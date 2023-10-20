@@ -587,7 +587,7 @@
           </div> -->
           <div class="dashboard-dark-sprint-board-sprint">
             <span class="dashboard-dark-sprint-board-text44">
-              <span><input type = "text" id = "Sprint_Name_text" placeholder="Sprint Name: " readonly style="background-color: transparent; color: black; width: 260px"></span>
+              <span style="font-size: 18px;">Active Sprint</span>
             </span>
           </div>
         </div>
@@ -624,8 +624,7 @@
   // const analytics = getAnalytics(app);
   const database = getDatabase(app);
   const dbRef = ref(database, 'product-backlog-tasks/');
-  const dbRef1 = ref(database, 'sprint-view-sprints/');
-  
+
   const params = new Proxy(new URLSearchParams(window.location.search), {
     get: (searchParams, prop) => searchParams.get(prop),
   });
