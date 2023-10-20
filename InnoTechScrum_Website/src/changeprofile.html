@@ -554,23 +554,13 @@
             alt="Rectangle774984"
             class="changeprofile-rectangle77"
           />
-          <div class="dashboard-dark-pop-up-edit-task-product-backlog-confirm-task", id = "submitbtn">
-            <div class="dashboard-dark-pop-up-edit-task-product-backlog-group1">
-              <a href="#" class="close" data-bs-dismiss="modal" aria-label="close" onclick="closeModal">
-              <span class="dashboard-dark-pop-up-edit-task-product-backlog-text16"> 
-                <button id="btnEditTaskConfirm" type="submit" class = "close" data-bs-dismiss="modal" aria-label="close"></button>
-                  <span class="close">Confirm Edits</span>
-              </span>
-              </a>
-            </div>
-          </div>
-          <span class="changeprofile-text18">
+          <span class="changeprofile-text18", id="cancelbtn">
             <a href="#" class="close">
               <span>Cancel Changes</span>
               <button id="btncanprofile" type="submit" class = "close"></button>
             </a>
           </span>
-          <span class="changeprofile-text20">
+          <span class="changeprofile-text20", id="submitbtn">
             <a href="#" class="close">
               <span>Confirm Changes</span>
               <button id="btnconprofile" type="submit" class = "close"></button>
@@ -640,8 +630,9 @@
   let Username;
   let store;
   let Phone_Number;
-  var datausers = ref(database, 'ActiveRole/')
-  var userRef = ref(database, 'users/')
+  var datausers = ref(database, 'ActiveRole/');
+  var userRef = ref(database, 'Users/');
+  let newprof;
   get(datausers).then((snapshot) =>{
     if (snapshot.exists()) {
       Email = snapshot.val().Email;
@@ -663,19 +654,21 @@
       const Username_input = document.getElementById('username_text');
       Username_input.value = Username;
       console.log(`${Email}/${Password}/${Role}/${Username}/${store}`);
-      //const newprof ={ Email: Email_input, Phone_Number: Phone_Number_input,Password: Password_input, Username: Username_input,};
+      newprof ={ Email: Email_input, Phone_Number: Phone_Number_input,Password: Password_input, Username: Username_input,};
       var adminlist=[];
       var userlist=[];
       var condadmin=false;
       var conduser=false;
+      //store = eval(store);
+      
       onValue(userRef, (snapshot) => {
         var data=snapshot.val();
         for(var key in data){
           var value=data[key];
-          if(value.Username=='admin'){
+          if(value.Role=='admin'){
             adminlist.push(value);//push entire ID
           }
-          if(value.Username!='admin'){
+          if(value.Role!='admin'){
             userlist.push(value);
           }
         }
@@ -683,23 +676,40 @@
         for(var index in adminlist){
           var value=adminlist[index];
           if(value.Username==store){
-            condadmin=true;
+            condadmin=Username;
           }
           console.log(store);
         }
         for(var index in userlist){
           var value=userlist[index];
           if(value.Username==store){
-            conduser=true;
+            conduser=Username;
           }
         }
         console.log(userlist);
         console.log(adminlist);
         console.log(`${condadmin}/${conduser}`)
+        // var newRef = ref(database, 'Users/' + condadmin)
+        // submitbtn.addEventListener('click',(e)=>{
+        //   console.log('Button clicked');
+
+        //   set(newRef,{
+        //       Email: Email_input,
+        //       Password: Password_input,
+        //       Phone_Number: Phone_Number_input,
+        //       Username: Username_input
+        //     });
+        //   // set(newRef, newprof).then(() =>{
+        //   //   console.log("Changed")
+        //   // })
+        // });
       });
-      // set(userRef, newprof).then(() =>{
+      
+      // set(newRef, newprof).then(() =>{
       //   console.log("Changed")
       // })
+
+
     }
   })
   // let Email;
