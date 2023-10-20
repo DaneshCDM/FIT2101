@@ -1,25 +1,23 @@
 .changeprofile-container {
   width: 100%;
-  display: flex;
+  /* display: flex; */
   overflow: auto;
   min-height: 100vh;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
 }
 .changeprofile-changeprofile {
   width: 100%;
-  height: 850px;
+  height: 100%;
   display: flex;
   overflow: hidden;
-  position: relative;
   align-items: flex-start;
-  flex-shrink: 0;
-  background-color: rgba(255, 255, 255, 1);
 }
 .changeprofile-top-navigation {
   top: 0px;
   left: 0px;
-  width: 1440px;
+  width: 100%;
   height: 60px;
   display: flex;
   overflow: hidden;
@@ -221,7 +219,7 @@
   height: 25px;
   position: absolute;
 }
-.changeprofile-body {
+/* .changeprofile-body {
   top: 60px;
   left: 0px;
   width: 1440px;
@@ -232,7 +230,7 @@
   align-items: flex-start;
   flex-shrink: 0;
   background-image: linear-gradient(180deg, rgba(13, 13, 13, 1) 0%, rgba(61, 25, 1, 1) 100%);
-}
+} */
 .changeprofile-rectangle70 {
   top: 253px;
   left: 513px;
