@@ -522,7 +522,7 @@
   const database = getDatabase(app);
 
 login_btn.addEventListener("click",function(){
-  var fetchedData = ref(database, 'users/');
+  var fetchedData = ref(database, 'Users/');
   var user = document.getElementById('login_id').value;
   var pass = document.getElementById('login_pass').value;
   var authorized = false;
