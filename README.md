@@ -1,1 +1,1 @@
-# FIT2101 Project
+# Agile Project Management Web Application ('InnoTechScrum')
