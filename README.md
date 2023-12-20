@@ -1,6 +1,6 @@
 # Agile Project Management Web Application ('InnoTechScrum')
 
-## Project Screenshots: <br/> <br/>
+### Project Screenshots: <br/> <br/>
 
 ### Login
 ![LoginPage](https://github.com/DaneshCDM/FIT2101/assets/66300163/54f08478-17e0-4a5c-9aca-efb24b59a2c8) <br/>
